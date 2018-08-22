@@ -1970,7 +1970,7 @@ function onTransactionStarted() {
                                             <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
                                                 <MobileSmartSourceType>{
  "mode": "plain",
- "value": "OffChat Lobby"
+ "value": "Lobby"
 }</MobileSmartSourceType>
                                             </xmlizable>
                                         </textValue>

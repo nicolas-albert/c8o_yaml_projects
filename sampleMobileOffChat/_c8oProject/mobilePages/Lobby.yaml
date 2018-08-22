@@ -117,7 +117,7 @@ title: Title for Lobby
               - MobileSmartSourceType: |
                   '{
                    "mode": "plain",
-                   "value": "OffChat Lobby"
+                   "value": "Lobby"
                   }'
     ↓ButtonSet [mobile.components.UIDynamicElement-1518088441378]: 
       beanData: |
