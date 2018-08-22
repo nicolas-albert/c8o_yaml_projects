@@ -219,18 +219,20 @@
           - SmartType: 
             - ↑mode: JS
             - →→: username
-    ↓Element [steps.XMLElementStep-1433256479340]: 
-      nodeName: ok
-      nodeText: true
-      ↓Attribute [steps.XMLAttributeStep-1518023293305]: 
-        nodeName: type
-        nodeText: boolean
-    ↓jElement1 [steps.ElementStep-1518022450797]: 
-      expression: '"" + new Date().getTime()'
-      nodeName: ts
-      ↓Attribute [steps.XMLAttributeStep-1518023240095]: 
-        nodeName: type
-        nodeText: long
+    ↓jIf1 [steps.IfStep-1534949953419]: 
+      condition: true
+      ↓Element [steps.XMLElementStep-1433256479340]: 
+        nodeName: ok
+        nodeText: true
+        ↓Attribute [steps.XMLAttributeStep-1518023293305]: 
+          nodeName: type
+          nodeText: boolean
+      ↓jElement1 [steps.ElementStep-1518022450797]: 
+        expression: '"" + new Date().getTime()'
+        nodeName: ts
+        ↓Attribute [steps.XMLAttributeStep-1518023240095]: 
+          nodeName: type
+          nodeText: long
     ↓username [variables.RequestableVariable-1433256479347]: 
       value: 
     ↓password [variables.RequestableVariable-1433256479354]: 
@@ -306,6 +308,8 @@
                 - java.lang.String: 
                   - ↑value: ./user/text()
         ↓_id [variables.StepVariable-1518012563992]: 
+        ↓success [variables.StepVariable-1534950003122]: 
+          value: true
       ↓Iterator [steps.IteratorStep-1433425036105]: 
         sourceDefinition: 
           - xmlizable: 

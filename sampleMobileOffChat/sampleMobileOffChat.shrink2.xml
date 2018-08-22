@@ -253,20 +253,23 @@ function onTransactionStarted() {
                     </xmlizable>
                 </userid>
             </bean>
-            <bean yaml_key="Element [steps.XMLElementStep-1433256479340]">
-                <nodeName>ok</nodeName>
-                <nodeText>true</nodeText>
-                <bean yaml_key="Attribute [steps.XMLAttributeStep-1518023293305]">
-                    <nodeName>type</nodeName>
-                    <nodeText>boolean</nodeText>
+            <bean yaml_key="jIf1 [steps.IfStep-1534949953419]">
+                <condition>true</condition>
+                <bean yaml_key="Element [steps.XMLElementStep-1433256479340]">
+                    <nodeName>ok</nodeName>
+                    <nodeText>true</nodeText>
+                    <bean yaml_key="Attribute [steps.XMLAttributeStep-1518023293305]">
+                        <nodeName>type</nodeName>
+                        <nodeText>boolean</nodeText>
+                    </bean>
                 </bean>
-            </bean>
-            <bean yaml_key="jElement1 [steps.ElementStep-1518022450797]">
-                <expression>"" + new Date().getTime()</expression>
-                <nodeName>ts</nodeName>
-                <bean yaml_key="Attribute [steps.XMLAttributeStep-1518023240095]">
-                    <nodeName>type</nodeName>
-                    <nodeText>long</nodeText>
+                <bean yaml_key="jElement1 [steps.ElementStep-1518022450797]">
+                    <expression>"" + new Date().getTime()</expression>
+                    <nodeName>ts</nodeName>
+                    <bean yaml_key="Attribute [steps.XMLAttributeStep-1518023240095]">
+                        <nodeName>type</nodeName>
+                        <nodeText>long</nodeText>
+                    </bean>
                 </bean>
             </bean>
             <bean yaml_key="username [variables.RequestableVariable-1433256479347]">
@@ -352,6 +355,9 @@ function onTransactionStarted() {
                         </sourceDefinition>
                     </bean>
                     <bean yaml_key="_id [variables.StepVariable-1518012563992]"/>
+                    <bean yaml_key="success [variables.StepVariable-1534950003122]">
+                        <value>true</value>
+                    </bean>
                 </bean>
                 <bean yaml_key="Iterator [steps.IteratorStep-1433425036105]">
                     <sourceDefinition>

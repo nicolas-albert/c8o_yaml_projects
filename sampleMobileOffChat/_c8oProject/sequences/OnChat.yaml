@@ -64,6 +64,8 @@ accessibility: Private
             - java.lang.String: 
               - ↑value: ./user/text()
     ↓_id [variables.StepVariable-1518012563992]: 
+    ↓success [variables.StepVariable-1534950003122]: 
+      value: true
   ↓Iterator [steps.IteratorStep-1433425036105]: 
     sourceDefinition: 
       - xmlizable: 
