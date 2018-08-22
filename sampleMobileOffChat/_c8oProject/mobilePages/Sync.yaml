@@ -1,0 +1,284 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        '/*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	public window: any;
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		this.window = window;
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        '
+segment: Sync
+title: Title for Sync
+↓Header [mobile.components.UIDynamicElement-1517841328972]: 
+  beanData: |
+    '{
+     "name": "Header",
+     "properties": {"NoBorder": {
+      "name": "NoBorder",
+      "mode": "plain",
+      "value": false
+     }}
+    }'
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1517841328998]: 
+    beanData: |
+      '{
+       "name": "NavBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        },
+        "BackButtonHidden": {
+         "name": "BackButtonHidden",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1517841329024]: 
+      beanData: |
+        '{
+         "name": "BarTitle",
+         "properties": {}
+        }'
+      tagName: ion-title
+      ↓TextFormat [mobile.components.UIDynamicElement-1517841329048]: 
+        beanData: |
+          '{
+           "name": "TextFormat",
+           "properties": {
+            "TextLeft": {
+             "name": "TextLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "TextRight": {
+             "name": "TextRight",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCenter": {
+             "name": "TextCenter",
+             "mode": "plain",
+             "value": "text-center"
+            },
+            "TextJustify": {
+             "name": "TextJustify",
+             "mode": "plain",
+             "value": false
+            },
+            "TextWrap": {
+             "name": "TextWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextNoWrap": {
+             "name": "TextNoWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextUpperCase": {
+             "name": "TextUpperCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextLowerCase": {
+             "name": "TextLowerCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCapitalize": {
+             "name": "TextCapitalize",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: div
+        ↓Text [mobile.components.UIText-1517841329074]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "plain",
+                   "value": "OffChat Sync"
+                  }'
+↓Content [mobile.components.UIDynamicElement-1517841344920]: 
+  beanData: |
+    '{
+     "name": "Content",
+     "properties": {
+      "IonPadding": {
+       "name": "IonPadding",
+       "mode": "plain",
+       "value": "padding"
+      },
+      "Fullscreen": {
+       "name": "Fullscreen",
+       "mode": "plain",
+       "value": false
+      }
+     }
+    }'
+  tagName: ion-content
+  ↓Style [mobile.components.UIStyle-1517841643117]: 
+    styleContent: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '	animation-name: sync;
+            	animation-duration: 1.5s;
+            	animation-direction: alternate;
+            	animation-iteration-count: infinite;
+            	animation-timing-function: ease-in-out;
+            '
+↓Footer [mobile.components.UIDynamicElement-1517841335763]: 
+  beanData: |
+    '{
+     "name": "Footer",
+     "properties": {}
+    }'
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1517841335793]: 
+    beanData: |
+      '{
+       "name": "ToolBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-toolbar
+    ↓Style [mobile.components.UIStyle-1517841335823]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	text-align: center;
+              	color: color($colors, secondary);
+              '
+    ↓Text [mobile.components.UIText-1517841335854]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              '{
+               "mode": "plain",
+               "value": "© Convertigo"
+              }'
+↓PageEvent [mobile.components.UIPageEvent-1517842433048]: 
+  ↓Toast [mobile.components.UIDynamicAction-1517845209579]: 
+    beanData: |
+      '{
+       "name": "ToastAction",
+       "properties": {
+        "message": {
+         "name": "message",
+         "mode": "script",
+         "value": "''Welcome '' + this.window.sessionStorage.username + '', sync in progress!''"
+        },
+        "duration": {
+         "name": "duration",
+         "mode": "plain",
+         "value": "10000"
+        },
+        "position": {
+         "name": "position",
+         "mode": "plain",
+         "value": "bottom"
+        },
+        "cssClass": {
+         "name": "cssClass",
+         "mode": "plain",
+         "value": false
+        },
+        "showCloseButton": {
+         "name": "showCloseButton",
+         "mode": "plain",
+         "value": false
+        },
+        "closeButtonText": {
+         "name": "closeButtonText",
+         "mode": "plain",
+         "value": false
+        },
+        "dismissOnPageChange": {
+         "name": "dismissOnPageChange",
+         "mode": "plain",
+         "value": "true"
+        }
+       }
+      }'
+  ↓SyncData [mobile.components.UIDynamicAction-1518010028402]: 
+    beanData: |
+      '{
+       "name": "FullSyncSyncAction",
+       "properties": {
+        "requestable": {
+         "name": "requestable",
+         "mode": "plain",
+         "value": "sampleMobileOffChat.offchat_fullsync"
+        },
+        "Direction": {
+         "name": "Direction",
+         "mode": "plain",
+         "value": "bi-directional"
+        },
+        "Mode": {
+         "name": "Mode",
+         "mode": "plain",
+         "value": "continuous"
+        },
+        "Retry": {
+         "name": "Retry",
+         "mode": "plain",
+         "value": "true"
+        },
+        "BatchSize": {
+         "name": "BatchSize",
+         "mode": "script",
+         "value": "100"
+        },
+        "BatchesLimit": {
+         "name": "BatchesLimit",
+         "mode": "script",
+         "value": "10"
+        }
+       }
+      }'
+    ↓RootPage [mobile.components.UIDynamicAction-1517842553795]: 
+      beanData: |
+        '{
+         "name": "RootPageAction",
+         "properties": {"page": {
+          "name": "page",
+          "mode": "plain",
+          "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
+         }}
+        }'

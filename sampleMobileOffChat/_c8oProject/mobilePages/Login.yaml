@@ -1,0 +1,1094 @@
+↑isRoot: true
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        '/*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	public window: any;
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		this.window = window;
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        '
+segment: Login
+title: Title for Login
+↓Header [mobile.components.UIDynamicElement-1517567290269]: 
+  beanData: |
+    '{
+     "name": "Header",
+     "properties": {"NoBorder": {
+      "name": "NoBorder",
+      "mode": "plain",
+      "value": false
+     }}
+    }'
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1517590376644]: 
+    beanData: |
+      '{
+       "name": "NavBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        },
+        "BackButtonHidden": {
+         "name": "BackButtonHidden",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1517567324784]: 
+      beanData: |
+        '{
+         "name": "BarTitle",
+         "properties": {}
+        }'
+      tagName: ion-title
+      ↓Center [mobile.components.UIDynamicElement-1517567363505]: 
+        beanData: |
+          '{
+           "name": "TextFormat",
+           "properties": {
+            "TextLeft": {
+             "name": "TextLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "TextRight": {
+             "name": "TextRight",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCenter": {
+             "name": "TextCenter",
+             "mode": "plain",
+             "value": "text-center"
+            },
+            "TextJustify": {
+             "name": "TextJustify",
+             "mode": "plain",
+             "value": false
+            },
+            "TextWrap": {
+             "name": "TextWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextNoWrap": {
+             "name": "TextNoWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextUpperCase": {
+             "name": "TextUpperCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextLowerCase": {
+             "name": "TextLowerCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCapitalize": {
+             "name": "TextCapitalize",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: div
+        ↓Text [mobile.components.UIText-1517567331669]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "plain",
+                   "value": "OffChat Login"
+                  }'
+    ↓ButtonSet [mobile.components.UIDynamicElement-1517591030309]: 
+      beanData: |
+        '{
+         "name": "ButtonSet",
+         "properties": {"SetPosition": {
+          "name": "SetPosition",
+          "mode": "plain",
+          "value": "right"
+         }}
+        }'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1517591030322]: 
+        beanData: |
+          '{
+           "name": "Button",
+           "properties": {
+            "ButtonFormType": {
+             "name": "ButtonFormType",
+             "mode": "plain",
+             "value": false
+            },
+            "ButtonType": {
+             "name": "ButtonType",
+             "mode": "plain",
+             "value": "ion-button"
+            },
+            "MenuMode": {
+             "name": "MenuMode",
+             "mode": "plain",
+             "value": false
+            },
+            "IonColor": {
+             "name": "IonColor",
+             "mode": "plain",
+             "value": false
+            },
+            "IonShape": {
+             "name": "IonShape",
+             "mode": "plain",
+             "value": false
+            },
+            "IonOutline": {
+             "name": "IonOutline",
+             "mode": "plain",
+             "value": false
+            },
+            "IonClear": {
+             "name": "IonClear",
+             "mode": "plain",
+             "value": false
+            },
+            "IonSize": {
+             "name": "IonSize",
+             "mode": "plain",
+             "value": false
+            },
+            "IconPosition": {
+             "name": "IconPosition",
+             "mode": "plain",
+             "value": false
+            },
+            "IconOnly": {
+             "name": "IconOnly",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1517591030335]: 
+          beanData: |
+            '{
+             "name": "Icon",
+             "properties": {
+              "IconName": {
+               "name": "IconName",
+               "mode": "plain",
+               "value": "more"
+              },
+              "ItemPosition": {
+               "name": "ItemPosition",
+               "mode": "plain",
+               "value": false
+              },
+              "IonColor": {
+               "name": "IonColor",
+               "mode": "plain",
+               "value": false
+              },
+              "RangeLeft": {
+               "name": "RangeLeft",
+               "mode": "plain",
+               "value": false
+              },
+              "RangeRight": {
+               "name": "RangeRight",
+               "mode": "plain",
+               "value": false
+              }
+             }
+            }'
+          tagName: ion-icon
+        ↓Event [mobile.components.UIControlEvent-1517825155947]: 
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "plain",
+                   "value": "value"
+                  }'
+          ↓CustomAction [mobile.components.UICustomAction-1517827010857]: 
+            actionValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '		page.c8o.log.debug(event ? event.toString():''no event'');
+                    		
+                            let actionSheet = this.getInstance(ActionSheetController).create({
+                                title: ''Reset your Database ?'',
+                                buttons: [
+                                  {
+                                    text: ''Reset'',
+                                    role: ''destructive'',
+                                    icon: ''trash'',
+                                    handler: () => {
+                                      console.log(''Destructive clicked'');
+                                      resolve();
+                                    }
+                                  },{
+                                    text: ''Cancel'',
+                                    role: ''cancel'',
+                                    icon: ''close'',
+                                    handler: () => {
+                                      console.log(''Cancel clicked'');
+                                    }
+                                  }
+                                ]
+                              });
+                    	      actionSheet.present();
+                    		
+                    '
+            module_ts_imports: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                - com.twinsoft.convertigo.beans.common.XMLVector: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - java.lang.String: 
+                        - ↑value: ActionSheetController 
+                      - java.lang.String: 
+                        - ↑value: ionic-angular
+            ↓CallFullSync [mobile.components.UIDynamicAction-1517828045820]: 
+              beanData: |
+                '{
+                 "name": "CallFullSyncAction",
+                 "properties": {
+                  "requestable": {
+                   "name": "requestable",
+                   "mode": "plain",
+                   "value": "sampleMobileOffChat.offchat_fullsync"
+                  },
+                  "marker": {
+                   "name": "marker",
+                   "mode": "plain",
+                   "value": ""
+                  },
+                  "verb": {
+                   "name": "verb",
+                   "mode": "plain",
+                   "value": "reset"
+                  }
+                 }
+                }'
+              ↓Toast [mobile.components.UIDynamicAction-1517828126515]: 
+                beanData: |
+                  '{
+                   "name": "ToastAction",
+                   "properties": {
+                    "message": {
+                     "name": "message",
+                     "mode": "plain",
+                     "value": "Reset done!"
+                    },
+                    "duration": {
+                     "name": "duration",
+                     "mode": "plain",
+                     "value": "3000"
+                    },
+                    "position": {
+                     "name": "position",
+                     "mode": "plain",
+                     "value": "bottom"
+                    },
+                    "cssClass": {
+                     "name": "cssClass",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "showCloseButton": {
+                     "name": "showCloseButton",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "closeButtonText": {
+                     "name": "closeButtonText",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "dismissOnPageChange": {
+                     "name": "dismissOnPageChange",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+↓Content [mobile.components.UIDynamicElement-1517567294948]: 
+  beanData: |
+    '{
+     "name": "Content",
+     "properties": {
+      "IonPadding": {
+       "name": "IonPadding",
+       "mode": "plain",
+       "value": "padding"
+      },
+      "Fullscreen": {
+       "name": "Fullscreen",
+       "mode": "plain",
+       "value": false
+      }
+     }
+    }'
+  tagName: ion-content
+  ↓CardContainer [mobile.components.UIDynamicElement-1517590561097]: 
+    beanData: |
+      '{
+       "name": "Card",
+       "properties": {}
+      }'
+    tagName: ion-card
+    ↓CardContent [mobile.components.UIDynamicElement-1517590566688]: 
+      beanData: |
+        '{
+         "name": "CardContent",
+         "properties": {}
+        }'
+      tagName: ion-card-content
+      ↓Form [mobile.components.UIForm-1517569296572]: 
+        ↓Event [mobile.components.UIControlEvent-1517588818264]: 
+          attrName: (ngSubmit)
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "plain",
+                   "value": "value"
+                  }'
+          eventName: onSubmit
+          ↓CallLogin [mobile.components.UIDynamicAction-1517588861783]: 
+            beanData: |
+              '{
+               "name": "CallSequenceAction",
+               "properties": {
+                "requestable": {
+                 "name": "requestable",
+                 "mode": "plain",
+                 "value": "sampleMobileOffChat.Login"
+                },
+                "marker": {
+                 "name": "marker",
+                 "mode": "plain",
+                 "value": ""
+                },
+                "cachePolicy": {
+                 "name": "cachePolicy",
+                 "mode": "plain",
+                 "value": false
+                },
+                "cacheTtl": {
+                 "name": "cacheTtl",
+                 "mode": "plain",
+                 "value": "3000"
+                }
+               }
+              }'
+            ↓FailureHandler [mobile.components.UIActionFailureEvent-1518086125645]: 
+              ↓Toast [mobile.components.UIDynamicAction-1518086718732]: 
+                beanData: |
+                  '{
+                   "name": "ToastAction",
+                   "properties": {
+                    "message": {
+                     "name": "message",
+                     "mode": "plain",
+                     "value": "Network failure: Offline mode"
+                    },
+                    "duration": {
+                     "name": "duration",
+                     "mode": "plain",
+                     "value": "2000"
+                    },
+                    "position": {
+                     "name": "position",
+                     "mode": "plain",
+                     "value": "top"
+                    },
+                    "cssClass": {
+                     "name": "cssClass",
+                     "mode": "plain",
+                     "value": "toast-error"
+                    },
+                    "showCloseButton": {
+                     "name": "showCloseButton",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "closeButtonText": {
+                     "name": "closeButtonText",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "dismissOnPageChange": {
+                     "name": "dismissOnPageChange",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                ↓CustomActionOffline [mobile.components.UICustomAction-1518086141924]: 
+                  actionValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          		if (props.stack["CallLogin"].in.vars.username != window.localStorage.username) {
+                          		    this.form1517569296572.controls["username"].setValue(window.localStorage.username);
+                          		    reject("User cannot change, should be '" + window.localStorage.username + "'");
+                          		}
+                                  if (props.stack["CallLogin"].in.vars.password != window.localStorage.password) {
+                                      reject("Wrong password!");
+                                  }
+                                  window.sessionStorage.username = window.localStorage.username;
+                                  window.sessionStorage.offline = true;
+                                  window.document.body.className = "offline";
+                          		resolve();
+                  ↓FailureHandler [mobile.components.UIActionFailureEvent-1518086795231]: 
+                    ↓Toast [mobile.components.UIDynamicAction-1518086807380]: 
+                      beanData: |
+                        '{
+                         "name": "ToastAction",
+                         "properties": {
+                          "message": {
+                           "name": "message",
+                           "mode": "script",
+                           "value": "out"
+                          },
+                          "duration": {
+                           "name": "duration",
+                           "mode": "plain",
+                           "value": "2000"
+                          },
+                          "position": {
+                           "name": "position",
+                           "mode": "plain",
+                           "value": "top"
+                          },
+                          "cssClass": {
+                           "name": "cssClass",
+                           "mode": "plain",
+                           "value": "toast-error"
+                          },
+                          "showCloseButton": {
+                           "name": "showCloseButton",
+                           "mode": "plain",
+                           "value": false
+                          },
+                          "closeButtonText": {
+                           "name": "closeButtonText",
+                           "mode": "plain",
+                           "value": false
+                          },
+                          "dismissOnPageChange": {
+                           "name": "dismissOnPageChange",
+                           "mode": "plain",
+                           "value": false
+                          }
+                         }
+                        }'
+                    ↓Error [mobile.components.UIDynamicAction-1518086813725]: 
+                      beanData: |
+                        '{
+                         "name": "ErrorAction",
+                         "properties": {"message": {
+                          "name": "message",
+                          "mode": "plain",
+                          "value": "some error"
+                         }}
+                        }'
+                  ↓RootPage [mobile.components.UIDynamicAction-1518086150793]: 
+                    beanData: |
+                      '{
+                       "name": "RootPageAction",
+                       "properties": {"page": {
+                        "name": "page",
+                        "mode": "plain",
+                        "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
+                       }}
+                      }'
+              ↓Error [mobile.components.UIDynamicAction-1518086564258]: 
+                beanData: |
+                  '{
+                   "name": "ErrorAction",
+                   "properties": {"message": {
+                    "name": "message",
+                    "mode": "plain",
+                    "value": "offline"
+                   }}
+                  }'
+            ↓If_ERROR [mobile.components.UIDynamicAction-1517840368874]: 
+              beanData: |
+                '{
+                 "name": "IfAction",
+                 "properties": {
+                  "condition": {
+                   "name": "condition",
+                   "mode": "script",
+                   "value": "out.error"
+                  },
+                  "negate": {
+                   "name": "negate",
+                   "mode": "plain",
+                   "value": "false"
+                  }
+                 }
+                }'
+              ↓Toast [mobile.components.UIDynamicAction-1517828328158]: 
+                beanData: |
+                  '{
+                   "name": "ToastAction",
+                   "properties": {
+                    "message": {
+                     "name": "message",
+                     "mode": "script",
+                     "value": "stack[\"CallLogin\"].out.error.message"
+                    },
+                    "duration": {
+                     "name": "duration",
+                     "mode": "plain",
+                     "value": "3000"
+                    },
+                    "position": {
+                     "name": "position",
+                     "mode": "plain",
+                     "value": "top"
+                    },
+                    "cssClass": {
+                     "name": "cssClass",
+                     "mode": "plain",
+                     "value": "toast-error"
+                    },
+                    "showCloseButton": {
+                     "name": "showCloseButton",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "closeButtonText": {
+                     "name": "closeButtonText",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "dismissOnPageChange": {
+                     "name": "dismissOnPageChange",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+            ↓If_OK [mobile.components.UIDynamicAction-1517840421888]: 
+              beanData: |
+                '{
+                 "name": "IfAction",
+                 "properties": {
+                  "condition": {
+                   "name": "condition",
+                   "mode": "script",
+                   "value": "out.ok"
+                  },
+                  "negate": {
+                   "name": "negate",
+                   "mode": "plain",
+                   "value": "false"
+                  }
+                 }
+                }'
+              ↓CustomAction [mobile.components.UICustomAction-1517911129934]: 
+                actionValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        		let localTs = new Date().getTime();
+                        		let serverTs = props.stack["CallLogin"].out.ts * 1;
+                        		window.localStorage.decTs = serverTs - localTs;
+                                window.sessionStorage.offline = false;
+                                window.document.body.className = "";
+                        		
+                        		page.c8o.log.debug(event ? event.toString():'no event');
+                        		let user = window.sessionStorage.username = props.stack["CallLogin"].in.vars.username;
+                        		let exUser = window.localStorage.username;
+                        		if (user != exUser) {
+                        		    window.localStorage.username = user;
+                        		    window.localStorage.password = props.stack["CallLogin"].in.vars.password;
+                        		    this.call('fs://offchat_fullsync.reset').then(function () {
+                        		        resolve();
+                        		    }, function () {
+                        		        reject();
+                        		    });
+                        		} else {
+                        	        resolve();
+                        		}
+                ↓RootPage [mobile.components.UIDynamicAction-1517842566552]: 
+                  beanData: |
+                    '{
+                     "name": "RootPageAction",
+                     "properties": {"page": {
+                      "name": "page",
+                      "mode": "plain",
+                      "value": "sampleMobileOffChat.OffChat.OffChat.Sync"
+                     }}
+                    }'
+        ↓ListContainer [mobile.components.UIDynamicElement-1517590290750]: 
+          beanData: |
+            '{
+             "name": "List",
+             "properties": {
+              "Nolines": {
+               "name": "Nolines",
+               "mode": "plain",
+               "value": false
+              },
+              "Inset": {
+               "name": "Inset",
+               "mode": "plain",
+               "value": false
+              }
+             }
+            }'
+          tagName: ion-list
+          ↓Username [mobile.components.UIDynamicElement-1517583518722]: 
+            beanData: |
+              '{
+               "name": "ListItem",
+               "properties": {"ItemPosition": {
+                "name": "ItemPosition",
+                "mode": "plain",
+                "value": false
+               }}
+              }'
+            tagName: ion-item
+            ↓LabelUsername [mobile.components.UIDynamicElement-1517567871069]: 
+              beanData: |
+                '{
+                 "name": "Label",
+                 "properties": {
+                  "Fixed": {
+                   "name": "Fixed",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Floating": {
+                   "name": "Floating",
+                   "mode": "plain",
+                   "value": "floating"
+                  },
+                  "Stacked": {
+                   "name": "Stacked",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "RangeLeft": {
+                   "name": "RangeLeft",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "RangeRight": {
+                   "name": "RangeRight",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: ion-label
+              ↓Text [mobile.components.UIText-1517567903626]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "Username :"
+                        }'
+            ↓Username [mobile.components.UIDynamicElement-1517567886976]: 
+              beanData: |
+                '{
+                 "name": "Input",
+                 "properties": {
+                  "FormControlName": {
+                   "name": "FormControlName",
+                   "mode": "plain",
+                   "value": "username"
+                  },
+                  "Disabled": {
+                   "name": "Disabled",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ClearInput": {
+                   "name": "ClearInput",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ClearOnEdit": {
+                   "name": "ClearOnEdit",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Max": {
+                   "name": "Max",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Min": {
+                   "name": "Min",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Mode": {
+                   "name": "Mode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Placeholder": {
+                   "name": "Placeholder",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Readonly": {
+                   "name": "Readonly",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Step": {
+                   "name": "Step",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "TextAlign": {
+                   "name": "TextAlign",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Type": {
+                   "name": "Type",
+                   "mode": "plain",
+                   "value": "text"
+                  },
+                  "Value": {
+                   "name": "Value",
+                   "mode": "script",
+                   "value": "this.window.localStorage.username"
+                  }
+                 }
+                }'
+              tagName: ion-input
+              ↓ControlValidator [mobile.components.UIFormControlValidator-1517588945279]: 
+                minLength: 4
+                required: set
+            ↓Attr [mobile.components.UIAttribute-1517583820683]: 
+              attrName: 
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: |
+                      '{
+                       "mode": "plain",
+                       "value": "no-lines"
+                      }'
+          ↓Password [mobile.components.UIDynamicElement-1517583521117]: 
+            beanData: |
+              '{
+               "name": "ListItem",
+               "properties": {"ItemPosition": {
+                "name": "ItemPosition",
+                "mode": "plain",
+                "value": false
+               }}
+              }'
+            tagName: ion-item
+            ↓LabelPassword [mobile.components.UIDynamicElement-1517567880553]: 
+              beanData: |
+                '{
+                 "name": "Label",
+                 "properties": {
+                  "Fixed": {
+                   "name": "Fixed",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Floating": {
+                   "name": "Floating",
+                   "mode": "plain",
+                   "value": "floating"
+                  },
+                  "Stacked": {
+                   "name": "Stacked",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "RangeLeft": {
+                   "name": "RangeLeft",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "RangeRight": {
+                   "name": "RangeRight",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: ion-label
+              ↓Text [mobile.components.UIText-1517567907991]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "Password :"
+                        }'
+            ↓Password [mobile.components.UIDynamicElement-1517567889698]: 
+              beanData: |
+                '{
+                 "name": "Input",
+                 "properties": {
+                  "FormControlName": {
+                   "name": "FormControlName",
+                   "mode": "plain",
+                   "value": "password"
+                  },
+                  "Disabled": {
+                   "name": "Disabled",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ClearInput": {
+                   "name": "ClearInput",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ClearOnEdit": {
+                   "name": "ClearOnEdit",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Max": {
+                   "name": "Max",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Min": {
+                   "name": "Min",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Mode": {
+                   "name": "Mode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Placeholder": {
+                   "name": "Placeholder",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Readonly": {
+                   "name": "Readonly",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Step": {
+                   "name": "Step",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "TextAlign": {
+                   "name": "TextAlign",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Type": {
+                   "name": "Type",
+                   "mode": "plain",
+                   "value": "password"
+                  },
+                  "Value": {
+                   "name": "Value",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: ion-input
+              ↓ControlValidator [mobile.components.UIFormControlValidator-1517588971917]: 
+                minLength: 4
+                required: set
+            ↓Attr [mobile.components.UIAttribute-1517583882602]: 
+              attrName: 
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: |
+                      '{
+                       "mode": "plain",
+                       "value": "no-lines"
+                      }'
+          ↓SubmitButton [mobile.components.UIDynamicElement-1517570142145]: 
+            beanData: |
+              '{
+               "name": "SubmitButton",
+               "properties": {
+                "ButtonFormType": {
+                 "name": "ButtonFormType",
+                 "mode": "plain",
+                 "value": "submit"
+                },
+                "ButtonType": {
+                 "name": "ButtonType",
+                 "mode": "plain",
+                 "value": "ion-button"
+                },
+                "MenuMode": {
+                 "name": "MenuMode",
+                 "mode": "plain",
+                 "value": false
+                },
+                "IonColor": {
+                 "name": "IonColor",
+                 "mode": "plain",
+                 "value": false
+                },
+                "IonShape": {
+                 "name": "IonShape",
+                 "mode": "plain",
+                 "value": "full"
+                },
+                "IonOutline": {
+                 "name": "IonOutline",
+                 "mode": "plain",
+                 "value": false
+                },
+                "IonClear": {
+                 "name": "IonClear",
+                 "mode": "plain",
+                 "value": false
+                },
+                "IonSize": {
+                 "name": "IonSize",
+                 "mode": "plain",
+                 "value": false
+                },
+                "IconPosition": {
+                 "name": "IconPosition",
+                 "mode": "plain",
+                 "value": false
+                },
+                "IconOnly": {
+                 "name": "IconOnly",
+                 "mode": "plain",
+                 "value": false
+                },
+                "AutoDisable": {
+                 "name": "AutoDisable",
+                 "mode": "plain",
+                 "value": "true"
+                }
+               }
+              }'
+            tagName: button
+            ↓Text [mobile.components.UIText-1517570175643]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: |
+                      '{
+                       "mode": "plain",
+                       "value": "Login"
+                      }'
+            ↓Style [mobile.components.UIStyle-1517580640478]: 
+              styleContent: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	margin-top: 20px;
+                      	margin-bottom: 20px;
+                      '
+          ↓Paragraph [mobile.components.UIDynamicElement-1517583021362]: 
+            beanData: |
+              '{
+               "name": "Paragraph",
+               "properties": {}
+              }'
+            tagName: p
+            ↓Fragment [mobile.components.UICustom-1517583057743]: 
+              htmlTemplate: '<b>Note</b>: Account creation is automatic if the <b>username</b> is unknown.'
+↓Footer [mobile.components.UIDynamicElement-1517567298829]: 
+  beanData: |
+    '{
+     "name": "Footer",
+     "properties": {}
+    }'
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1517590656498]: 
+    beanData: |
+      '{
+       "name": "ToolBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-toolbar
+    ↓Style [mobile.components.UIStyle-1517599585343]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	text-align: center;
+              	color: color($colors, secondary);
+              '
+    ↓Text [mobile.components.UIText-1517599652753]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              '{
+               "mode": "plain",
+               "value": "© Convertigo"
+              }'
+↓Style [mobile.components.UIStyle-1517585344021]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '.scroll-content {
+          	overflow: hidden;
+          }'

@@ -1,0 +1,2004 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        '/*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	public window: any;
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+                this.window = window;
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	public validateForm() {
+        	    var msg = this.form1517850194442.controls.message;
+        	    window.setTimeout(function () {
+        	        msg.updateValueAndValidity()
+        	    }, 50);
+        	}
+        	public clearForm() {
+        	    //this.window.document.getElementById(''photo'').setAttribute(''src'','''');
+        	    delete this.router.sharedObject.photo;
+        	    this.form1517850194442.controls.message.setValue('''');
+        	    this.validateForm();
+        	}
+        	public toDate(ts) {
+        	    return new Date(ts).toLocaleString();
+        	}
+        	/*End_c8o_PageFunction*/
+        '
+segment: Chat
+title: Title for Chat
+↓Header [mobile.components.UIDynamicElement-1517849497973]: 
+  beanData: |
+    '{
+     "name": "Header",
+     "properties": {"NoBorder": {
+      "name": "NoBorder",
+      "mode": "plain",
+      "value": false
+     }}
+    }'
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1517849498007]: 
+    beanData: |
+      '{
+       "name": "NavBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        },
+        "BackButtonHidden": {
+         "name": "BackButtonHidden",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1517849498041]: 
+      beanData: |
+        '{
+         "name": "BarTitle",
+         "properties": {}
+        }'
+      tagName: ion-title
+      ↓TextFormat [mobile.components.UIDynamicElement-1517849498072]: 
+        beanData: |
+          '{
+           "name": "TextFormat",
+           "properties": {
+            "TextLeft": {
+             "name": "TextLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "TextRight": {
+             "name": "TextRight",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCenter": {
+             "name": "TextCenter",
+             "mode": "plain",
+             "value": "text-center"
+            },
+            "TextJustify": {
+             "name": "TextJustify",
+             "mode": "plain",
+             "value": false
+            },
+            "TextWrap": {
+             "name": "TextWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextNoWrap": {
+             "name": "TextNoWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextUpperCase": {
+             "name": "TextUpperCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextLowerCase": {
+             "name": "TextLowerCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCapitalize": {
+             "name": "TextCapitalize",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: div
+        ↓Text [mobile.components.UIText-1517849498103]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "script",
+                   "value": "\"OffChat with \" + this.window.sessionStorage.dest"
+                  }'
+↓Content [mobile.components.UIDynamicElement-1517849574548]: 
+  beanData: |
+    '{
+     "name": "Content",
+     "properties": {
+      "IonPadding": {
+       "name": "IonPadding",
+       "mode": "plain",
+       "value": "padding"
+      },
+      "Fullscreen": {
+       "name": "Fullscreen",
+       "mode": "plain",
+       "value": false
+      }
+     }
+    }'
+  tagName: ion-content
+  ↓TextFormat [mobile.components.UIDynamicElement-1518021234144]: 
+    beanData: |
+      '{
+       "name": "TextFormat",
+       "properties": {
+        "TextLeft": {
+         "name": "TextLeft",
+         "mode": "plain",
+         "value": false
+        },
+        "TextRight": {
+         "name": "TextRight",
+         "mode": "plain",
+         "value": false
+        },
+        "TextCenter": {
+         "name": "TextCenter",
+         "mode": "plain",
+         "value": false
+        },
+        "TextJustify": {
+         "name": "TextJustify",
+         "mode": "plain",
+         "value": false
+        },
+        "TextWrap": {
+         "name": "TextWrap",
+         "mode": "plain",
+         "value": "text-wrap"
+        },
+        "TextNoWrap": {
+         "name": "TextNoWrap",
+         "mode": "plain",
+         "value": false
+        },
+        "TextUpperCase": {
+         "name": "TextUpperCase",
+         "mode": "plain",
+         "value": false
+        },
+        "TextLowerCase": {
+         "name": "TextLowerCase",
+         "mode": "plain",
+         "value": false
+        },
+        "TextCapitalize": {
+         "name": "TextCapitalize",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: div
+    ↓CardContainer [mobile.components.UIDynamicElement-1517849585876]: 
+      beanData: |
+        '{
+         "name": "Card",
+         "properties": {}
+        }'
+      tagName: ion-card
+      ↓CardContent [mobile.components.UIDynamicElement-1517849588610]: 
+        beanData: |
+          '{
+           "name": "CardContent",
+           "properties": {}
+          }'
+        tagName: ion-card-content
+        ↓Form [mobile.components.UIForm-1517850194442]: 
+          ↓GenericItem [mobile.components.UIDynamicElement-1517850283058]: 
+            beanData: |
+              '{
+               "name": "ListItem",
+               "properties": {"ItemPosition": {
+                "name": "ItemPosition",
+                "mode": "plain",
+                "value": false
+               }}
+              }'
+            tagName: ion-item
+            ↓MessageLabel [mobile.components.UIDynamicElement-1517850172878]: 
+              beanData: |
+                '{
+                 "name": "Label",
+                 "properties": {
+                  "Fixed": {
+                   "name": "Fixed",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Floating": {
+                   "name": "Floating",
+                   "mode": "plain",
+                   "value": "floating"
+                  },
+                  "Stacked": {
+                   "name": "Stacked",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "RangeLeft": {
+                   "name": "RangeLeft",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "RangeRight": {
+                   "name": "RangeRight",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: ion-label
+              ↓message [mobile.components.UIText-1517850172912]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "message"
+                        }'
+            ↓message [mobile.components.UIDynamicElement-1517850172946]: 
+              beanData: |
+                '{
+                 "name": "Input",
+                 "properties": {
+                  "FormControlName": {
+                   "name": "FormControlName",
+                   "mode": "plain",
+                   "value": "message"
+                  },
+                  "Disabled": {
+                   "name": "Disabled",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ClearInput": {
+                   "name": "ClearInput",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ClearOnEdit": {
+                   "name": "ClearOnEdit",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Max": {
+                   "name": "Max",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Min": {
+                   "name": "Min",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Mode": {
+                   "name": "Mode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Placeholder": {
+                   "name": "Placeholder",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Readonly": {
+                   "name": "Readonly",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Step": {
+                   "name": "Step",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "TextAlign": {
+                   "name": "TextAlign",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "Type": {
+                   "name": "Type",
+                   "mode": "plain",
+                   "value": "text"
+                  },
+                  "Value": {
+                   "name": "Value",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: ion-input
+              ↓CustomValidator [mobile.components.UIFormCustomValidator-1518002152000]: 
+                validatorValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '            let hasImage = false;
+                                    try {
+                                        hasImage = window.document.getElementById(''photo'').getAttribute(''src'').length != 0;
+                                    } catch (e) {
+                                    }
+                                    try {
+                                	    if (c.value.length == 0 && !hasImage) {
+                                	        return {''empty'': true};
+                                	    }
+                                    } catch (e) {
+                                        return {''exception'': true};
+                                    }
+                            		return null;
+                        '
+          ↓Image [mobile.components.UIDynamicElement-1517996593478]: 
+            beanData: |
+              '{
+               "name": "Image",
+               "properties": {
+                "url": {
+                 "name": "url",
+                 "mode": "script",
+                 "value": "this.router.sharedObject[''photo''] || ''''"
+                },
+                "width": {
+                 "name": "width",
+                 "mode": "plain",
+                 "value": ""
+                },
+                "height": {
+                 "name": "height",
+                 "mode": "plain",
+                 "value": ""
+                },
+                "alt": {
+                 "name": "alt",
+                 "mode": "plain",
+                 "value": false
+                }
+               }
+              }'
+            selfClose: true
+            tagName: img
+            ↓Attr [mobile.components.UIAttribute-1517997468359]: 
+              attrName: id
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: |
+                      '{
+                       "mode": "plain",
+                       "value": "photo"
+                      }'
+          ↓ButtonSet [mobile.components.UIDynamicElement-1517909662176]: 
+            beanData: |
+              '{
+               "name": "ButtonSet",
+               "properties": {"SetPosition": {
+                "name": "SetPosition",
+                "mode": "plain",
+                "value": "right"
+               }}
+              }'
+            tagName: ion-buttons
+            ↓ResetButton [mobile.components.UIDynamicElement-1517999213040]: 
+              beanData: |
+                '{
+                 "name": "ResetButton",
+                 "properties": {
+                  "ButtonFormType": {
+                   "name": "ButtonFormType",
+                   "mode": "plain",
+                   "value": "button"
+                  },
+                  "ButtonType": {
+                   "name": "ButtonType",
+                   "mode": "plain",
+                   "value": "ion-button"
+                  },
+                  "MenuMode": {
+                   "name": "MenuMode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonColor": {
+                   "name": "IonColor",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonShape": {
+                   "name": "IonShape",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonOutline": {
+                   "name": "IonOutline",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonClear": {
+                   "name": "IonClear",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonSize": {
+                   "name": "IonSize",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconPosition": {
+                   "name": "IconPosition",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconOnly": {
+                   "name": "IconOnly",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: button
+              ↓Icon [mobile.components.UIDynamicElement-1517999256230]: 
+                beanData: |
+                  '{
+                   "name": "Icon",
+                   "properties": {
+                    "IconName": {
+                     "name": "IconName",
+                     "mode": "plain",
+                     "value": "trash"
+                    },
+                    "ItemPosition": {
+                     "name": "ItemPosition",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeLeft": {
+                     "name": "RangeLeft",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeRight": {
+                     "name": "RangeRight",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: ion-icon
+              ↓Event [mobile.components.UIControlEvent-1518001691979]: 
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "value"
+                        }'
+                ↓ClearForm [mobile.components.UIDynamicAction-1518001706502]: 
+                  beanData: |
+                    '{
+                     "name": "IfAction",
+                     "properties": {
+                      "condition": {
+                       "name": "condition",
+                       "mode": "script",
+                       "value": "this.clearForm()"
+                      },
+                      "negate": {
+                       "name": "negate",
+                       "mode": "plain",
+                       "value": "false"
+                      }
+                     }
+                    }'
+            ↓ButtonGallery [mobile.components.UIDynamicElement-1518702232589]: 
+              beanData: |
+                '{
+                 "name": "Button",
+                 "properties": {
+                  "ButtonFormType": {
+                   "name": "ButtonFormType",
+                   "mode": "plain",
+                   "value": "button"
+                  },
+                  "ButtonType": {
+                   "name": "ButtonType",
+                   "mode": "plain",
+                   "value": "ion-button"
+                  },
+                  "MenuMode": {
+                   "name": "MenuMode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonColor": {
+                   "name": "IonColor",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonShape": {
+                   "name": "IonShape",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonOutline": {
+                   "name": "IonOutline",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonClear": {
+                   "name": "IonClear",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonSize": {
+                   "name": "IonSize",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconPosition": {
+                   "name": "IconPosition",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconOnly": {
+                   "name": "IconOnly",
+                   "mode": "plain",
+                   "value": "icon-only"
+                  }
+                 }
+                }'
+              tagName: button
+              ↓Icon [mobile.components.UIDynamicElement-1518702232652]: 
+                beanData: |
+                  '{
+                   "name": "Icon",
+                   "properties": {
+                    "IconName": {
+                     "name": "IconName",
+                     "mode": "plain",
+                     "value": "images"
+                    },
+                    "ItemPosition": {
+                     "name": "ItemPosition",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeLeft": {
+                     "name": "RangeLeft",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeRight": {
+                     "name": "RangeRight",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: ion-icon
+              ↓Event [mobile.components.UIControlEvent-1518702232697]: 
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "value"
+                        }'
+                ↓Camera [mobile.components.UIDynamicAction-1518702232732]: 
+                  beanData: |
+                    '{
+                     "name": "CameraAction",
+                     "properties": {
+                      "quality": {
+                       "name": "quality",
+                       "mode": "script",
+                       "value": "75"
+                      },
+                      "destinationType": {
+                       "name": "destinationType",
+                       "mode": "plain",
+                       "value": "FILE_URI"
+                      },
+                      "sourceType": {
+                       "name": "sourceType",
+                       "mode": "plain",
+                       "value": "PHOTOLIBRARY"
+                      },
+                      "allowEdit": {
+                       "name": "allowEdit",
+                       "mode": "plain",
+                       "value": "false"
+                      },
+                      "encodingType": {
+                       "name": "encodingType",
+                       "mode": "plain",
+                       "value": "JPEG"
+                      },
+                      "targetWidth": {
+                       "name": "targetWidth",
+                       "mode": "script",
+                       "value": "640"
+                      },
+                      "targetHeight": {
+                       "name": "targetHeight",
+                       "mode": "script",
+                       "value": "640"
+                      },
+                      "mediaType": {
+                       "name": "mediaType",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "correctOrientation": {
+                       "name": "correctOrientation",
+                       "mode": "plain",
+                       "value": "true"
+                      },
+                      "saveToPhotoAlbum": {
+                       "name": "saveToPhotoAlbum",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "cameraDirection": {
+                       "name": "cameraDirection",
+                       "mode": "plain",
+                       "value": "FRONT"
+                      },
+                      "x": {
+                       "name": "x",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "y": {
+                       "name": "y",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "width": {
+                       "name": "width",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "height": {
+                       "name": "height",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "arrowDir": {
+                       "name": "arrowDir",
+                       "mode": "plain",
+                       "value": false
+                      }
+                     }
+                    }'
+                  ↓SetGlobal [mobile.components.UIDynamicAction-1518702232797]: 
+                    beanData: |
+                      '{
+                       "name": "SetGlobalAction",
+                       "properties": {
+                        "Property": {
+                         "name": "Property",
+                         "mode": "plain",
+                         "value": "photo"
+                        },
+                        "Value": {
+                         "name": "Value",
+                         "mode": "script",
+                         "value": "out"
+                        }
+                       }
+                      }'
+                    ↓ValidateForm [mobile.components.UIDynamicAction-1518702232858]: 
+                      beanData: |
+                        '{
+                         "name": "IfAction",
+                         "properties": {
+                          "condition": {
+                           "name": "condition",
+                           "mode": "script",
+                           "value": "this.validateForm()"
+                          },
+                          "negate": {
+                           "name": "negate",
+                           "mode": "plain",
+                           "value": "false"
+                          }
+                         }
+                        }'
+            ↓ButtonPhoto [mobile.components.UIDynamicElement-1517909749723]: 
+              beanData: |
+                '{
+                 "name": "Button",
+                 "properties": {
+                  "ButtonFormType": {
+                   "name": "ButtonFormType",
+                   "mode": "plain",
+                   "value": "button"
+                  },
+                  "ButtonType": {
+                   "name": "ButtonType",
+                   "mode": "plain",
+                   "value": "ion-button"
+                  },
+                  "MenuMode": {
+                   "name": "MenuMode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonColor": {
+                   "name": "IonColor",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonShape": {
+                   "name": "IonShape",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonOutline": {
+                   "name": "IonOutline",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonClear": {
+                   "name": "IonClear",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonSize": {
+                   "name": "IonSize",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconPosition": {
+                   "name": "IconPosition",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconOnly": {
+                   "name": "IconOnly",
+                   "mode": "plain",
+                   "value": "icon-only"
+                  }
+                 }
+                }'
+              tagName: button
+              ↓Icon [mobile.components.UIDynamicElement-1517909753358]: 
+                beanData: |
+                  '{
+                   "name": "Icon",
+                   "properties": {
+                    "IconName": {
+                     "name": "IconName",
+                     "mode": "plain",
+                     "value": "camera"
+                    },
+                    "ItemPosition": {
+                     "name": "ItemPosition",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeLeft": {
+                     "name": "RangeLeft",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeRight": {
+                     "name": "RangeRight",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: ion-icon
+              ↓Event [mobile.components.UIControlEvent-1517995956259]: 
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "value"
+                        }'
+                ↓Camera [mobile.components.UIDynamicAction-1518528294291]: 
+                  beanData: |
+                    '{
+                     "name": "CameraAction",
+                     "properties": {
+                      "quality": {
+                       "name": "quality",
+                       "mode": "script",
+                       "value": "75"
+                      },
+                      "destinationType": {
+                       "name": "destinationType",
+                       "mode": "plain",
+                       "value": "FILE_URI"
+                      },
+                      "sourceType": {
+                       "name": "sourceType",
+                       "mode": "plain",
+                       "value": "CAMERA"
+                      },
+                      "allowEdit": {
+                       "name": "allowEdit",
+                       "mode": "plain",
+                       "value": "false"
+                      },
+                      "encodingType": {
+                       "name": "encodingType",
+                       "mode": "plain",
+                       "value": "JPEG"
+                      },
+                      "targetWidth": {
+                       "name": "targetWidth",
+                       "mode": "script",
+                       "value": "640"
+                      },
+                      "targetHeight": {
+                       "name": "targetHeight",
+                       "mode": "script",
+                       "value": "640"
+                      },
+                      "mediaType": {
+                       "name": "mediaType",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "correctOrientation": {
+                       "name": "correctOrientation",
+                       "mode": "plain",
+                       "value": "true"
+                      },
+                      "saveToPhotoAlbum": {
+                       "name": "saveToPhotoAlbum",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "cameraDirection": {
+                       "name": "cameraDirection",
+                       "mode": "plain",
+                       "value": "FRONT"
+                      },
+                      "x": {
+                       "name": "x",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "y": {
+                       "name": "y",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "width": {
+                       "name": "width",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "height": {
+                       "name": "height",
+                       "mode": "script",
+                       "value": false
+                      },
+                      "arrowDir": {
+                       "name": "arrowDir",
+                       "mode": "plain",
+                       "value": false
+                      }
+                     }
+                    }'
+                  ↓SetGlobal [mobile.components.UIDynamicAction-1518528390020]: 
+                    beanData: |
+                      '{
+                       "name": "SetGlobalAction",
+                       "properties": {
+                        "Property": {
+                         "name": "Property",
+                         "mode": "plain",
+                         "value": "photo"
+                        },
+                        "Value": {
+                         "name": "Value",
+                         "mode": "script",
+                         "value": "out"
+                        }
+                       }
+                      }'
+                    ↓ValidateForm [mobile.components.UIDynamicAction-1518529740890]: 
+                      beanData: |
+                        '{
+                         "name": "IfAction",
+                         "properties": {
+                          "condition": {
+                           "name": "condition",
+                           "mode": "script",
+                           "value": "this.validateForm()"
+                          },
+                          "negate": {
+                           "name": "negate",
+                           "mode": "plain",
+                           "value": "false"
+                          }
+                         }
+                        }'
+            ↓SubmitButton [mobile.components.UIDynamicElement-1517850328552]: 
+              beanData: |
+                '{
+                 "name": "SubmitButton",
+                 "properties": {
+                  "ButtonFormType": {
+                   "name": "ButtonFormType",
+                   "mode": "plain",
+                   "value": "submit"
+                  },
+                  "ButtonType": {
+                   "name": "ButtonType",
+                   "mode": "plain",
+                   "value": "ion-button"
+                  },
+                  "MenuMode": {
+                   "name": "MenuMode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonColor": {
+                   "name": "IonColor",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonShape": {
+                   "name": "IonShape",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonOutline": {
+                   "name": "IonOutline",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonClear": {
+                   "name": "IonClear",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonSize": {
+                   "name": "IonSize",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconPosition": {
+                   "name": "IconPosition",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconOnly": {
+                   "name": "IconOnly",
+                   "mode": "plain",
+                   "value": "icon-only"
+                  },
+                  "AutoDisable": {
+                   "name": "AutoDisable",
+                   "mode": "plain",
+                   "value": "true"
+                  }
+                 }
+                }'
+              tagName: button
+              ↓Icon [mobile.components.UIDynamicElement-1517909691234]: 
+                beanData: |
+                  '{
+                   "name": "Icon",
+                   "properties": {
+                    "IconName": {
+                     "name": "IconName",
+                     "mode": "plain",
+                     "value": "send"
+                    },
+                    "ItemPosition": {
+                     "name": "ItemPosition",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeLeft": {
+                     "name": "RangeLeft",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeRight": {
+                     "name": "RangeRight",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: ion-icon
+          ↓Event [mobile.components.UIControlEvent-1517917394981]: 
+            attrName: (ngSubmit)
+            attrValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: |
+                    '{
+                     "mode": "plain",
+                     "value": "value"
+                    }'
+            eventName: onSubmit
+            ↓PostData [mobile.components.UIDynamicAction-1517917440325]: 
+              beanData: |
+                '{
+                 "name": "FullSyncPostAction",
+                 "properties": {
+                  "requestable": {
+                   "name": "requestable",
+                   "mode": "plain",
+                   "value": "sampleMobileOffChat.offchat_fullsync"
+                  },
+                  "_id": {
+                   "name": "_id",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "_use_policy": {
+                   "name": "_use_policy",
+                   "mode": "plain",
+                   "value": "none"
+                  },
+                  "RootKey": {
+                   "name": "RootKey",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "c8oGrp": {
+                   "name": "c8oGrp",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              ↓message [mobile.components.UIControlVariable-1517917507970]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "source",
+                         "value": "{\"filter\":\"Form\",\"project\":\"sampleMobileOffChat\",\"input\":\"form1517850194442?.controls[''message'']?.value\"}"
+                        }'
+              ↓user [mobile.components.UIControlVariable-1517917846817]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "script",
+                         "value": "this.window.sessionStorage.dest"
+                        }'
+              ↓type [mobile.components.UIControlVariable-1517922496998]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "message"
+                        }'
+              ↓dir [mobile.components.UIControlVariable-1517922499531]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "to"
+                        }'
+              ↓IfPhoto [mobile.components.UIDynamicAction-1517999085331]: 
+                beanData: |
+                  '{
+                   "name": "IfAction",
+                   "properties": {
+                    "condition": {
+                     "name": "condition",
+                     "mode": "script",
+                     "value": "document.getElementById(''photo'').getAttribute(''src'').length != 0"
+                    },
+                    "negate": {
+                     "name": "negate",
+                     "mode": "plain",
+                     "value": "false"
+                    }
+                   }
+                  }'
+                ↓PutAttachment [mobile.components.UIDynamicAction-1517998064600]: 
+                  beanData: |
+                    '{
+                     "name": "FullSyncPutAttachmentAction",
+                     "properties": {
+                      "requestable": {
+                       "name": "requestable",
+                       "mode": "plain",
+                       "value": "sampleMobileOffChat.offchat_fullsync"
+                      },
+                      "docid": {
+                       "name": "docid",
+                       "mode": "script",
+                       "value": "stack[''PostData''].out.id"
+                      },
+                      "name": {
+                       "name": "name",
+                       "mode": "plain",
+                       "value": "img.jpeg"
+                      },
+                      "content_type": {
+                       "name": "content_type",
+                       "mode": "plain",
+                       "value": "image\/jpeg"
+                      },
+                      "content": {
+                       "name": "content",
+                       "mode": "script",
+                       "value": "document.getElementById(''photo'').getAttribute(''src'')"
+                      }
+                     }
+                    }'
+                  ↓ClearForm [mobile.components.UIDynamicAction-1518008222791]: 
+                    beanData: |
+                      '{
+                       "name": "IfAction",
+                       "properties": {
+                        "condition": {
+                         "name": "condition",
+                         "mode": "script",
+                         "value": "this.clearForm()"
+                        },
+                        "negate": {
+                         "name": "negate",
+                         "mode": "plain",
+                         "value": "false"
+                        }
+                       }
+                      }'
+              ↓Else [mobile.components.UIDynamicAction-1518008230653]: 
+                beanData: |
+                  '{
+                   "name": "IfAction",
+                   "properties": {
+                    "condition": {
+                     "name": "condition",
+                     "mode": "script",
+                     "value": "document.getElementById(''photo'').getAttribute(''src'').length != 0"
+                    },
+                    "negate": {
+                     "name": "negate",
+                     "mode": "plain",
+                     "value": "true"
+                    }
+                   }
+                  }'
+                ↓ClearForm [mobile.components.UIDynamicAction-1518008230718]: 
+                  beanData: |
+                    '{
+                     "name": "IfAction",
+                     "properties": {
+                      "condition": {
+                       "name": "condition",
+                       "mode": "script",
+                       "value": "this.clearForm()"
+                      },
+                      "negate": {
+                       "name": "negate",
+                       "mode": "plain",
+                       "value": "false"
+                      }
+                     }
+                    }'
+              ↓ts [mobile.components.UIControlVariable-1518022800702]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "script",
+                         "value": "this.window.localStorage.decTs * 1 + new Date().getTime()"
+                        }'
+    ↓CardContainer1 [mobile.components.UIDynamicElement-1518001966264]: 
+      beanData: |
+        '{
+         "name": "Card",
+         "properties": {}
+        }'
+      tagName: ion-card
+      ↓ListContainer [mobile.components.UIDynamicElement-1517849854716]: 
+        beanData: |
+          '{
+           "name": "List",
+           "properties": {
+            "Nolines": {
+             "name": "Nolines",
+             "mode": "plain",
+             "value": false
+            },
+            "Inset": {
+             "name": "Inset",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: ion-list
+        ↓Directive [mobile.components.UIControlDirective-1517849900594]: 
+          directiveSource: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "source",
+                   "value": "{\"filter\":\"Database\",\"project\":\"sampleMobileOffChat\",\"input\":\"listen([''fs:\\\/\\\/offchat_fullsync.view, {ddoc=''OffChat'', view=''getChat'', include_docs=''false''}''])?.rows\"}"
+                  }'
+          ↓Directive [mobile.components.UIControlDirective-1517912758916]: 
+            directiveName: If
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: |
+                    '{
+                     "mode": "source",
+                     "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.dir == ''to''\"}"
+                    }'
+            ↓GenericItem [mobile.components.UIDynamicElement-1517849944165]: 
+              beanData: |
+                '{
+                 "name": "ListItem",
+                 "properties": {"ItemPosition": {
+                  "name": "ItemPosition",
+                  "mode": "plain",
+                  "value": false
+                 }}
+                }'
+              tagName: ion-item
+              ↓AvatarItem [mobile.components.UIDynamicElement-1517913225485]: 
+                beanData: |
+                  '{
+                   "name": "Avatar",
+                   "properties": {"ItemPosition": {
+                    "name": "ItemPosition",
+                    "mode": "plain",
+                    "value": "item-left"
+                   }}
+                  }'
+                tagName: ion-avatar
+                ↓Icon [mobile.components.UIDynamicElement-1517913258594]: 
+                  beanData: |
+                    '{
+                     "name": "Icon",
+                     "properties": {
+                      "IconName": {
+                       "name": "IconName",
+                       "mode": "plain",
+                       "value": "ionitron"
+                      },
+                      "ItemPosition": {
+                       "name": "ItemPosition",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "IonColor": {
+                       "name": "IonColor",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "RangeLeft": {
+                       "name": "RangeLeft",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "RangeRight": {
+                       "name": "RangeRight",
+                       "mode": "plain",
+                       "value": false
+                      }
+                     }
+                    }'
+                  tagName: ion-icon
+              ↓H2 [mobile.components.UIDynamicElement-1517913138703]: 
+                beanData: |
+                  '{
+                   "name": "Heading2",
+                   "properties": {
+                    "ionText": {
+                     "name": "ionText",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: h2
+                ↓Text [mobile.components.UIText-1517912810323]: 
+                  textValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: |
+                          '{
+                           "mode": "script",
+                           "value": "window.sessionStorage.username"
+                          }'
+                ↓Span [mobile.components.UIDynamicElement-1518094131695]: 
+                  beanData: |
+                    '{
+                     "name": "SpanTag",
+                     "properties": {}
+                    }'
+                  tagName: span
+                  ↓Text [mobile.components.UIText-1518093127569]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: |
+                            '{
+                             "mode": "source",
+                             "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"toDate(item1517849900594?.value?.ts)\"}"
+                            }'
+                  ↓Style [mobile.components.UIStyle-1518094168403]: 
+                    styleContent: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                          →: |
+                            '	font-size: 66%;
+                                color: darkgray;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                            '
+              ↓H3 [mobile.components.UIDynamicElement-1517913154295]: 
+                beanData: |
+                  '{
+                   "name": "Heading3",
+                   "properties": {
+                    "ionText": {
+                     "name": "ionText",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: h3
+                ↓Text1 [mobile.components.UIText-1517849979669]: 
+                  textValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: |
+                          '{
+                           "mode": "source",
+                           "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.message\"}"
+                          }'
+              ↓Directive [mobile.components.UIControlDirective-1517910361136]: 
+                directiveName: If
+                directiveSource: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "source",
+                         "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.doc?._attachments\"}"
+                        }'
+                ↓FSImage [mobile.components.UIDynamicElement-1517910596011]: 
+                  beanData: |
+                    '{
+                     "name": "FSImage",
+                     "properties": {
+                      "url": {
+                       "name": "url",
+                       "mode": "script",
+                       "value": "getAttachmentUrl($[docid], $[attachment], $[placeholder], $[requestable])"
+                      },
+                      "docid": {
+                       "name": "docid",
+                       "mode": "source",
+                       "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.id\"}"
+                      },
+                      "attachment": {
+                       "name": "attachment",
+                       "mode": "plain",
+                       "value": "img.jpeg"
+                      },
+                      "placeholder": {
+                       "name": "placeholder",
+                       "mode": "plain",
+                       "value": "assets\/icon.svg"
+                      },
+                      "requestable": {
+                       "name": "requestable",
+                       "mode": "plain",
+                       "value": "sampleMobileOffChat.offchat_fullsync"
+                      },
+                      "width": {
+                       "name": "width",
+                       "mode": "plain",
+                       "value": ""
+                      },
+                      "height": {
+                       "name": "height",
+                       "mode": "plain",
+                       "value": ""
+                      },
+                      "alt": {
+                       "name": "alt",
+                       "mode": "plain",
+                       "value": "image"
+                      }
+                     }
+                    }'
+                  selfClose: true
+                  tagName: img
+          ↓Directive1 [mobile.components.UIControlDirective-1517912810286]: 
+            directiveName: If
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: |
+                    '{
+                     "mode": "source",
+                     "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.dir == ''from''\"}"
+                    }'
+            ↓GenericItem [mobile.components.UIDynamicElement-1517912810303]: 
+              beanData: |
+                '{
+                 "name": "ListItem",
+                 "properties": {"ItemPosition": {
+                  "name": "ItemPosition",
+                  "mode": "plain",
+                  "value": false
+                 }}
+                }'
+              tagName: ion-item
+              ↓AvatarItem [mobile.components.UIDynamicElement-1517913370313]: 
+                beanData: |
+                  '{
+                   "name": "Avatar",
+                   "properties": {"ItemPosition": {
+                    "name": "ItemPosition",
+                    "mode": "plain",
+                    "value": "item-right"
+                   }}
+                  }'
+                tagName: ion-avatar
+                ↓Icon [mobile.components.UIDynamicElement-1517913370330]: 
+                  beanData: |
+                    '{
+                     "name": "Icon",
+                     "properties": {
+                      "IconName": {
+                       "name": "IconName",
+                       "mode": "plain",
+                       "value": "happy"
+                      },
+                      "ItemPosition": {
+                       "name": "ItemPosition",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "IonColor": {
+                       "name": "IonColor",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "RangeLeft": {
+                       "name": "RangeLeft",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "RangeRight": {
+                       "name": "RangeRight",
+                       "mode": "plain",
+                       "value": false
+                      }
+                     }
+                    }'
+                  tagName: ion-icon
+              ↓TextFormat [mobile.components.UIDynamicElement-1517915194451]: 
+                beanData: |
+                  '{
+                   "name": "TextFormat",
+                   "properties": {
+                    "TextLeft": {
+                     "name": "TextLeft",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextRight": {
+                     "name": "TextRight",
+                     "mode": "plain",
+                     "value": "text-right"
+                    },
+                    "TextCenter": {
+                     "name": "TextCenter",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextJustify": {
+                     "name": "TextJustify",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextWrap": {
+                     "name": "TextWrap",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextNoWrap": {
+                     "name": "TextNoWrap",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextUpperCase": {
+                     "name": "TextUpperCase",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextLowerCase": {
+                     "name": "TextLowerCase",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "TextCapitalize": {
+                     "name": "TextCapitalize",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: div
+                ↓H2 [mobile.components.UIDynamicElement-1517913407093]: 
+                  beanData: |
+                    '{
+                     "name": "Heading2",
+                     "properties": {
+                      "ionText": {
+                       "name": "ionText",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "IonColor": {
+                       "name": "IonColor",
+                       "mode": "plain",
+                       "value": false
+                      }
+                     }
+                    }'
+                  tagName: h2
+                  ↓Span [mobile.components.UIDynamicElement-1518094703835]: 
+                    beanData: |
+                      '{
+                       "name": "SpanTag",
+                       "properties": {}
+                      }'
+                    tagName: span
+                    ↓Text [mobile.components.UIText-1518094703863]: 
+                      textValue: 
+                        - xmlizable: 
+                          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                          - MobileSmartSourceType: |
+                              '{
+                               "mode": "source",
+                               "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"toDate(item1517849900594?.value?.ts)\"}"
+                              }'
+                    ↓Style [mobile.components.UIStyle-1518094703889]: 
+                      styleContent: 
+                        - xmlizable: 
+                          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                            →: |
+                              '	font-size: 66%;
+                              
+                                  color: darkgray;
+                              
+                                  padding-left: 15px;
+                              
+                                  padding-right: 15px;
+                              
+                              '
+                  ↓Text1 [mobile.components.UIText-1517922896792]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: |
+                            '{
+                             "mode": "source",
+                             "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.user\"}"
+                            }'
+                ↓H3 [mobile.components.UIDynamicElement-1517913423897]: 
+                  beanData: |
+                    '{
+                     "name": "Heading3",
+                     "properties": {
+                      "ionText": {
+                       "name": "ionText",
+                       "mode": "plain",
+                       "value": false
+                      },
+                      "IonColor": {
+                       "name": "IonColor",
+                       "mode": "plain",
+                       "value": false
+                      }
+                     }
+                    }'
+                  tagName: h3
+                  ↓Text1 [mobile.components.UIText-1517912810341]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: |
+                            '{
+                             "mode": "source",
+                             "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.message\"}"
+                            }'
+                ↓Directive [mobile.components.UIControlDirective-1517912810374]: 
+                  directiveName: If
+                  directiveSource: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: |
+                          '{
+                           "mode": "source",
+                           "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.doc?._attachments\"}"
+                          }'
+                  ↓Text3 [mobile.components.UIText-1517912810392]: 
+                    isEnabled: false
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: |
+                            '{
+                             "mode": "script",
+                             "value": "this.window.JSON.stringify(item1517849900594)"
+                            }'
+                  ↓FSImage [mobile.components.UIDynamicElement-1517912810405]: 
+                    beanData: |
+                      '{
+                       "name": "FSImage",
+                       "properties": {
+                        "url": {
+                         "name": "url",
+                         "mode": "script",
+                         "value": "getAttachmentUrl($[docid], $[attachment], $[placeholder], $[requestable])"
+                        },
+                        "docid": {
+                         "name": "docid",
+                         "mode": "source",
+                         "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.id\"}"
+                        },
+                        "attachment": {
+                         "name": "attachment",
+                         "mode": "plain",
+                         "value": "img.jpeg"
+                        },
+                        "placeholder": {
+                         "name": "placeholder",
+                         "mode": "plain",
+                         "value": "assets\/icon.svg"
+                        },
+                        "requestable": {
+                         "name": "requestable",
+                         "mode": "plain",
+                         "value": "sampleMobileOffChat.offchat_fullsync"
+                        },
+                        "width": {
+                         "name": "width",
+                         "mode": "plain",
+                         "value": ""
+                        },
+                        "height": {
+                         "name": "height",
+                         "mode": "plain",
+                         "value": ""
+                        },
+                        "alt": {
+                         "name": "alt",
+                         "mode": "plain",
+                         "value": "image"
+                        }
+                       }
+                      }'
+                    selfClose: true
+                    tagName: img
+↓Footer [mobile.components.UIDynamicElement-1517849498139]: 
+  beanData: |
+    '{
+     "name": "Footer",
+     "properties": {}
+    }'
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1517849498172]: 
+    beanData: |
+      '{
+       "name": "ToolBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-toolbar
+    ↓Style [mobile.components.UIStyle-1517849498205]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	text-align: center;
+              	color: color($colors, secondary);
+              '
+    ↓Directive [mobile.components.UIControlDirective-1518097160507]: 
+      directiveExpression: this.window.sessionStorage.offline == 'true'
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              '{
+               "mode": "plain",
+               "value": ""
+              }'
+      ↓Icon [mobile.components.UIDynamicElement-1518097160532]: 
+        beanData: |
+          '{
+           "name": "Icon",
+           "properties": {
+            "IconName": {
+             "name": "IconName",
+             "mode": "plain",
+             "value": "plane"
+            },
+            "ItemPosition": {
+             "name": "ItemPosition",
+             "mode": "plain",
+             "value": false
+            },
+            "IonColor": {
+             "name": "IonColor",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeLeft": {
+             "name": "RangeLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeRight": {
+             "name": "RangeRight",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: ion-icon
+      ↓Text [mobile.components.UIText-1518097160557]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: |
+                '{
+                 "mode": "plain",
+                 "value": "Offline Mode"
+                }'
+      ↓Icon1 [mobile.components.UIDynamicElement-1518097160580]: 
+        beanData: |
+          '{
+           "name": "Icon",
+           "properties": {
+            "IconName": {
+             "name": "IconName",
+             "mode": "plain",
+             "value": "plane"
+            },
+            "ItemPosition": {
+             "name": "ItemPosition",
+             "mode": "plain",
+             "value": false
+            },
+            "IonColor": {
+             "name": "IonColor",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeLeft": {
+             "name": "RangeLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeRight": {
+             "name": "RangeRight",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: ion-icon
+    ↓Text [mobile.components.UIText-1517849498243]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              '{
+               "mode": "plain",
+               "value": "© Convertigo"
+              }'
+↓PageEvent [mobile.components.UIPageEvent-1517849657943]: 
+  ↓QueryView [mobile.components.UIDynamicAction-1517849678307]: 
+    beanData: |
+      '{
+       "name": "FullSyncViewAction",
+       "properties": {
+        "marker": {
+         "name": "marker",
+         "mode": "plain",
+         "value": false
+        },
+        "fsview": {
+         "name": "fsview",
+         "mode": "plain",
+         "value": "sampleMobileOffChat.offchat_fullsync.OffChat.getChat"
+        },
+        "__live": {
+         "name": "__live",
+         "mode": "plain",
+         "value": "chat"
+        },
+        "include_docs": {
+         "name": "include_docs",
+         "mode": "plain",
+         "value": "true"
+        },
+        "conflicts": {
+         "name": "conflicts",
+         "mode": "plain",
+         "value": false
+        },
+        "reduce": {
+         "name": "reduce",
+         "mode": "plain",
+         "value": false
+        },
+        "attachments": {
+         "name": "attachments",
+         "mode": "plain",
+         "value": false
+        },
+        "binary": {
+         "name": "binary",
+         "mode": "plain",
+         "value": false
+        },
+        "startkey": {
+         "name": "startkey",
+         "mode": "script",
+         "value": "[this.window.sessionStorage.dest,{}]"
+        },
+        "endkey": {
+         "name": "endkey",
+         "mode": "script",
+         "value": "[this.window.sessionStorage.dest]"
+        },
+        "inclusive_end": {
+         "name": "inclusive_end",
+         "mode": "plain",
+         "value": false
+        },
+        "limit": {
+         "name": "limit",
+         "mode": "script",
+         "value": "14"
+        },
+        "skip": {
+         "name": "skip",
+         "mode": "script",
+         "value": false
+        },
+        "descending": {
+         "name": "descending",
+         "mode": "plain",
+         "value": "true"
+        },
+        "key": {
+         "name": "key",
+         "mode": "plain",
+         "value": false
+        },
+        "keys": {
+         "name": "keys",
+         "mode": "plain",
+         "value": false
+        },
+        "group": {
+         "name": "group",
+         "mode": "plain",
+         "value": false
+        },
+        "group_level": {
+         "name": "group_level",
+         "mode": "plain",
+         "value": false
+        },
+        "stale": {
+         "name": "stale",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'

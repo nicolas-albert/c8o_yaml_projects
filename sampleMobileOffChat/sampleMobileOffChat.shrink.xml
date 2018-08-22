@@ -1,0 +1,4761 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+    <bean yaml_attr="convertigo">7.6.0_beta</bean>
+    <bean yaml_attr="beans">7.6.0.m006</bean>
+    <bean yaml_key="sampleMobileOffChat [core.Project]">
+        <comment>Mobile application sample of a chat that can be use offline using the FullSync</comment>
+        <contextTimeout>301</contextTimeout>
+        <version>7.5.2</version>
+        <bean default="true" yaml_file="connectors/offchat_fullsync.yaml" yaml_key="offchat_fullsync [connectors.FullSyncConnector]">
+            <databaseName>offchat_fullsync</databaseName>
+            <bean yaml_key="GetDocumentAttachment [transactions.couchdb.GetDocumentAttachmentTransaction]">
+                <accessibility>Private</accessibility>
+                <bean yaml_key="_use_attpath [variables.RequestableVariable-1433424975372]">
+                    <description>Attachment path | This path is either absolute or relative to Convertigo environment. Relative paths starting with:&lt;br/&gt;&lt;br/&gt;• &lt;span class="computer"&gt;./&lt;/span&gt; are relative to Convertigo workspace,&lt;br/&gt;• &lt;span class="computer"&gt;.//&lt;/span&gt; are relative to current project folder. &lt;br/&gt;&lt;br/&gt;</description>
+                </bean>
+                <bean yaml_key="_use_attname [variables.RequestableVariable-1433424975374]">
+                    <description>Attachment name</description>
+                </bean>
+                <bean yaml_key="_use_docid [variables.RequestableVariable-1433424975376]">
+                    <description>Document ID</description>
+                </bean>
+            </bean>
+            <bean default="true" yaml_key="GetServerInfo [transactions.couchdb.GetServerInfoTransaction]">
+                <accessibility>Private</accessibility>
+            </bean>
+            <bean yaml_key="NewMessageTo [transactions.couchdb.PostDocumentTransaction]">
+                <accessibility>Private</accessibility>
+                <fullSyncAclPolicy>fromKeyC8oAcl</fullSyncAclPolicy>
+                <policy>override</policy>
+                <bean yaml_key="_c8oAcl [variables.RequestableVariable-1517924398281]">
+                    <description>Set the owner of the document if the "Acl Policy"="From _c8oACL variable"</description>
+                </bean>
+                <bean yaml_key="user [variables.RequestableVariable-1517924648972]">
+                    <description>Document content</description>
+                </bean>
+                <bean yaml_key="num [variables.RequestableVariable-1517924648975]">
+                    <xmlTypeAffectation>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XmlQName">
+                            <schemaDefinition pLocalPart="integer" pNamespace="http://www.w3.org/2001/XMLSchema"/>
+                        </xmlizable>
+                    </xmlTypeAffectation>
+                </bean>
+                <bean yaml_key="message [variables.RequestableVariable-1517924648978]"/>
+                <bean yaml_key="type [variables.RequestableVariable-1517924681868]">
+                    <value>message</value>
+                </bean>
+                <bean yaml_key="dir [variables.RequestableVariable-1517924727127]">
+                    <value>from</value>
+                </bean>
+                <bean yaml_key="_id [variables.RequestableVariable-1518012553862]">
+                    <description>Document id</description>
+                </bean>
+                <bean yaml_key="ts [variables.RequestableVariable-1518023652832]">
+                    <xmlTypeAffectation>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XmlQName">
+                            <schemaDefinition pLocalPart="long" pNamespace="http://www.w3.org/2001/XMLSchema"/>
+                        </xmlizable>
+                    </xmlTypeAffectation>
+                </bean>
+            </bean>
+            <bean yaml_key="PutDocumentAttachment [transactions.couchdb.PutDocumentAttachmentTransaction]">
+                <accessibility>Private</accessibility>
+                <bean yaml_key="_use_attname [variables.RequestableVariable-1433425006835]">
+                    <description>Attachment name</description>
+                </bean>
+                <bean yaml_key="_use_attpath [variables.RequestableVariable-1433425006837]">
+                    <description>Attachment path | This path is either absolute or relative to Convertigo environment. Relative paths starting with:&lt;br/&gt;&lt;br/&gt;• &lt;span class="computer"&gt;./&lt;/span&gt; are relative to Convertigo workspace,&lt;br/&gt;• &lt;span class="computer"&gt;.//&lt;/span&gt; are relative to current project folder. &lt;br/&gt;&lt;br/&gt;</description>
+                </bean>
+                <bean yaml_key="_use_docid [variables.RequestableVariable-1433425006839]">
+                    <description>Document ID</description>
+                </bean>
+            </bean>
+            <bean yaml_key="ResetDatabase [transactions.couchdb.ResetDatabaseTransaction]">
+                <accessibility>Private</accessibility>
+            </bean>
+            <bean yaml_key="UserAdd [transactions.couchdb.PostDocumentTransaction]">
+                <accessibility>Private</accessibility>
+                <fullSyncAclPolicy>fromKeyC8oAcl</fullSyncAclPolicy>
+                <policy>create</policy>
+                <handlers><![CDATA[
+// Handles the transaction start event.
+function onTransactionStarted() {
+    // TODO: add your code here
+
+    // TODO: customize the returned value (if you omit returned value, the 
+    // algorithm will continue its process).
+    // Possible values are:
+    //    cancel - means the algorithm cancels the transaction core process.
+
+    // return "cancel";
+}
+]]></handlers>
+                <bean yaml_key="username [variables.RequestableVariable-1426250069953]"/>
+                <bean yaml_key="type [variables.RequestableVariable-1426254211433]">
+                    <value>user</value>
+                </bean>
+                <bean yaml_key="token [variables.RequestableVariable-1426254353330]"/>
+                <bean yaml_key="_c8oAcl [variables.RequestableVariable-1517924433993]">
+                    <description>Set the owner of the document if the "Acl Policy"="From _c8oACL variable"</description>
+                    <value>admin</value>
+                </bean>
+            </bean>
+            <bean yaml_key="UserExists [transactions.couchdb.GetViewTransaction]">
+                <accessibility>Private</accessibility>
+                <q_reduce>false</q_reduce>
+                <viewname>OffChat/checkUsername</viewname>
+                <bean yaml_key="_use_key [variables.RequestableVariable-1426253269087]"/>
+            </bean>
+            <bean yaml_key="UserListSet [transactions.couchdb.PostDocumentTransaction]">
+                <accessibility>Private</accessibility>
+                <fullSyncAclPolicy>anonymous</fullSyncAclPolicy>
+                <policy>override</policy>
+                <useHash>true</useHash>
+                <bean yaml_key="_id [variables.RequestableVariable-1433253851354]">
+                    <description>Document id</description>
+                    <value>userList</value>
+                </bean>
+                <bean yaml_key="users [variables.RequestableMultiValuedVariable-1433254090457]">
+                    <description>Document content</description>
+                </bean>
+            </bean>
+            <bean yaml_key="OffChat [couchdb.DesignDocument]">
+                <docdata><![CDATA[{"views":{"checkUsername":{"map":"function (doc) {\r\n\tif (doc.type == \"user\") {\r\n\t\temit(doc.username, doc.token);\r\n\t}\r\n}"},"getChat":{"map":"function (doc) {\r\n\tif (doc.type == \"message\") {\r\n\t\tif (doc.ts) {\r\n\t\t\temit([doc.user, doc.ts], {user: doc.user, dir: doc.dir, message: doc.message, ts: doc.ts});\r\n\t\t} else {\r\n\t\t\temit([doc.user, doc.num], {user: doc.user, dir: doc.dir, message: doc.message, num: doc.num});\r\n\t\t}\r\n\t}\r\n}"},"typeMessage":{"map":"function (doc) {\r\n\ttry {\r\n\t\tif (doc.type == \"message\") {\r\n\t\t\temit(doc._id, null);\r\n\t\t}\r\n\t} catch (err) {\r\n\t\tlog(err.message);\r\n\t}\r\n}"}},"_id":"_design\/OffChat","filters":{},"updates":{}}]]></docdata>
+            </bean>
+            <bean yaml_key="OnChat [couchdb.FullSyncListener]">
+                <targetSequence>sampleMobileOffChat.OnChat</targetSequence>
+                <targetView>sampleMobileOffChat.offchat_fullsync.OffChat.typeMessage</targetView>
+            </bean>
+        </bean>
+        <bean yaml_file="sequences/Login.yaml" yaml_key="Login [sequences.GenericSequence]">
+            <bean yaml_key="Input_variables [steps.InputVariablesStep-1433256479163]"/>
+            <bean yaml_key="jIf [steps.IfStep-1433256479172]">
+                <condition>username.length &lt; 4 || password.length &lt; 4</condition>
+                <bean yaml_key="Error_structure [steps.XMLErrorStep-1433256479181]">
+                    <code>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.steps.SmartType">
+                            <SmartType mode="PLAIN">1</SmartType>
+                        </xmlizable>
+                    </code>
+                    <message>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.steps.SmartType">
+                            <SmartType mode="PLAIN">Username and password size must by 4 or more.</SmartType>
+                        </xmlizable>
+                    </message>
+                </bean>
+                <bean yaml_key="Return [steps.ReturnStep-1433256479190]"/>
+            </bean>
+            <bean yaml_key="jElement [steps.ElementStep-1433256479200]">
+                <expression>token = org.apache.commons.codec.digest.DigestUtils.md5Hex(username + password)</expression>
+                <nodeName>token</nodeName>
+                <output>false</output>
+            </bean>
+            <bean yaml_key="Call_Transaction [steps.TransactionStep-1433256479218]">
+                <sourceTransaction>sampleMobileOffChat.offchat_fullsync.UserExists</sourceTransaction>
+                <bean yaml_key="_use_key [variables.StepVariable-1433256479227]">
+                    <sourceDefinition>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                            <com.twinsoft.convertigo.beans.common.XMLVector>
+                                <java.lang.String value="1433256479163"/>
+                                <java.lang.String value="./username/text()"/>
+                            </com.twinsoft.convertigo.beans.common.XMLVector>
+                        </xmlizable>
+                    </sourceDefinition>
+                </bean>
+            </bean>
+            <bean yaml_key="IfExistThenElse [steps.IfExistThenElseStep-1433256479236]">
+                <sourceDefinition>
+                    <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                        <com.twinsoft.convertigo.beans.common.XMLVector>
+                            <java.lang.String value="1433256479218"/>
+                            <java.lang.String value="./document/couchdb_output/rows/item"/>
+                        </com.twinsoft.convertigo.beans.common.XMLVector>
+                    </xmlizable>
+                </sourceDefinition>
+                <bean yaml_key="jThen [steps.ThenStep-1433256479244]">
+                    <bean yaml_key="id [steps.SimpleSourceStep-1433256479253]">
+                        <sourceDefinition>
+                            <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                <com.twinsoft.convertigo.beans.common.XMLVector>
+                                    <java.lang.String value="1433256479218"/>
+                                    <java.lang.String value="./document/couchdb_output/rows/item/value"/>
+                                </com.twinsoft.convertigo.beans.common.XMLVector>
+                            </xmlizable>
+                        </sourceDefinition>
+                        <variableName>dbToken</variableName>
+                    </bean>
+                    <bean yaml_key="jIf [steps.IfStep-1433256479261]">
+                        <condition>token != dbToken</condition>
+                        <bean yaml_key="Error_structure [steps.XMLErrorStep-1433256479269]">
+                            <code>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.steps.SmartType">
+                                    <SmartType mode="PLAIN">2</SmartType>
+                                </xmlizable>
+                            </code>
+                            <message>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.steps.SmartType">
+                                    <SmartType mode="PLAIN">Invalid password</SmartType>
+                                </xmlizable>
+                            </message>
+                        </bean>
+                        <bean yaml_key="Remove_authenticated_user [steps.RemoveAuthenticatedUserStep-1433256479278]"/>
+                        <bean yaml_key="Return [steps.ReturnStep-1433256479285]"/>
+                    </bean>
+                </bean>
+                <bean yaml_key="jElse [steps.ElseStep-1433256479293]">
+                    <bean yaml_key="Call_Transaction [steps.TransactionStep-1433256479302]">
+                        <sourceTransaction>sampleMobileOffChat.offchat_fullsync.UserAdd</sourceTransaction>
+                        <bean yaml_key="username [variables.StepVariable-1433256479309]">
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1433256479163"/>
+                                        <java.lang.String value="./username/text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                        <bean yaml_key="token [variables.StepVariable-1433256479316]">
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1433256479200"/>
+                                        <java.lang.String value="./text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Call_Transaction1 [steps.TransactionStep-1433258134098]">
+                        <sourceTransaction>sampleMobileOffChat.offchat_fullsync.UserExists</sourceTransaction>
+                    </bean>
+                    <bean yaml_key="Call_Transaction11 [steps.TransactionStep-1433258134104]">
+                        <sourceTransaction>sampleMobileOffChat.offchat_fullsync.UserListSet</sourceTransaction>
+                        <bean yaml_key="_id [variables.StepVariable-1433258134108]">
+                            <description>Document id</description>
+                            <value>userList</value>
+                        </bean>
+                        <bean yaml_key="users [variables.StepMultiValuedVariable-1433258134112]">
+                            <description>Document content</description>
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1433258134098"/>
+                                        <java.lang.String value="./document/couchdb_output/rows/item/key/text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                    </bean>
+                </bean>
+            </bean>
+            <bean yaml_key="username [steps.SetAuthenticatedUserStep-1433256479330]">
+                <userid>
+                    <xmlizable classname="com.twinsoft.convertigo.beans.steps.SmartType">
+                        <SmartType mode="JS">username</SmartType>
+                    </xmlizable>
+                </userid>
+            </bean>
+            <bean yaml_key="Element [steps.XMLElementStep-1433256479340]">
+                <nodeName>ok</nodeName>
+                <nodeText>true</nodeText>
+                <bean yaml_key="Attribute [steps.XMLAttributeStep-1518023293305]">
+                    <nodeName>type</nodeName>
+                    <nodeText>boolean</nodeText>
+                </bean>
+            </bean>
+            <bean yaml_key="jElement1 [steps.ElementStep-1518022450797]">
+                <expression>"" + new Date().getTime()</expression>
+                <nodeName>ts</nodeName>
+                <bean yaml_key="Attribute [steps.XMLAttributeStep-1518023240095]">
+                    <nodeName>type</nodeName>
+                    <nodeText>long</nodeText>
+                </bean>
+            </bean>
+            <bean yaml_key="username [variables.RequestableVariable-1433256479347]">
+                <value/>
+            </bean>
+            <bean yaml_key="password [variables.RequestableVariable-1433256479354]">
+                <value ciphered="true" traceable="false">xd8e180806a1c1d83a6255212121ab827</value>
+                <visibility>-1</visibility>
+            </bean>
+        </bean>
+        <bean yaml_file="sequences/OnChat.yaml" yaml_key="OnChat [sequences.GenericSequence]">
+            <accessibility>Private</accessibility>
+            <bean yaml_key="Input_variables [steps.InputVariablesStep-1433334964116]">
+                <output>true</output>
+            </bean>
+            <bean yaml_key="Get_authenticated_user [steps.GetAuthenticatedUserStep-1459521415482]">
+                <output>false</output>
+            </bean>
+            <bean yaml_key="Iterator [steps.IteratorStep-1433337431883]">
+                <sourceDefinition>
+                    <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                        <com.twinsoft.convertigo.beans.common.XMLVector>
+                            <java.lang.String value="1433334964116"/>
+                            <java.lang.String value="./doc/item"/>
+                        </com.twinsoft.convertigo.beans.common.XMLVector>
+                    </xmlizable>
+                </sourceDefinition>
+                <bean yaml_key="jSimpleSource [steps.SimpleSourceStep-1518012631462]">
+                    <sourceDefinition>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                            <com.twinsoft.convertigo.beans.common.XMLVector>
+                                <java.lang.String value="1433337431883"/>
+                                <java.lang.String value="./_id/text()"/>
+                            </com.twinsoft.convertigo.beans.common.XMLVector>
+                        </xmlizable>
+                    </sourceDefinition>
+                    <variableName>_id</variableName>
+                </bean>
+                <bean yaml_key="add_copy [steps.SimpleStep-1518012732584]">
+                    <expression>_id += "_copy";</expression>
+                </bean>
+                <bean yaml_key="Call_Transaction [steps.TransactionStep-1517924622885]">
+                    <sourceTransaction>sampleMobileOffChat.offchat_fullsync.NewMessageTo</sourceTransaction>
+                    <bean yaml_key="user [variables.StepVariable-1517925064895]">
+                        <description>Document content</description>
+                        <sourceDefinition>
+                            <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                <com.twinsoft.convertigo.beans.common.XMLVector>
+                                    <java.lang.String value="1459521415482"/>
+                                    <java.lang.String value="./text()"/>
+                                </com.twinsoft.convertigo.beans.common.XMLVector>
+                            </xmlizable>
+                        </sourceDefinition>
+                    </bean>
+                    <bean yaml_key="message [variables.StepVariable-1517925064901]">
+                        <sourceDefinition>
+                            <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                <com.twinsoft.convertigo.beans.common.XMLVector>
+                                    <java.lang.String value="1433337431883"/>
+                                    <java.lang.String value="./message/text()"/>
+                                </com.twinsoft.convertigo.beans.common.XMLVector>
+                            </xmlizable>
+                        </sourceDefinition>
+                    </bean>
+                    <bean yaml_key="ts [variables.StepVariable-1518023692878]">
+                        <sourceDefinition>
+                            <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                <com.twinsoft.convertigo.beans.common.XMLVector>
+                                    <java.lang.String value="1433337431883"/>
+                                    <java.lang.String value="./ts/text()"/>
+                                </com.twinsoft.convertigo.beans.common.XMLVector>
+                            </xmlizable>
+                        </sourceDefinition>
+                    </bean>
+                    <bean yaml_key="_c8oAcl [variables.StepVariable-1517925069236]">
+                        <sourceDefinition>
+                            <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                <com.twinsoft.convertigo.beans.common.XMLVector>
+                                    <java.lang.String value="1433337431883"/>
+                                    <java.lang.String value="./user/text()"/>
+                                </com.twinsoft.convertigo.beans.common.XMLVector>
+                            </xmlizable>
+                        </sourceDefinition>
+                    </bean>
+                    <bean yaml_key="_id [variables.StepVariable-1518012563992]"/>
+                </bean>
+                <bean yaml_key="Iterator [steps.IteratorStep-1433425036105]">
+                    <sourceDefinition>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                            <com.twinsoft.convertigo.beans.common.XMLVector>
+                                <java.lang.String value="1433337431883"/>
+                                <java.lang.String value="./_attachments/attachment"/>
+                            </com.twinsoft.convertigo.beans.common.XMLVector>
+                        </xmlizable>
+                    </sourceDefinition>
+                    <bean yaml_key="TemporaryFile [steps.SimpleStep-1433425560965]">
+                        <expression>var _use_attpath = "" + java.io.File.createTempFile("attachment", ".tmp").getAbsolutePath();</expression>
+                    </bean>
+                    <bean yaml_key="Call_Transaction [steps.TransactionStep-1433425089216]">
+                        <sourceTransaction>sampleMobileOffChat.offchat_fullsync.GetDocumentAttachment</sourceTransaction>
+                        <bean yaml_key="_use_attpath [variables.StepVariable-1433425089218]">
+                            <description>Attachment path | This path is either absolute or relative to Convertigo environment. Relative paths starting with:&lt;br/&gt;&lt;br/&gt;• &lt;span class="computer"&gt;./&lt;/span&gt; are relative to Convertigo workspace,&lt;br/&gt;• &lt;span class="computer"&gt;.//&lt;/span&gt; are relative to current project folder. &lt;br/&gt;&lt;br/&gt;</description>
+                        </bean>
+                        <bean yaml_key="_use_attname [variables.StepVariable-1433425089220]">
+                            <description>Attachment name</description>
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1433425036105"/>
+                                        <java.lang.String value="./name/text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                        <bean yaml_key="_use_docid [variables.StepVariable-1433425089222]">
+                            <description>Document ID</description>
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1433337431883"/>
+                                        <java.lang.String value="./_id/text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Call_Transaction1 [steps.TransactionStep-1433425091982]">
+                        <sourceTransaction>sampleMobileOffChat.offchat_fullsync.PutDocumentAttachment</sourceTransaction>
+                        <bean yaml_key="_use_attname [variables.StepVariable-1433425091984]">
+                            <description>Attachment name</description>
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1433425036105"/>
+                                        <java.lang.String value="./name/text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                        <bean yaml_key="_use_attpath [variables.StepVariable-1433425091986]">
+                            <description>Attachment path | This path is either absolute or relative to Convertigo environment. Relative paths starting with:&lt;br/&gt;&lt;br/&gt;• &lt;span class="computer"&gt;./&lt;/span&gt; are relative to Convertigo workspace,&lt;br/&gt;• &lt;span class="computer"&gt;.//&lt;/span&gt; are relative to current project folder. &lt;br/&gt;&lt;br/&gt;</description>
+                        </bean>
+                        <bean yaml_key="_use_docid [variables.StepVariable-1433425091988]">
+                            <description>Document ID</description>
+                            <sourceDefinition>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                        <java.lang.String value="1517924622885"/>
+                                        <java.lang.String value="./document/couchdb_output/id/text()"/>
+                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                </xmlizable>
+                            </sourceDefinition>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Delete_file [steps.DeleteStep-1433425543707]">
+                        <sourcePath>_use_attpath</sourcePath>
+                    </bean>
+                </bean>
+            </bean>
+            <bean yaml_key="doc [variables.RequestableMultiValuedVariable-1433336837323]"/>
+        </bean>
+        <bean yaml_key="OffChat [core.MobileApplication]">
+            <applicationDescription>Allow user to type chat message event if offline</applicationDescription>
+            <applicationName>OffChat</applicationName>
+            <bean yaml_key="Android [mobileplatforms.Android]"/>
+            <bean yaml_key="iOS [mobileplatforms.IOs]"/>
+            <bean yaml_key="OffChat [mobile.components.ApplicationComponent]">
+                <componentScriptContent>
+                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[/*Begin_c8o_AppImport*/
+/*End_c8o_AppImport*/
+/*Begin_c8o_AppDeclaration*/
+	/*End_c8o_AppDeclaration*/
+/*Begin_c8o_AppConstructor*/
+		this.c8o.logLevelLocal = C8oLogLevel.TRACE;
+		/*End_c8o_AppConstructor*/
+/*Begin_c8o_AppInitialization*/
+                statusBar.overlaysWebView(false);
+                statusBar.backgroundColorByHexString("#00a2c9");
+                statusBar.styleBlackOpaque();
+                /*End_c8o_AppInitialization*/
+/*Begin_c8o_AppFunction*/
+	/*End_c8o_AppFunction*/
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                    </xmlizable>
+                </componentScriptContent>
+                <tplProjectName>mobilebuilder_tpl_7_5_3</tplProjectName>
+                <tplProjectVersion>7.5.3.0</tplProjectVersion>
+                <bean isRoot="true" yaml_file="mobilePages/Login.yaml" yaml_key="Login [mobile.components.PageComponent-1517565746153]">
+                    <scriptContent>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[/*Begin_c8o_PageImport*/
+/*End_c8o_PageImport*/
+/*Begin_c8o_PageDeclaration*/
+	public window: any;
+	/*End_c8o_PageDeclaration*/
+/*Begin_c8o_PageConstructor*/
+		this.window = window;
+		/*End_c8o_PageConstructor*/
+/*Begin_c8o_PageFunction*/
+	/*End_c8o_PageFunction*/
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                        </xmlizable>
+                    </scriptContent>
+                    <segment>Login</segment>
+                    <title>Title for Login</title>
+                    <bean yaml_key="Header [mobile.components.UIDynamicElement-1517567290269]">
+                        <beanData>{
+ "name": "Header",
+ "properties": {"NoBorder": {
+  "name": "NoBorder",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                        <tagName>ion-header</tagName>
+                        <bean yaml_key="NavBar [mobile.components.UIDynamicElement-1517590376644]">
+                            <beanData>{
+ "name": "NavBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  },
+  "BackButtonHidden": {
+   "name": "BackButtonHidden",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-navbar</tagName>
+                            <bean yaml_key="BarTitle [mobile.components.UIDynamicElement-1517567324784]">
+                                <beanData>{
+ "name": "BarTitle",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-title</tagName>
+                                <bean yaml_key="Center [mobile.components.UIDynamicElement-1517567363505]">
+                                    <beanData>{
+ "name": "TextFormat",
+ "properties": {
+  "TextLeft": {
+   "name": "TextLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "TextRight": {
+   "name": "TextRight",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCenter": {
+   "name": "TextCenter",
+   "mode": "plain",
+   "value": "text-center"
+  },
+  "TextJustify": {
+   "name": "TextJustify",
+   "mode": "plain",
+   "value": false
+  },
+  "TextWrap": {
+   "name": "TextWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextNoWrap": {
+   "name": "TextNoWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextUpperCase": {
+   "name": "TextUpperCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextLowerCase": {
+   "name": "TextLowerCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCapitalize": {
+   "name": "TextCapitalize",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>div</tagName>
+                                    <bean yaml_key="Text [mobile.components.UIText-1517567331669]">
+                                        <textValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "OffChat Login"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </textValue>
+                                    </bean>
+                                </bean>
+                            </bean>
+                            <bean yaml_key="ButtonSet [mobile.components.UIDynamicElement-1517591030309]">
+                                <beanData>{
+ "name": "ButtonSet",
+ "properties": {"SetPosition": {
+  "name": "SetPosition",
+  "mode": "plain",
+  "value": "right"
+ }}
+}</beanData>
+                                <tagName>ion-buttons</tagName>
+                                <bean yaml_key="Button [mobile.components.UIDynamicElement-1517591030322]">
+                                    <beanData>{
+ "name": "Button",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": false
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>button</tagName>
+                                    <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517591030335]">
+                                        <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "more"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                        <tagName>ion-icon</tagName>
+                                    </bean>
+                                    <bean yaml_key="Event [mobile.components.UIControlEvent-1517825155947]">
+                                        <attrValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </attrValue>
+                                        <bean yaml_key="CustomAction [mobile.components.UICustomAction-1517827010857]">
+                                            <actionValue>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                    <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[		page.c8o.log.debug(event ? event.toString():'no event');
+		
+        let actionSheet = this.getInstance(ActionSheetController).create({
+            title: 'Reset your Database ?',
+            buttons: [
+              {
+                text: 'Reset',
+                role: 'destructive',
+                icon: 'trash',
+                handler: () => {
+                  console.log('Destructive clicked');
+                  resolve();
+                }
+              },{
+                text: 'Cancel',
+                role: 'cancel',
+                icon: 'close',
+                handler: () => {
+                  console.log('Cancel clicked');
+                }
+              }
+            ]
+          });
+	      actionSheet.present();
+		
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                </xmlizable>
+                                            </actionValue>
+                                            <module_ts_imports>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                                            <com.twinsoft.convertigo.beans.common.XMLVector>
+                                                                <java.lang.String value="ActionSheetController "/>
+                                                                <java.lang.String value="ionic-angular"/>
+                                                            </com.twinsoft.convertigo.beans.common.XMLVector>
+                                                        </xmlizable>
+                                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                                </xmlizable>
+                                            </module_ts_imports>
+                                            <bean yaml_key="CallFullSync [mobile.components.UIDynamicAction-1517828045820]">
+                                                <beanData>{
+ "name": "CallFullSyncAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "marker": {
+   "name": "marker",
+   "mode": "plain",
+   "value": ""
+  },
+  "verb": {
+   "name": "verb",
+   "mode": "plain",
+   "value": "reset"
+  }
+ }
+}</beanData>
+                                                <bean yaml_key="Toast [mobile.components.UIDynamicAction-1517828126515]">
+                                                    <beanData>{
+ "name": "ToastAction",
+ "properties": {
+  "message": {
+   "name": "message",
+   "mode": "plain",
+   "value": "Reset done!"
+  },
+  "duration": {
+   "name": "duration",
+   "mode": "plain",
+   "value": "3000"
+  },
+  "position": {
+   "name": "position",
+   "mode": "plain",
+   "value": "bottom"
+  },
+  "cssClass": {
+   "name": "cssClass",
+   "mode": "plain",
+   "value": false
+  },
+  "showCloseButton": {
+   "name": "showCloseButton",
+   "mode": "plain",
+   "value": false
+  },
+  "closeButtonText": {
+   "name": "closeButtonText",
+   "mode": "plain",
+   "value": false
+  },
+  "dismissOnPageChange": {
+   "name": "dismissOnPageChange",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Content [mobile.components.UIDynamicElement-1517567294948]">
+                        <beanData>{
+ "name": "Content",
+ "properties": {
+  "IonPadding": {
+   "name": "IonPadding",
+   "mode": "plain",
+   "value": "padding"
+  },
+  "Fullscreen": {
+   "name": "Fullscreen",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                        <tagName>ion-content</tagName>
+                        <bean yaml_key="CardContainer [mobile.components.UIDynamicElement-1517590561097]">
+                            <beanData>{
+ "name": "Card",
+ "properties": {}
+}</beanData>
+                            <tagName>ion-card</tagName>
+                            <bean yaml_key="CardContent [mobile.components.UIDynamicElement-1517590566688]">
+                                <beanData>{
+ "name": "CardContent",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-card-content</tagName>
+                                <bean yaml_key="Form [mobile.components.UIForm-1517569296572]">
+                                    <bean yaml_key="Event [mobile.components.UIControlEvent-1517588818264]">
+                                        <attrName>(ngSubmit)</attrName>
+                                        <attrValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </attrValue>
+                                        <eventName>onSubmit</eventName>
+                                        <bean yaml_key="CallLogin [mobile.components.UIDynamicAction-1517588861783]">
+                                            <beanData>{
+ "name": "CallSequenceAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.Login"
+  },
+  "marker": {
+   "name": "marker",
+   "mode": "plain",
+   "value": ""
+  },
+  "cachePolicy": {
+   "name": "cachePolicy",
+   "mode": "plain",
+   "value": false
+  },
+  "cacheTtl": {
+   "name": "cacheTtl",
+   "mode": "plain",
+   "value": "3000"
+  }
+ }
+}</beanData>
+                                            <bean yaml_key="FailureHandler [mobile.components.UIActionFailureEvent-1518086125645]">
+                                                <bean yaml_key="Toast [mobile.components.UIDynamicAction-1518086718732]">
+                                                    <beanData>{
+ "name": "ToastAction",
+ "properties": {
+  "message": {
+   "name": "message",
+   "mode": "plain",
+   "value": "Network failure: Offline mode"
+  },
+  "duration": {
+   "name": "duration",
+   "mode": "plain",
+   "value": "2000"
+  },
+  "position": {
+   "name": "position",
+   "mode": "plain",
+   "value": "top"
+  },
+  "cssClass": {
+   "name": "cssClass",
+   "mode": "plain",
+   "value": "toast-error"
+  },
+  "showCloseButton": {
+   "name": "showCloseButton",
+   "mode": "plain",
+   "value": false
+  },
+  "closeButtonText": {
+   "name": "closeButtonText",
+   "mode": "plain",
+   "value": false
+  },
+  "dismissOnPageChange": {
+   "name": "dismissOnPageChange",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <bean yaml_key="CustomActionOffline [mobile.components.UICustomAction-1518086141924]">
+                                                        <actionValue>
+                                                            <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                                <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[		if (props.stack["CallLogin"].in.vars.username != window.localStorage.username) {
+		    this.form1517569296572.controls["username"].setValue(window.localStorage.username);
+		    reject("User cannot change, should be '" + window.localStorage.username + "'");
+		}
+        if (props.stack["CallLogin"].in.vars.password != window.localStorage.password) {
+            reject("Wrong password!");
+        }
+        window.sessionStorage.username = window.localStorage.username;
+        window.sessionStorage.offline = true;
+        window.document.body.className = "offline";
+		resolve();
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                            </xmlizable>
+                                                        </actionValue>
+                                                        <bean yaml_key="FailureHandler [mobile.components.UIActionFailureEvent-1518086795231]">
+                                                            <bean yaml_key="Toast [mobile.components.UIDynamicAction-1518086807380]">
+                                                                <beanData>{
+ "name": "ToastAction",
+ "properties": {
+  "message": {
+   "name": "message",
+   "mode": "script",
+   "value": "out"
+  },
+  "duration": {
+   "name": "duration",
+   "mode": "plain",
+   "value": "2000"
+  },
+  "position": {
+   "name": "position",
+   "mode": "plain",
+   "value": "top"
+  },
+  "cssClass": {
+   "name": "cssClass",
+   "mode": "plain",
+   "value": "toast-error"
+  },
+  "showCloseButton": {
+   "name": "showCloseButton",
+   "mode": "plain",
+   "value": false
+  },
+  "closeButtonText": {
+   "name": "closeButtonText",
+   "mode": "plain",
+   "value": false
+  },
+  "dismissOnPageChange": {
+   "name": "dismissOnPageChange",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                            </bean>
+                                                            <bean yaml_key="Error [mobile.components.UIDynamicAction-1518086813725]">
+                                                                <beanData>{
+ "name": "ErrorAction",
+ "properties": {"message": {
+  "name": "message",
+  "mode": "plain",
+  "value": "some error"
+ }}
+}</beanData>
+                                                            </bean>
+                                                        </bean>
+                                                        <bean yaml_key="RootPage [mobile.components.UIDynamicAction-1518086150793]">
+                                                            <beanData>{
+ "name": "RootPageAction",
+ "properties": {"page": {
+  "name": "page",
+  "mode": "plain",
+  "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
+ }}
+}</beanData>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="Error [mobile.components.UIDynamicAction-1518086564258]">
+                                                    <beanData>{
+ "name": "ErrorAction",
+ "properties": {"message": {
+  "name": "message",
+  "mode": "plain",
+  "value": "offline"
+ }}
+}</beanData>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="If_ERROR [mobile.components.UIDynamicAction-1517840368874]">
+                                                <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "out.error"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                <bean yaml_key="Toast [mobile.components.UIDynamicAction-1517828328158]">
+                                                    <beanData>{
+ "name": "ToastAction",
+ "properties": {
+  "message": {
+   "name": "message",
+   "mode": "script",
+   "value": "stack[\"CallLogin\"].out.error.message"
+  },
+  "duration": {
+   "name": "duration",
+   "mode": "plain",
+   "value": "3000"
+  },
+  "position": {
+   "name": "position",
+   "mode": "plain",
+   "value": "top"
+  },
+  "cssClass": {
+   "name": "cssClass",
+   "mode": "plain",
+   "value": "toast-error"
+  },
+  "showCloseButton": {
+   "name": "showCloseButton",
+   "mode": "plain",
+   "value": false
+  },
+  "closeButtonText": {
+   "name": "closeButtonText",
+   "mode": "plain",
+   "value": false
+  },
+  "dismissOnPageChange": {
+   "name": "dismissOnPageChange",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="If_OK [mobile.components.UIDynamicAction-1517840421888]">
+                                                <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "out.ok"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                <bean yaml_key="CustomAction [mobile.components.UICustomAction-1517911129934]">
+                                                    <actionValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[		let localTs = new Date().getTime();
+		let serverTs = props.stack["CallLogin"].out.ts * 1;
+		window.localStorage.decTs = serverTs - localTs;
+        window.sessionStorage.offline = false;
+        window.document.body.className = "";
+		
+		page.c8o.log.debug(event ? event.toString():'no event');
+		let user = window.sessionStorage.username = props.stack["CallLogin"].in.vars.username;
+		let exUser = window.localStorage.username;
+		if (user != exUser) {
+		    window.localStorage.username = user;
+		    window.localStorage.password = props.stack["CallLogin"].in.vars.password;
+		    this.call('fs://offchat_fullsync.reset').then(function () {
+		        resolve();
+		    }, function () {
+		        reject();
+		    });
+		} else {
+	        resolve();
+		}
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                        </xmlizable>
+                                                    </actionValue>
+                                                    <bean yaml_key="RootPage [mobile.components.UIDynamicAction-1517842566552]">
+                                                        <beanData>{
+ "name": "RootPageAction",
+ "properties": {"page": {
+  "name": "page",
+  "mode": "plain",
+  "value": "sampleMobileOffChat.OffChat.OffChat.Sync"
+ }}
+}</beanData>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                    <bean yaml_key="ListContainer [mobile.components.UIDynamicElement-1517590290750]">
+                                        <beanData>{
+ "name": "List",
+ "properties": {
+  "Nolines": {
+   "name": "Nolines",
+   "mode": "plain",
+   "value": false
+  },
+  "Inset": {
+   "name": "Inset",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                        <tagName>ion-list</tagName>
+                                        <bean yaml_key="Username [mobile.components.UIDynamicElement-1517583518722]">
+                                            <beanData>{
+ "name": "ListItem",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                                            <tagName>ion-item</tagName>
+                                            <bean yaml_key="LabelUsername [mobile.components.UIDynamicElement-1517567871069]">
+                                                <beanData>{
+ "name": "Label",
+ "properties": {
+  "Fixed": {
+   "name": "Fixed",
+   "mode": "plain",
+   "value": false
+  },
+  "Floating": {
+   "name": "Floating",
+   "mode": "plain",
+   "value": "floating"
+  },
+  "Stacked": {
+   "name": "Stacked",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>ion-label</tagName>
+                                                <bean yaml_key="Text [mobile.components.UIText-1517567903626]">
+                                                    <textValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "Username :"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </textValue>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="Username [mobile.components.UIDynamicElement-1517567886976]">
+                                                <beanData>{
+ "name": "Input",
+ "properties": {
+  "FormControlName": {
+   "name": "FormControlName",
+   "mode": "plain",
+   "value": "username"
+  },
+  "Disabled": {
+   "name": "Disabled",
+   "mode": "plain",
+   "value": false
+  },
+  "ClearInput": {
+   "name": "ClearInput",
+   "mode": "plain",
+   "value": false
+  },
+  "ClearOnEdit": {
+   "name": "ClearOnEdit",
+   "mode": "plain",
+   "value": false
+  },
+  "Max": {
+   "name": "Max",
+   "mode": "plain",
+   "value": false
+  },
+  "Min": {
+   "name": "Min",
+   "mode": "plain",
+   "value": false
+  },
+  "Mode": {
+   "name": "Mode",
+   "mode": "plain",
+   "value": false
+  },
+  "Placeholder": {
+   "name": "Placeholder",
+   "mode": "plain",
+   "value": false
+  },
+  "Readonly": {
+   "name": "Readonly",
+   "mode": "plain",
+   "value": false
+  },
+  "Step": {
+   "name": "Step",
+   "mode": "plain",
+   "value": false
+  },
+  "TextAlign": {
+   "name": "TextAlign",
+   "mode": "plain",
+   "value": false
+  },
+  "Type": {
+   "name": "Type",
+   "mode": "plain",
+   "value": "text"
+  },
+  "Value": {
+   "name": "Value",
+   "mode": "script",
+   "value": "this.window.localStorage.username"
+  }
+ }
+}</beanData>
+                                                <tagName>ion-input</tagName>
+                                                <bean yaml_key="ControlValidator [mobile.components.UIFormControlValidator-1517588945279]">
+                                                    <minLength>4</minLength>
+                                                    <required>set</required>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="Attr [mobile.components.UIAttribute-1517583820683]">
+                                                <attrName/>
+                                                <attrValue>
+                                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "no-lines"
+}</MobileSmartSourceType>
+                                                    </xmlizable>
+                                                </attrValue>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="Password [mobile.components.UIDynamicElement-1517583521117]">
+                                            <beanData>{
+ "name": "ListItem",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                                            <tagName>ion-item</tagName>
+                                            <bean yaml_key="LabelPassword [mobile.components.UIDynamicElement-1517567880553]">
+                                                <beanData>{
+ "name": "Label",
+ "properties": {
+  "Fixed": {
+   "name": "Fixed",
+   "mode": "plain",
+   "value": false
+  },
+  "Floating": {
+   "name": "Floating",
+   "mode": "plain",
+   "value": "floating"
+  },
+  "Stacked": {
+   "name": "Stacked",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>ion-label</tagName>
+                                                <bean yaml_key="Text [mobile.components.UIText-1517567907991]">
+                                                    <textValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "Password :"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </textValue>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="Password [mobile.components.UIDynamicElement-1517567889698]">
+                                                <beanData>{
+ "name": "Input",
+ "properties": {
+  "FormControlName": {
+   "name": "FormControlName",
+   "mode": "plain",
+   "value": "password"
+  },
+  "Disabled": {
+   "name": "Disabled",
+   "mode": "plain",
+   "value": false
+  },
+  "ClearInput": {
+   "name": "ClearInput",
+   "mode": "plain",
+   "value": false
+  },
+  "ClearOnEdit": {
+   "name": "ClearOnEdit",
+   "mode": "plain",
+   "value": false
+  },
+  "Max": {
+   "name": "Max",
+   "mode": "plain",
+   "value": false
+  },
+  "Min": {
+   "name": "Min",
+   "mode": "plain",
+   "value": false
+  },
+  "Mode": {
+   "name": "Mode",
+   "mode": "plain",
+   "value": false
+  },
+  "Placeholder": {
+   "name": "Placeholder",
+   "mode": "plain",
+   "value": false
+  },
+  "Readonly": {
+   "name": "Readonly",
+   "mode": "plain",
+   "value": false
+  },
+  "Step": {
+   "name": "Step",
+   "mode": "plain",
+   "value": false
+  },
+  "TextAlign": {
+   "name": "TextAlign",
+   "mode": "plain",
+   "value": false
+  },
+  "Type": {
+   "name": "Type",
+   "mode": "plain",
+   "value": "password"
+  },
+  "Value": {
+   "name": "Value",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>ion-input</tagName>
+                                                <bean yaml_key="ControlValidator [mobile.components.UIFormControlValidator-1517588971917]">
+                                                    <minLength>4</minLength>
+                                                    <required>set</required>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="Attr [mobile.components.UIAttribute-1517583882602]">
+                                                <attrName/>
+                                                <attrValue>
+                                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "no-lines"
+}</MobileSmartSourceType>
+                                                    </xmlizable>
+                                                </attrValue>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="SubmitButton [mobile.components.UIDynamicElement-1517570142145]">
+                                            <beanData>{
+ "name": "SubmitButton",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": "submit"
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": "full"
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": false
+  },
+  "AutoDisable": {
+   "name": "AutoDisable",
+   "mode": "plain",
+   "value": "true"
+  }
+ }
+}</beanData>
+                                            <tagName>button</tagName>
+                                            <bean yaml_key="Text [mobile.components.UIText-1517570175643]">
+                                                <textValue>
+                                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "Login"
+}</MobileSmartSourceType>
+                                                    </xmlizable>
+                                                </textValue>
+                                            </bean>
+                                            <bean yaml_key="Style [mobile.components.UIStyle-1517580640478]">
+                                                <styleContent>
+                                                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	margin-top: 20px;
+	margin-bottom: 20px;
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                    </xmlizable>
+                                                </styleContent>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="Paragraph [mobile.components.UIDynamicElement-1517583021362]">
+                                            <beanData>{
+ "name": "Paragraph",
+ "properties": {}
+}</beanData>
+                                            <tagName>p</tagName>
+                                            <bean yaml_key="Fragment [mobile.components.UICustom-1517583057743]">
+                                                <htmlTemplate>&lt;b&gt;Note&lt;/b&gt;: Account creation is automatic if the &lt;b&gt;username&lt;/b&gt; is unknown.</htmlTemplate>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Footer [mobile.components.UIDynamicElement-1517567298829]">
+                        <beanData>{
+ "name": "Footer",
+ "properties": {}
+}</beanData>
+                        <tagName>ion-footer</tagName>
+                        <bean yaml_key="ToolBar [mobile.components.UIDynamicElement-1517590656498]">
+                            <beanData>{
+ "name": "ToolBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-toolbar</tagName>
+                            <bean yaml_key="Style [mobile.components.UIStyle-1517599585343]">
+                                <styleContent>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	text-align: center;
+	color: color($colors, secondary);
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                    </xmlizable>
+                                </styleContent>
+                            </bean>
+                            <bean yaml_key="Text [mobile.components.UIText-1517599652753]">
+                                <textValue>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "© Convertigo"
+}</MobileSmartSourceType>
+                                    </xmlizable>
+                                </textValue>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Style [mobile.components.UIStyle-1517585344021]">
+                        <styleContent>
+                            <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[.scroll-content {
+	overflow: hidden;
+}]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                            </xmlizable>
+                        </styleContent>
+                    </bean>
+                </bean>
+                <bean yaml_file="mobilePages/Sync.yaml" yaml_key="Sync [mobile.components.PageComponent-1517841304460]">
+                    <scriptContent>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[/*Begin_c8o_PageImport*/
+/*End_c8o_PageImport*/
+/*Begin_c8o_PageDeclaration*/
+	public window: any;
+	/*End_c8o_PageDeclaration*/
+/*Begin_c8o_PageConstructor*/
+		this.window = window;
+		/*End_c8o_PageConstructor*/
+/*Begin_c8o_PageFunction*/
+	/*End_c8o_PageFunction*/
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                        </xmlizable>
+                    </scriptContent>
+                    <segment>Sync</segment>
+                    <title>Title for Sync</title>
+                    <bean yaml_key="Header [mobile.components.UIDynamicElement-1517841328972]">
+                        <beanData>{
+ "name": "Header",
+ "properties": {"NoBorder": {
+  "name": "NoBorder",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                        <tagName>ion-header</tagName>
+                        <bean yaml_key="NavBar [mobile.components.UIDynamicElement-1517841328998]">
+                            <beanData>{
+ "name": "NavBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  },
+  "BackButtonHidden": {
+   "name": "BackButtonHidden",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-navbar</tagName>
+                            <bean yaml_key="BarTitle [mobile.components.UIDynamicElement-1517841329024]">
+                                <beanData>{
+ "name": "BarTitle",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-title</tagName>
+                                <bean yaml_key="TextFormat [mobile.components.UIDynamicElement-1517841329048]">
+                                    <beanData>{
+ "name": "TextFormat",
+ "properties": {
+  "TextLeft": {
+   "name": "TextLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "TextRight": {
+   "name": "TextRight",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCenter": {
+   "name": "TextCenter",
+   "mode": "plain",
+   "value": "text-center"
+  },
+  "TextJustify": {
+   "name": "TextJustify",
+   "mode": "plain",
+   "value": false
+  },
+  "TextWrap": {
+   "name": "TextWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextNoWrap": {
+   "name": "TextNoWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextUpperCase": {
+   "name": "TextUpperCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextLowerCase": {
+   "name": "TextLowerCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCapitalize": {
+   "name": "TextCapitalize",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>div</tagName>
+                                    <bean yaml_key="Text [mobile.components.UIText-1517841329074]">
+                                        <textValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "OffChat Sync"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </textValue>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Content [mobile.components.UIDynamicElement-1517841344920]">
+                        <beanData>{
+ "name": "Content",
+ "properties": {
+  "IonPadding": {
+   "name": "IonPadding",
+   "mode": "plain",
+   "value": "padding"
+  },
+  "Fullscreen": {
+   "name": "Fullscreen",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                        <tagName>ion-content</tagName>
+                        <bean yaml_key="Style [mobile.components.UIStyle-1517841643117]">
+                            <styleContent>
+                                <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                    <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	animation-name: sync;
+	animation-duration: 1.5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                </xmlizable>
+                            </styleContent>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Footer [mobile.components.UIDynamicElement-1517841335763]">
+                        <beanData>{
+ "name": "Footer",
+ "properties": {}
+}</beanData>
+                        <tagName>ion-footer</tagName>
+                        <bean yaml_key="ToolBar [mobile.components.UIDynamicElement-1517841335793]">
+                            <beanData>{
+ "name": "ToolBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-toolbar</tagName>
+                            <bean yaml_key="Style [mobile.components.UIStyle-1517841335823]">
+                                <styleContent>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	text-align: center;
+	color: color($colors, secondary);
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                    </xmlizable>
+                                </styleContent>
+                            </bean>
+                            <bean yaml_key="Text [mobile.components.UIText-1517841335854]">
+                                <textValue>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "© Convertigo"
+}</MobileSmartSourceType>
+                                    </xmlizable>
+                                </textValue>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="PageEvent [mobile.components.UIPageEvent-1517842433048]">
+                        <bean yaml_key="Toast [mobile.components.UIDynamicAction-1517845209579]">
+                            <beanData>{
+ "name": "ToastAction",
+ "properties": {
+  "message": {
+   "name": "message",
+   "mode": "script",
+   "value": "'Welcome ' + this.window.sessionStorage.username + ', sync in progress!'"
+  },
+  "duration": {
+   "name": "duration",
+   "mode": "plain",
+   "value": "10000"
+  },
+  "position": {
+   "name": "position",
+   "mode": "plain",
+   "value": "bottom"
+  },
+  "cssClass": {
+   "name": "cssClass",
+   "mode": "plain",
+   "value": false
+  },
+  "showCloseButton": {
+   "name": "showCloseButton",
+   "mode": "plain",
+   "value": false
+  },
+  "closeButtonText": {
+   "name": "closeButtonText",
+   "mode": "plain",
+   "value": false
+  },
+  "dismissOnPageChange": {
+   "name": "dismissOnPageChange",
+   "mode": "plain",
+   "value": "true"
+  }
+ }
+}</beanData>
+                        </bean>
+                        <bean yaml_key="SyncData [mobile.components.UIDynamicAction-1518010028402]">
+                            <beanData>{
+ "name": "FullSyncSyncAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "Direction": {
+   "name": "Direction",
+   "mode": "plain",
+   "value": "bi-directional"
+  },
+  "Mode": {
+   "name": "Mode",
+   "mode": "plain",
+   "value": "continuous"
+  },
+  "Retry": {
+   "name": "Retry",
+   "mode": "plain",
+   "value": "true"
+  },
+  "BatchSize": {
+   "name": "BatchSize",
+   "mode": "script",
+   "value": "100"
+  },
+  "BatchesLimit": {
+   "name": "BatchesLimit",
+   "mode": "script",
+   "value": "10"
+  }
+ }
+}</beanData>
+                            <bean yaml_key="RootPage [mobile.components.UIDynamicAction-1517842553795]">
+                                <beanData>{
+ "name": "RootPageAction",
+ "properties": {"page": {
+  "name": "page",
+  "mode": "plain",
+  "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
+ }}
+}</beanData>
+                            </bean>
+                        </bean>
+                    </bean>
+                </bean>
+                <bean yaml_file="mobilePages/Lobby.yaml" yaml_key="Lobby [mobile.components.PageComponent-1517842598071]">
+                    <scriptContent>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[/*Begin_c8o_PageImport*/
+/*End_c8o_PageImport*/
+/*Begin_c8o_PageDeclaration*/
+	public window: any;
+	/*End_c8o_PageDeclaration*/
+/*Begin_c8o_PageConstructor*/
+		this.window = window;
+		/*End_c8o_PageConstructor*/
+/*Begin_c8o_PageFunction*/
+	/*End_c8o_PageFunction*/
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                        </xmlizable>
+                    </scriptContent>
+                    <segment>Lobby</segment>
+                    <title>Title for Lobby</title>
+                    <bean yaml_key="Header [mobile.components.UIDynamicElement-1517842625969]">
+                        <beanData>{
+ "name": "Header",
+ "properties": {"NoBorder": {
+  "name": "NoBorder",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                        <tagName>ion-header</tagName>
+                        <bean yaml_key="NavBar [mobile.components.UIDynamicElement-1517842626004]">
+                            <beanData>{
+ "name": "NavBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  },
+  "BackButtonHidden": {
+   "name": "BackButtonHidden",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-navbar</tagName>
+                            <bean yaml_key="BarTitle [mobile.components.UIDynamicElement-1517842626044]">
+                                <beanData>{
+ "name": "BarTitle",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-title</tagName>
+                                <bean yaml_key="TextFormat [mobile.components.UIDynamicElement-1517842626089]">
+                                    <beanData>{
+ "name": "TextFormat",
+ "properties": {
+  "TextLeft": {
+   "name": "TextLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "TextRight": {
+   "name": "TextRight",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCenter": {
+   "name": "TextCenter",
+   "mode": "plain",
+   "value": "text-center"
+  },
+  "TextJustify": {
+   "name": "TextJustify",
+   "mode": "plain",
+   "value": false
+  },
+  "TextWrap": {
+   "name": "TextWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextNoWrap": {
+   "name": "TextNoWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextUpperCase": {
+   "name": "TextUpperCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextLowerCase": {
+   "name": "TextLowerCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCapitalize": {
+   "name": "TextCapitalize",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>div</tagName>
+                                    <bean yaml_key="Text [mobile.components.UIText-1517842626131]">
+                                        <textValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "OffChat Lobby"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </textValue>
+                                    </bean>
+                                </bean>
+                            </bean>
+                            <bean yaml_key="ButtonSet [mobile.components.UIDynamicElement-1518088441378]">
+                                <beanData>{
+ "name": "ButtonSet",
+ "properties": {"SetPosition": {
+  "name": "SetPosition",
+  "mode": "plain",
+  "value": "right"
+ }}
+}</beanData>
+                                <tagName>ion-buttons</tagName>
+                                <bean yaml_key="Button [mobile.components.UIDynamicElement-1518088441400]">
+                                    <beanData>{
+ "name": "Button",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": false
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>button</tagName>
+                                    <bean yaml_key="Icon [mobile.components.UIDynamicElement-1518088441421]">
+                                        <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "more"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                        <tagName>ion-icon</tagName>
+                                    </bean>
+                                    <bean yaml_key="Event [mobile.components.UIControlEvent-1518088441443]">
+                                        <attrValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </attrValue>
+                                        <bean yaml_key="CustomAction [mobile.components.UICustomAction-1518088441460]">
+                                            <actionValue>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                    <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[		page.c8o.log.debug(event ? event.toString():'no event');
+		
+	    let actionSheet = this.getInstance(ActionSheetController).create({
+	        title: 'Disconnect and go to login?',
+	        buttons: [
+	          {
+	            text: 'Logout',
+	            icon: 'log-out',
+	            handler: () => {
+	              resolve();
+	            }
+	          },{
+	            text: 'Cancel',
+	            role: 'cancel',
+	            icon: 'close',
+	            handler: () => {
+	            }
+	          }
+	        ]
+	      });
+	      actionSheet.present();
+		
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                </xmlizable>
+                                            </actionValue>
+                                            <module_ts_imports>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                                    <com.twinsoft.convertigo.beans.common.XMLVector>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector">
+                                                            <com.twinsoft.convertigo.beans.common.XMLVector>
+                                                                <java.lang.String value="ActionSheetController "/>
+                                                                <java.lang.String value="ionic-angular"/>
+                                                            </com.twinsoft.convertigo.beans.common.XMLVector>
+                                                        </xmlizable>
+                                                    </com.twinsoft.convertigo.beans.common.XMLVector>
+                                                </xmlizable>
+                                            </module_ts_imports>
+                                            <bean yaml_key="CallFullSync [mobile.components.UIDynamicAction-1518088441506]">
+                                                <beanData>{
+ "name": "CallFullSyncAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "marker": {
+   "name": "marker",
+   "mode": "plain",
+   "value": ""
+  },
+  "verb": {
+   "name": "verb",
+   "mode": "plain",
+   "value": "sync"
+  }
+ }
+}</beanData>
+                                                <bean yaml_key="cancel [mobile.components.UIControlVariable-1518089024003]">
+                                                    <varValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "script",
+ "value": "true"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </varValue>
+                                                </bean>
+                                                <bean yaml_key="RootPage [mobile.components.UIDynamicAction-1518089070701]">
+                                                    <beanData>{
+ "name": "RootPageAction",
+ "properties": {"page": {
+  "name": "page",
+  "mode": "plain",
+  "value": "sampleMobileOffChat.OffChat.OffChat.Login"
+ }}
+}</beanData>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Content [mobile.components.UIDynamicElement-1517842626167]">
+                        <beanData>{
+ "name": "Content",
+ "properties": {
+  "IonPadding": {
+   "name": "IonPadding",
+   "mode": "plain",
+   "value": "padding"
+  },
+  "Fullscreen": {
+   "name": "Fullscreen",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                        <tagName>ion-content</tagName>
+                        <bean yaml_key="CardContainer [mobile.components.UIDynamicElement-1517849109999]">
+                            <beanData>{
+ "name": "Card",
+ "properties": {}
+}</beanData>
+                            <tagName>ion-card</tagName>
+                            <bean yaml_key="CardContent [mobile.components.UIDynamicElement-1517849115628]">
+                                <beanData>{
+ "name": "CardContent",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-card-content</tagName>
+                                <bean yaml_key="ListContainer [mobile.components.UIDynamicElement-1517842865406]">
+                                    <beanData>{
+ "name": "List",
+ "properties": {
+  "Nolines": {
+   "name": "Nolines",
+   "mode": "plain",
+   "value": false
+  },
+  "Inset": {
+   "name": "Inset",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>ion-list</tagName>
+                                    <bean yaml_key="Directive [mobile.components.UIControlDirective-1517843119306]">
+                                        <directiveSource>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Database\",\"project\":\"sampleMobileOffChat\",\"input\":\"listen(['fs:\\\/\\\/offchat_fullsync.get'])?.users\"}"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </directiveSource>
+                                        <bean yaml_key="Directive [mobile.components.UIControlDirective-1517844943304]">
+                                            <comment>item1517843119306 != this.router.sharedObject["username"]</comment>
+                                            <directiveExpression>item1517843119306 != this.window.sessionStorage.username</directiveExpression>
+                                            <directiveName>If</directiveName>
+                                            <directiveSource>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{}"
+}</MobileSmartSourceType>
+                                                </xmlizable>
+                                            </directiveSource>
+                                            <bean yaml_key="Button [mobile.components.UIDynamicElement-1517849203750]">
+                                                <beanData>{
+ "name": "Button",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": false
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-item"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>button</tagName>
+                                                <bean yaml_key="Text [mobile.components.UIText-1517843618972]">
+                                                    <textValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517843119306\"}"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </textValue>
+                                                </bean>
+                                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517848669716]">
+                                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "mail-open"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": "item-right"
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>ion-icon</tagName>
+                                                </bean>
+                                                <bean yaml_key="Event [mobile.components.UIControlEvent-1517848722634]">
+                                                    <attrValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </attrValue>
+                                                    <bean yaml_key="CustomAction [mobile.components.UICustomAction-1517918128977]">
+                                                        <actionValue>
+                                                            <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                                <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[		this.window.sessionStorage.dest = vars.dest;
+		resolve();
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                            </xmlizable>
+                                                        </actionValue>
+                                                        <bean yaml_key="PushPage [mobile.components.UIDynamicAction-1517849454387]">
+                                                            <beanData>{
+ "name": "PushPageAction",
+ "properties": {
+  "page": {
+   "name": "page",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.OffChat.OffChat.Chat"
+  },
+  "data": {
+   "name": "data",
+   "mode": "plain",
+   "value": ""
+  },
+  "animate": {
+   "name": "animate",
+   "mode": "plain",
+   "value": "true"
+  },
+  "animate_duration": {
+   "name": "animate_duration",
+   "mode": "script",
+   "value": "250"
+  }
+ }
+}</beanData>
+                                                        </bean>
+                                                        <bean yaml_key="dest [mobile.components.UIControlVariable-1517921410365]">
+                                                            <varValue>
+                                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517843119306\"}"
+}</MobileSmartSourceType>
+                                                                </xmlizable>
+                                                            </varValue>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Footer [mobile.components.UIDynamicElement-1517842626237]">
+                        <beanData>{
+ "name": "Footer",
+ "properties": {}
+}</beanData>
+                        <tagName>ion-footer</tagName>
+                        <bean yaml_key="ToolBar [mobile.components.UIDynamicElement-1517842626276]">
+                            <beanData>{
+ "name": "ToolBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-toolbar</tagName>
+                            <bean yaml_key="Style [mobile.components.UIStyle-1517842626309]">
+                                <styleContent>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	text-align: center;
+	color: color($colors, secondary);
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                    </xmlizable>
+                                </styleContent>
+                            </bean>
+                            <bean yaml_key="Directive [mobile.components.UIControlDirective-1518096866377]">
+                                <directiveExpression>this.window.sessionStorage.offline == 'true'</directiveExpression>
+                                <directiveName>If</directiveName>
+                                <directiveSource>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": ""
+}</MobileSmartSourceType>
+                                    </xmlizable>
+                                </directiveSource>
+                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1518096912075]">
+                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "plane"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>ion-icon</tagName>
+                                </bean>
+                                <bean yaml_key="Text [mobile.components.UIText-1518096918824]">
+                                    <textValue>
+                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "Offline Mode"
+}</MobileSmartSourceType>
+                                        </xmlizable>
+                                    </textValue>
+                                </bean>
+                                <bean yaml_key="Icon1 [mobile.components.UIDynamicElement-1518097036523]">
+                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "plane"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>ion-icon</tagName>
+                                </bean>
+                            </bean>
+                            <bean yaml_key="Text [mobile.components.UIText-1517842626341]">
+                                <textValue>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "© Convertigo"
+}</MobileSmartSourceType>
+                                    </xmlizable>
+                                </textValue>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="PageEvent [mobile.components.UIPageEvent-1517842890865]">
+                        <bean yaml_key="GetData [mobile.components.UIDynamicAction-1519206701361]">
+                            <beanData>{
+ "name": "FullSyncGetAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "marker": {
+   "name": "marker",
+   "mode": "plain",
+   "value": false
+  },
+  "_id": {
+   "name": "_id",
+   "mode": "plain",
+   "value": "userList"
+  },
+  "__live": {
+   "name": "__live",
+   "mode": "plain",
+   "value": "lobby"
+  }
+ }
+}</beanData>
+                        </bean>
+                    </bean>
+                </bean>
+                <bean yaml_file="mobilePages/Chat.yaml" yaml_key="Chat [mobile.components.PageComponent-1517848543093]">
+                    <scriptContent>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[/*Begin_c8o_PageImport*/
+/*End_c8o_PageImport*/
+/*Begin_c8o_PageDeclaration*/
+	public window: any;
+	/*End_c8o_PageDeclaration*/
+/*Begin_c8o_PageConstructor*/
+        this.window = window;
+		/*End_c8o_PageConstructor*/
+/*Begin_c8o_PageFunction*/
+	public validateForm() {
+	    var msg = this.form1517850194442.controls.message;
+	    window.setTimeout(function () {
+	        msg.updateValueAndValidity()
+	    }, 50);
+	}
+	public clearForm() {
+	    //this.window.document.getElementById('photo').setAttribute('src','');
+	    delete this.router.sharedObject.photo;
+	    this.form1517850194442.controls.message.setValue('');
+	    this.validateForm();
+	}
+	public toDate(ts) {
+	    return new Date(ts).toLocaleString();
+	}
+	/*End_c8o_PageFunction*/
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                        </xmlizable>
+                    </scriptContent>
+                    <segment>Chat</segment>
+                    <title>Title for Chat</title>
+                    <bean yaml_key="Header [mobile.components.UIDynamicElement-1517849497973]">
+                        <beanData>{
+ "name": "Header",
+ "properties": {"NoBorder": {
+  "name": "NoBorder",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                        <tagName>ion-header</tagName>
+                        <bean yaml_key="NavBar [mobile.components.UIDynamicElement-1517849498007]">
+                            <beanData>{
+ "name": "NavBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  },
+  "BackButtonHidden": {
+   "name": "BackButtonHidden",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-navbar</tagName>
+                            <bean yaml_key="BarTitle [mobile.components.UIDynamicElement-1517849498041]">
+                                <beanData>{
+ "name": "BarTitle",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-title</tagName>
+                                <bean yaml_key="TextFormat [mobile.components.UIDynamicElement-1517849498072]">
+                                    <beanData>{
+ "name": "TextFormat",
+ "properties": {
+  "TextLeft": {
+   "name": "TextLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "TextRight": {
+   "name": "TextRight",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCenter": {
+   "name": "TextCenter",
+   "mode": "plain",
+   "value": "text-center"
+  },
+  "TextJustify": {
+   "name": "TextJustify",
+   "mode": "plain",
+   "value": false
+  },
+  "TextWrap": {
+   "name": "TextWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextNoWrap": {
+   "name": "TextNoWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextUpperCase": {
+   "name": "TextUpperCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextLowerCase": {
+   "name": "TextLowerCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCapitalize": {
+   "name": "TextCapitalize",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>div</tagName>
+                                    <bean yaml_key="Text [mobile.components.UIText-1517849498103]">
+                                        <textValue>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "script",
+ "value": "\"OffChat with \" + this.window.sessionStorage.dest"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </textValue>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Content [mobile.components.UIDynamicElement-1517849574548]">
+                        <beanData>{
+ "name": "Content",
+ "properties": {
+  "IonPadding": {
+   "name": "IonPadding",
+   "mode": "plain",
+   "value": "padding"
+  },
+  "Fullscreen": {
+   "name": "Fullscreen",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                        <tagName>ion-content</tagName>
+                        <bean yaml_key="TextFormat [mobile.components.UIDynamicElement-1518021234144]">
+                            <beanData>{
+ "name": "TextFormat",
+ "properties": {
+  "TextLeft": {
+   "name": "TextLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "TextRight": {
+   "name": "TextRight",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCenter": {
+   "name": "TextCenter",
+   "mode": "plain",
+   "value": false
+  },
+  "TextJustify": {
+   "name": "TextJustify",
+   "mode": "plain",
+   "value": false
+  },
+  "TextWrap": {
+   "name": "TextWrap",
+   "mode": "plain",
+   "value": "text-wrap"
+  },
+  "TextNoWrap": {
+   "name": "TextNoWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextUpperCase": {
+   "name": "TextUpperCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextLowerCase": {
+   "name": "TextLowerCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCapitalize": {
+   "name": "TextCapitalize",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>div</tagName>
+                            <bean yaml_key="CardContainer [mobile.components.UIDynamicElement-1517849585876]">
+                                <beanData>{
+ "name": "Card",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-card</tagName>
+                                <bean yaml_key="CardContent [mobile.components.UIDynamicElement-1517849588610]">
+                                    <beanData>{
+ "name": "CardContent",
+ "properties": {}
+}</beanData>
+                                    <tagName>ion-card-content</tagName>
+                                    <bean yaml_key="Form [mobile.components.UIForm-1517850194442]">
+                                        <bean yaml_key="GenericItem [mobile.components.UIDynamicElement-1517850283058]">
+                                            <beanData>{
+ "name": "ListItem",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                                            <tagName>ion-item</tagName>
+                                            <bean yaml_key="MessageLabel [mobile.components.UIDynamicElement-1517850172878]">
+                                                <beanData>{
+ "name": "Label",
+ "properties": {
+  "Fixed": {
+   "name": "Fixed",
+   "mode": "plain",
+   "value": false
+  },
+  "Floating": {
+   "name": "Floating",
+   "mode": "plain",
+   "value": "floating"
+  },
+  "Stacked": {
+   "name": "Stacked",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>ion-label</tagName>
+                                                <bean yaml_key="message [mobile.components.UIText-1517850172912]">
+                                                    <textValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "message"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </textValue>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="message [mobile.components.UIDynamicElement-1517850172946]">
+                                                <beanData>{
+ "name": "Input",
+ "properties": {
+  "FormControlName": {
+   "name": "FormControlName",
+   "mode": "plain",
+   "value": "message"
+  },
+  "Disabled": {
+   "name": "Disabled",
+   "mode": "plain",
+   "value": false
+  },
+  "ClearInput": {
+   "name": "ClearInput",
+   "mode": "plain",
+   "value": false
+  },
+  "ClearOnEdit": {
+   "name": "ClearOnEdit",
+   "mode": "plain",
+   "value": false
+  },
+  "Max": {
+   "name": "Max",
+   "mode": "plain",
+   "value": false
+  },
+  "Min": {
+   "name": "Min",
+   "mode": "plain",
+   "value": false
+  },
+  "Mode": {
+   "name": "Mode",
+   "mode": "plain",
+   "value": false
+  },
+  "Placeholder": {
+   "name": "Placeholder",
+   "mode": "plain",
+   "value": false
+  },
+  "Readonly": {
+   "name": "Readonly",
+   "mode": "plain",
+   "value": false
+  },
+  "Step": {
+   "name": "Step",
+   "mode": "plain",
+   "value": false
+  },
+  "TextAlign": {
+   "name": "TextAlign",
+   "mode": "plain",
+   "value": false
+  },
+  "Type": {
+   "name": "Type",
+   "mode": "plain",
+   "value": "text"
+  },
+  "Value": {
+   "name": "Value",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>ion-input</tagName>
+                                                <bean yaml_key="CustomValidator [mobile.components.UIFormCustomValidator-1518002152000]">
+                                                    <validatorValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[            let hasImage = false;
+            try {
+                hasImage = window.document.getElementById('photo').getAttribute('src').length != 0;
+            } catch (e) {
+            }
+            try {
+        	    if (c.value.length == 0 && !hasImage) {
+        	        return {'empty': true};
+        	    }
+            } catch (e) {
+                return {'exception': true};
+            }
+    		return null;
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                        </xmlizable>
+                                                    </validatorValue>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="Image [mobile.components.UIDynamicElement-1517996593478]">
+                                            <beanData>{
+ "name": "Image",
+ "properties": {
+  "url": {
+   "name": "url",
+   "mode": "script",
+   "value": "this.router.sharedObject['photo'] || ''"
+  },
+  "width": {
+   "name": "width",
+   "mode": "plain",
+   "value": ""
+  },
+  "height": {
+   "name": "height",
+   "mode": "plain",
+   "value": ""
+  },
+  "alt": {
+   "name": "alt",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                            <selfClose>true</selfClose>
+                                            <tagName>img</tagName>
+                                            <bean yaml_key="Attr [mobile.components.UIAttribute-1517997468359]">
+                                                <attrName>id</attrName>
+                                                <attrValue>
+                                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "photo"
+}</MobileSmartSourceType>
+                                                    </xmlizable>
+                                                </attrValue>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="ButtonSet [mobile.components.UIDynamicElement-1517909662176]">
+                                            <beanData>{
+ "name": "ButtonSet",
+ "properties": {"SetPosition": {
+  "name": "SetPosition",
+  "mode": "plain",
+  "value": "right"
+ }}
+}</beanData>
+                                            <tagName>ion-buttons</tagName>
+                                            <bean yaml_key="ResetButton [mobile.components.UIDynamicElement-1517999213040]">
+                                                <beanData>{
+ "name": "ResetButton",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": "button"
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <tagName>button</tagName>
+                                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517999256230]">
+                                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "trash"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>ion-icon</tagName>
+                                                </bean>
+                                                <bean yaml_key="Event [mobile.components.UIControlEvent-1518001691979]">
+                                                    <attrValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </attrValue>
+                                                    <bean yaml_key="ClearForm [mobile.components.UIDynamicAction-1518001706502]">
+                                                        <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "this.clearForm()"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="ButtonGallery [mobile.components.UIDynamicElement-1518702232589]">
+                                                <beanData>{
+ "name": "Button",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": "button"
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": "icon-only"
+  }
+ }
+}</beanData>
+                                                <tagName>button</tagName>
+                                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1518702232652]">
+                                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "images"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>ion-icon</tagName>
+                                                </bean>
+                                                <bean yaml_key="Event [mobile.components.UIControlEvent-1518702232697]">
+                                                    <attrValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </attrValue>
+                                                    <bean yaml_key="Camera [mobile.components.UIDynamicAction-1518702232732]">
+                                                        <beanData>{
+ "name": "CameraAction",
+ "properties": {
+  "quality": {
+   "name": "quality",
+   "mode": "script",
+   "value": "75"
+  },
+  "destinationType": {
+   "name": "destinationType",
+   "mode": "plain",
+   "value": "FILE_URI"
+  },
+  "sourceType": {
+   "name": "sourceType",
+   "mode": "plain",
+   "value": "PHOTOLIBRARY"
+  },
+  "allowEdit": {
+   "name": "allowEdit",
+   "mode": "plain",
+   "value": "false"
+  },
+  "encodingType": {
+   "name": "encodingType",
+   "mode": "plain",
+   "value": "JPEG"
+  },
+  "targetWidth": {
+   "name": "targetWidth",
+   "mode": "script",
+   "value": "640"
+  },
+  "targetHeight": {
+   "name": "targetHeight",
+   "mode": "script",
+   "value": "640"
+  },
+  "mediaType": {
+   "name": "mediaType",
+   "mode": "plain",
+   "value": false
+  },
+  "correctOrientation": {
+   "name": "correctOrientation",
+   "mode": "plain",
+   "value": "true"
+  },
+  "saveToPhotoAlbum": {
+   "name": "saveToPhotoAlbum",
+   "mode": "plain",
+   "value": false
+  },
+  "cameraDirection": {
+   "name": "cameraDirection",
+   "mode": "plain",
+   "value": "FRONT"
+  },
+  "x": {
+   "name": "x",
+   "mode": "script",
+   "value": false
+  },
+  "y": {
+   "name": "y",
+   "mode": "script",
+   "value": false
+  },
+  "width": {
+   "name": "width",
+   "mode": "script",
+   "value": false
+  },
+  "height": {
+   "name": "height",
+   "mode": "script",
+   "value": false
+  },
+  "arrowDir": {
+   "name": "arrowDir",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                        <bean yaml_key="SetGlobal [mobile.components.UIDynamicAction-1518702232797]">
+                                                            <beanData>{
+ "name": "SetGlobalAction",
+ "properties": {
+  "Property": {
+   "name": "Property",
+   "mode": "plain",
+   "value": "photo"
+  },
+  "Value": {
+   "name": "Value",
+   "mode": "script",
+   "value": "out"
+  }
+ }
+}</beanData>
+                                                            <bean yaml_key="ValidateForm [mobile.components.UIDynamicAction-1518702232858]">
+                                                                <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "this.validateForm()"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                            </bean>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="ButtonPhoto [mobile.components.UIDynamicElement-1517909749723]">
+                                                <beanData>{
+ "name": "Button",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": "button"
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": "icon-only"
+  }
+ }
+}</beanData>
+                                                <tagName>button</tagName>
+                                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517909753358]">
+                                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "camera"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>ion-icon</tagName>
+                                                </bean>
+                                                <bean yaml_key="Event [mobile.components.UIControlEvent-1517995956259]">
+                                                    <attrValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </attrValue>
+                                                    <bean yaml_key="Camera [mobile.components.UIDynamicAction-1518528294291]">
+                                                        <beanData>{
+ "name": "CameraAction",
+ "properties": {
+  "quality": {
+   "name": "quality",
+   "mode": "script",
+   "value": "75"
+  },
+  "destinationType": {
+   "name": "destinationType",
+   "mode": "plain",
+   "value": "FILE_URI"
+  },
+  "sourceType": {
+   "name": "sourceType",
+   "mode": "plain",
+   "value": "CAMERA"
+  },
+  "allowEdit": {
+   "name": "allowEdit",
+   "mode": "plain",
+   "value": "false"
+  },
+  "encodingType": {
+   "name": "encodingType",
+   "mode": "plain",
+   "value": "JPEG"
+  },
+  "targetWidth": {
+   "name": "targetWidth",
+   "mode": "script",
+   "value": "640"
+  },
+  "targetHeight": {
+   "name": "targetHeight",
+   "mode": "script",
+   "value": "640"
+  },
+  "mediaType": {
+   "name": "mediaType",
+   "mode": "plain",
+   "value": false
+  },
+  "correctOrientation": {
+   "name": "correctOrientation",
+   "mode": "plain",
+   "value": "true"
+  },
+  "saveToPhotoAlbum": {
+   "name": "saveToPhotoAlbum",
+   "mode": "plain",
+   "value": false
+  },
+  "cameraDirection": {
+   "name": "cameraDirection",
+   "mode": "plain",
+   "value": "FRONT"
+  },
+  "x": {
+   "name": "x",
+   "mode": "script",
+   "value": false
+  },
+  "y": {
+   "name": "y",
+   "mode": "script",
+   "value": false
+  },
+  "width": {
+   "name": "width",
+   "mode": "script",
+   "value": false
+  },
+  "height": {
+   "name": "height",
+   "mode": "script",
+   "value": false
+  },
+  "arrowDir": {
+   "name": "arrowDir",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                        <bean yaml_key="SetGlobal [mobile.components.UIDynamicAction-1518528390020]">
+                                                            <beanData>{
+ "name": "SetGlobalAction",
+ "properties": {
+  "Property": {
+   "name": "Property",
+   "mode": "plain",
+   "value": "photo"
+  },
+  "Value": {
+   "name": "Value",
+   "mode": "script",
+   "value": "out"
+  }
+ }
+}</beanData>
+                                                            <bean yaml_key="ValidateForm [mobile.components.UIDynamicAction-1518529740890]">
+                                                                <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "this.validateForm()"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                            </bean>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                            <bean yaml_key="SubmitButton [mobile.components.UIDynamicElement-1517850328552]">
+                                                <beanData>{
+ "name": "SubmitButton",
+ "properties": {
+  "ButtonFormType": {
+   "name": "ButtonFormType",
+   "mode": "plain",
+   "value": "submit"
+  },
+  "ButtonType": {
+   "name": "ButtonType",
+   "mode": "plain",
+   "value": "ion-button"
+  },
+  "MenuMode": {
+   "name": "MenuMode",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "IonShape": {
+   "name": "IonShape",
+   "mode": "plain",
+   "value": false
+  },
+  "IonOutline": {
+   "name": "IonOutline",
+   "mode": "plain",
+   "value": false
+  },
+  "IonClear": {
+   "name": "IonClear",
+   "mode": "plain",
+   "value": false
+  },
+  "IonSize": {
+   "name": "IonSize",
+   "mode": "plain",
+   "value": false
+  },
+  "IconPosition": {
+   "name": "IconPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IconOnly": {
+   "name": "IconOnly",
+   "mode": "plain",
+   "value": "icon-only"
+  },
+  "AutoDisable": {
+   "name": "AutoDisable",
+   "mode": "plain",
+   "value": "true"
+  }
+ }
+}</beanData>
+                                                <tagName>button</tagName>
+                                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517909691234]">
+                                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "send"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>ion-icon</tagName>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="Event [mobile.components.UIControlEvent-1517917394981]">
+                                            <attrName>(ngSubmit)</attrName>
+                                            <attrValue>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                    <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "value"
+}</MobileSmartSourceType>
+                                                </xmlizable>
+                                            </attrValue>
+                                            <eventName>onSubmit</eventName>
+                                            <bean yaml_key="PostData [mobile.components.UIDynamicAction-1517917440325]">
+                                                <beanData>{
+ "name": "FullSyncPostAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "_id": {
+   "name": "_id",
+   "mode": "plain",
+   "value": false
+  },
+  "_use_policy": {
+   "name": "_use_policy",
+   "mode": "plain",
+   "value": "none"
+  },
+  "RootKey": {
+   "name": "RootKey",
+   "mode": "plain",
+   "value": false
+  },
+  "c8oGrp": {
+   "name": "c8oGrp",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                <bean yaml_key="message [mobile.components.UIControlVariable-1517917507970]">
+                                                    <varValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Form\",\"project\":\"sampleMobileOffChat\",\"input\":\"form1517850194442?.controls['message']?.value\"}"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </varValue>
+                                                </bean>
+                                                <bean yaml_key="user [mobile.components.UIControlVariable-1517917846817]">
+                                                    <varValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "script",
+ "value": "this.window.sessionStorage.dest"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </varValue>
+                                                </bean>
+                                                <bean yaml_key="type [mobile.components.UIControlVariable-1517922496998]">
+                                                    <varValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "message"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </varValue>
+                                                </bean>
+                                                <bean yaml_key="dir [mobile.components.UIControlVariable-1517922499531]">
+                                                    <varValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "to"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </varValue>
+                                                </bean>
+                                                <bean yaml_key="IfPhoto [mobile.components.UIDynamicAction-1517999085331]">
+                                                    <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "document.getElementById('photo').getAttribute('src').length != 0"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                    <bean yaml_key="PutAttachment [mobile.components.UIDynamicAction-1517998064600]">
+                                                        <beanData>{
+ "name": "FullSyncPutAttachmentAction",
+ "properties": {
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "docid": {
+   "name": "docid",
+   "mode": "script",
+   "value": "stack['PostData'].out.id"
+  },
+  "name": {
+   "name": "name",
+   "mode": "plain",
+   "value": "img.jpeg"
+  },
+  "content_type": {
+   "name": "content_type",
+   "mode": "plain",
+   "value": "image\/jpeg"
+  },
+  "content": {
+   "name": "content",
+   "mode": "script",
+   "value": "document.getElementById('photo').getAttribute('src')"
+  }
+ }
+}</beanData>
+                                                        <bean yaml_key="ClearForm [mobile.components.UIDynamicAction-1518008222791]">
+                                                            <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "this.clearForm()"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="Else [mobile.components.UIDynamicAction-1518008230653]">
+                                                    <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "document.getElementById('photo').getAttribute('src').length != 0"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "true"
+  }
+ }
+}</beanData>
+                                                    <bean yaml_key="ClearForm [mobile.components.UIDynamicAction-1518008230718]">
+                                                        <beanData>{
+ "name": "IfAction",
+ "properties": {
+  "condition": {
+   "name": "condition",
+   "mode": "script",
+   "value": "this.clearForm()"
+  },
+  "negate": {
+   "name": "negate",
+   "mode": "plain",
+   "value": "false"
+  }
+ }
+}</beanData>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="ts [mobile.components.UIControlVariable-1518022800702]">
+                                                    <varValue>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "script",
+ "value": "this.window.localStorage.decTs * 1 + new Date().getTime()"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </varValue>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                </bean>
+                            </bean>
+                            <bean yaml_key="CardContainer1 [mobile.components.UIDynamicElement-1518001966264]">
+                                <beanData>{
+ "name": "Card",
+ "properties": {}
+}</beanData>
+                                <tagName>ion-card</tagName>
+                                <bean yaml_key="ListContainer [mobile.components.UIDynamicElement-1517849854716]">
+                                    <beanData>{
+ "name": "List",
+ "properties": {
+  "Nolines": {
+   "name": "Nolines",
+   "mode": "plain",
+   "value": false
+  },
+  "Inset": {
+   "name": "Inset",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>ion-list</tagName>
+                                    <bean yaml_key="Directive [mobile.components.UIControlDirective-1517849900594]">
+                                        <directiveSource>
+                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Database\",\"project\":\"sampleMobileOffChat\",\"input\":\"listen(['fs:\\\/\\\/offchat_fullsync.view, {ddoc='OffChat', view='getChat', include_docs='false'}'])?.rows\"}"
+}</MobileSmartSourceType>
+                                            </xmlizable>
+                                        </directiveSource>
+                                        <bean yaml_key="Directive [mobile.components.UIControlDirective-1517912758916]">
+                                            <directiveName>If</directiveName>
+                                            <directiveSource>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.dir == 'to'\"}"
+}</MobileSmartSourceType>
+                                                </xmlizable>
+                                            </directiveSource>
+                                            <bean yaml_key="GenericItem [mobile.components.UIDynamicElement-1517849944165]">
+                                                <beanData>{
+ "name": "ListItem",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                                                <tagName>ion-item</tagName>
+                                                <bean yaml_key="AvatarItem [mobile.components.UIDynamicElement-1517913225485]">
+                                                    <beanData>{
+ "name": "Avatar",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": "item-left"
+ }}
+}</beanData>
+                                                    <tagName>ion-avatar</tagName>
+                                                    <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517913258594]">
+                                                        <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "ionitron"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                        <tagName>ion-icon</tagName>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="H2 [mobile.components.UIDynamicElement-1517913138703]">
+                                                    <beanData>{
+ "name": "Heading2",
+ "properties": {
+  "ionText": {
+   "name": "ionText",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>h2</tagName>
+                                                    <bean yaml_key="Text [mobile.components.UIText-1517912810323]">
+                                                        <textValue>
+                                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                <MobileSmartSourceType>{
+ "mode": "script",
+ "value": "window.sessionStorage.username"
+}</MobileSmartSourceType>
+                                                            </xmlizable>
+                                                        </textValue>
+                                                    </bean>
+                                                    <bean yaml_key="Span [mobile.components.UIDynamicElement-1518094131695]">
+                                                        <beanData>{
+ "name": "SpanTag",
+ "properties": {}
+}</beanData>
+                                                        <tagName>span</tagName>
+                                                        <bean yaml_key="Text [mobile.components.UIText-1518093127569]">
+                                                            <textValue>
+                                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"toDate(item1517849900594?.value?.ts)\"}"
+}</MobileSmartSourceType>
+                                                                </xmlizable>
+                                                            </textValue>
+                                                        </bean>
+                                                        <bean yaml_key="Style [mobile.components.UIStyle-1518094168403]">
+                                                            <styleContent>
+                                                                <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                                    <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	font-size: 66%;
+    color: darkgray;
+    padding-left: 15px;
+    padding-right: 15px;
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                                </xmlizable>
+                                                            </styleContent>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="H3 [mobile.components.UIDynamicElement-1517913154295]">
+                                                    <beanData>{
+ "name": "Heading3",
+ "properties": {
+  "ionText": {
+   "name": "ionText",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>h3</tagName>
+                                                    <bean yaml_key="Text1 [mobile.components.UIText-1517849979669]">
+                                                        <textValue>
+                                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.message\"}"
+}</MobileSmartSourceType>
+                                                            </xmlizable>
+                                                        </textValue>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="Directive [mobile.components.UIControlDirective-1517910361136]">
+                                                    <directiveName>If</directiveName>
+                                                    <directiveSource>
+                                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                            <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.doc?._attachments\"}"
+}</MobileSmartSourceType>
+                                                        </xmlizable>
+                                                    </directiveSource>
+                                                    <bean yaml_key="FSImage [mobile.components.UIDynamicElement-1517910596011]">
+                                                        <beanData>{
+ "name": "FSImage",
+ "properties": {
+  "url": {
+   "name": "url",
+   "mode": "script",
+   "value": "getAttachmentUrl($[docid], $[attachment], $[placeholder], $[requestable])"
+  },
+  "docid": {
+   "name": "docid",
+   "mode": "source",
+   "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.id\"}"
+  },
+  "attachment": {
+   "name": "attachment",
+   "mode": "plain",
+   "value": "img.jpeg"
+  },
+  "placeholder": {
+   "name": "placeholder",
+   "mode": "plain",
+   "value": "assets\/icon.svg"
+  },
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "width": {
+   "name": "width",
+   "mode": "plain",
+   "value": ""
+  },
+  "height": {
+   "name": "height",
+   "mode": "plain",
+   "value": ""
+  },
+  "alt": {
+   "name": "alt",
+   "mode": "plain",
+   "value": "image"
+  }
+ }
+}</beanData>
+                                                        <selfClose>true</selfClose>
+                                                        <tagName>img</tagName>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                        <bean yaml_key="Directive1 [mobile.components.UIControlDirective-1517912810286]">
+                                            <directiveName>If</directiveName>
+                                            <directiveSource>
+                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.dir == 'from'\"}"
+}</MobileSmartSourceType>
+                                                </xmlizable>
+                                            </directiveSource>
+                                            <bean yaml_key="GenericItem [mobile.components.UIDynamicElement-1517912810303]">
+                                                <beanData>{
+ "name": "ListItem",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": false
+ }}
+}</beanData>
+                                                <tagName>ion-item</tagName>
+                                                <bean yaml_key="AvatarItem [mobile.components.UIDynamicElement-1517913370313]">
+                                                    <beanData>{
+ "name": "Avatar",
+ "properties": {"ItemPosition": {
+  "name": "ItemPosition",
+  "mode": "plain",
+  "value": "item-right"
+ }}
+}</beanData>
+                                                    <tagName>ion-avatar</tagName>
+                                                    <bean yaml_key="Icon [mobile.components.UIDynamicElement-1517913370330]">
+                                                        <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "happy"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                        <tagName>ion-icon</tagName>
+                                                    </bean>
+                                                </bean>
+                                                <bean yaml_key="TextFormat [mobile.components.UIDynamicElement-1517915194451]">
+                                                    <beanData>{
+ "name": "TextFormat",
+ "properties": {
+  "TextLeft": {
+   "name": "TextLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "TextRight": {
+   "name": "TextRight",
+   "mode": "plain",
+   "value": "text-right"
+  },
+  "TextCenter": {
+   "name": "TextCenter",
+   "mode": "plain",
+   "value": false
+  },
+  "TextJustify": {
+   "name": "TextJustify",
+   "mode": "plain",
+   "value": false
+  },
+  "TextWrap": {
+   "name": "TextWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextNoWrap": {
+   "name": "TextNoWrap",
+   "mode": "plain",
+   "value": false
+  },
+  "TextUpperCase": {
+   "name": "TextUpperCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextLowerCase": {
+   "name": "TextLowerCase",
+   "mode": "plain",
+   "value": false
+  },
+  "TextCapitalize": {
+   "name": "TextCapitalize",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                    <tagName>div</tagName>
+                                                    <bean yaml_key="H2 [mobile.components.UIDynamicElement-1517913407093]">
+                                                        <beanData>{
+ "name": "Heading2",
+ "properties": {
+  "ionText": {
+   "name": "ionText",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                        <tagName>h2</tagName>
+                                                        <bean yaml_key="Span [mobile.components.UIDynamicElement-1518094703835]">
+                                                            <beanData>{
+ "name": "SpanTag",
+ "properties": {}
+}</beanData>
+                                                            <tagName>span</tagName>
+                                                            <bean yaml_key="Text [mobile.components.UIText-1518094703863]">
+                                                                <textValue>
+                                                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                        <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"toDate(item1517849900594?.value?.ts)\"}"
+}</MobileSmartSourceType>
+                                                                    </xmlizable>
+                                                                </textValue>
+                                                            </bean>
+                                                            <bean yaml_key="Style [mobile.components.UIStyle-1518094703889]">
+                                                                <styleContent>
+                                                                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                                                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	font-size: 66%;
+
+    color: darkgray;
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                                                    </xmlizable>
+                                                                </styleContent>
+                                                            </bean>
+                                                        </bean>
+                                                        <bean yaml_key="Text1 [mobile.components.UIText-1517922896792]">
+                                                            <textValue>
+                                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.user\"}"
+}</MobileSmartSourceType>
+                                                                </xmlizable>
+                                                            </textValue>
+                                                        </bean>
+                                                    </bean>
+                                                    <bean yaml_key="H3 [mobile.components.UIDynamicElement-1517913423897]">
+                                                        <beanData>{
+ "name": "Heading3",
+ "properties": {
+  "ionText": {
+   "name": "ionText",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                                        <tagName>h3</tagName>
+                                                        <bean yaml_key="Text1 [mobile.components.UIText-1517912810341]">
+                                                            <textValue>
+                                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                    <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.message\"}"
+}</MobileSmartSourceType>
+                                                                </xmlizable>
+                                                            </textValue>
+                                                        </bean>
+                                                    </bean>
+                                                    <bean yaml_key="Directive [mobile.components.UIControlDirective-1517912810374]">
+                                                        <directiveName>If</directiveName>
+                                                        <directiveSource>
+                                                            <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                <MobileSmartSourceType>{
+ "mode": "source",
+ "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.doc?._attachments\"}"
+}</MobileSmartSourceType>
+                                                            </xmlizable>
+                                                        </directiveSource>
+                                                        <bean yaml_key="Text3 [mobile.components.UIText-1517912810392]">
+                                                            <isEnabled>false</isEnabled>
+                                                            <textValue>
+                                                                <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                                                    <MobileSmartSourceType>{
+ "mode": "script",
+ "value": "this.window.JSON.stringify(item1517849900594)"
+}</MobileSmartSourceType>
+                                                                </xmlizable>
+                                                            </textValue>
+                                                        </bean>
+                                                        <bean yaml_key="FSImage [mobile.components.UIDynamicElement-1517912810405]">
+                                                            <beanData>{
+ "name": "FSImage",
+ "properties": {
+  "url": {
+   "name": "url",
+   "mode": "script",
+   "value": "getAttachmentUrl($[docid], $[attachment], $[placeholder], $[requestable])"
+  },
+  "docid": {
+   "name": "docid",
+   "mode": "source",
+   "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.id\"}"
+  },
+  "attachment": {
+   "name": "attachment",
+   "mode": "plain",
+   "value": "img.jpeg"
+  },
+  "placeholder": {
+   "name": "placeholder",
+   "mode": "plain",
+   "value": "assets\/icon.svg"
+  },
+  "requestable": {
+   "name": "requestable",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync"
+  },
+  "width": {
+   "name": "width",
+   "mode": "plain",
+   "value": ""
+  },
+  "height": {
+   "name": "height",
+   "mode": "plain",
+   "value": ""
+  },
+  "alt": {
+   "name": "alt",
+   "mode": "plain",
+   "value": "image"
+  }
+ }
+}</beanData>
+                                                            <selfClose>true</selfClose>
+                                                            <tagName>img</tagName>
+                                                        </bean>
+                                                    </bean>
+                                                </bean>
+                                            </bean>
+                                        </bean>
+                                    </bean>
+                                </bean>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="Footer [mobile.components.UIDynamicElement-1517849498139]">
+                        <beanData>{
+ "name": "Footer",
+ "properties": {}
+}</beanData>
+                        <tagName>ion-footer</tagName>
+                        <bean yaml_key="ToolBar [mobile.components.UIDynamicElement-1517849498172]">
+                            <beanData>{
+ "name": "ToolBar",
+ "properties": {
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": "primary"
+  },
+  "BarMode": {
+   "name": "BarMode",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                            <tagName>ion-toolbar</tagName>
+                            <bean yaml_key="Style [mobile.components.UIStyle-1517849498205]">
+                                <styleContent>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                                        <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[	text-align: center;
+	color: color($colors, secondary);
+]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                                    </xmlizable>
+                                </styleContent>
+                            </bean>
+                            <bean yaml_key="Directive [mobile.components.UIControlDirective-1518097160507]">
+                                <directiveExpression>this.window.sessionStorage.offline == 'true'</directiveExpression>
+                                <directiveName>If</directiveName>
+                                <directiveSource>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": ""
+}</MobileSmartSourceType>
+                                    </xmlizable>
+                                </directiveSource>
+                                <bean yaml_key="Icon [mobile.components.UIDynamicElement-1518097160532]">
+                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "plane"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>ion-icon</tagName>
+                                </bean>
+                                <bean yaml_key="Text [mobile.components.UIText-1518097160557]">
+                                    <textValue>
+                                        <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                            <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "Offline Mode"
+}</MobileSmartSourceType>
+                                        </xmlizable>
+                                    </textValue>
+                                </bean>
+                                <bean yaml_key="Icon1 [mobile.components.UIDynamicElement-1518097160580]">
+                                    <beanData>{
+ "name": "Icon",
+ "properties": {
+  "IconName": {
+   "name": "IconName",
+   "mode": "plain",
+   "value": "plane"
+  },
+  "ItemPosition": {
+   "name": "ItemPosition",
+   "mode": "plain",
+   "value": false
+  },
+  "IonColor": {
+   "name": "IonColor",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeLeft": {
+   "name": "RangeLeft",
+   "mode": "plain",
+   "value": false
+  },
+  "RangeRight": {
+   "name": "RangeRight",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                                    <tagName>ion-icon</tagName>
+                                </bean>
+                            </bean>
+                            <bean yaml_key="Text [mobile.components.UIText-1517849498243]">
+                                <textValue>
+                                    <xmlizable classname="com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType">
+                                        <MobileSmartSourceType>{
+ "mode": "plain",
+ "value": "© Convertigo"
+}</MobileSmartSourceType>
+                                    </xmlizable>
+                                </textValue>
+                            </bean>
+                        </bean>
+                    </bean>
+                    <bean yaml_key="PageEvent [mobile.components.UIPageEvent-1517849657943]">
+                        <bean yaml_key="QueryView [mobile.components.UIDynamicAction-1517849678307]">
+                            <beanData>{
+ "name": "FullSyncViewAction",
+ "properties": {
+  "marker": {
+   "name": "marker",
+   "mode": "plain",
+   "value": false
+  },
+  "fsview": {
+   "name": "fsview",
+   "mode": "plain",
+   "value": "sampleMobileOffChat.offchat_fullsync.OffChat.getChat"
+  },
+  "__live": {
+   "name": "__live",
+   "mode": "plain",
+   "value": "chat"
+  },
+  "include_docs": {
+   "name": "include_docs",
+   "mode": "plain",
+   "value": "true"
+  },
+  "conflicts": {
+   "name": "conflicts",
+   "mode": "plain",
+   "value": false
+  },
+  "reduce": {
+   "name": "reduce",
+   "mode": "plain",
+   "value": false
+  },
+  "attachments": {
+   "name": "attachments",
+   "mode": "plain",
+   "value": false
+  },
+  "binary": {
+   "name": "binary",
+   "mode": "plain",
+   "value": false
+  },
+  "startkey": {
+   "name": "startkey",
+   "mode": "script",
+   "value": "[this.window.sessionStorage.dest,{}]"
+  },
+  "endkey": {
+   "name": "endkey",
+   "mode": "script",
+   "value": "[this.window.sessionStorage.dest]"
+  },
+  "inclusive_end": {
+   "name": "inclusive_end",
+   "mode": "plain",
+   "value": false
+  },
+  "limit": {
+   "name": "limit",
+   "mode": "script",
+   "value": "14"
+  },
+  "skip": {
+   "name": "skip",
+   "mode": "script",
+   "value": false
+  },
+  "descending": {
+   "name": "descending",
+   "mode": "plain",
+   "value": "true"
+  },
+  "key": {
+   "name": "key",
+   "mode": "plain",
+   "value": false
+  },
+  "keys": {
+   "name": "keys",
+   "mode": "plain",
+   "value": false
+  },
+  "group": {
+   "name": "group",
+   "mode": "plain",
+   "value": false
+  },
+  "group_level": {
+   "name": "group_level",
+   "mode": "plain",
+   "value": false
+  },
+  "stale": {
+   "name": "stale",
+   "mode": "plain",
+   "value": false
+  }
+ }
+}</beanData>
+                        </bean>
+                    </bean>
+                </bean>
+                <bean yaml_key="Theme [mobile.components.UITheme-1517567391269]">
+                    <styleContent>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/ 
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+        primary:    #00a2c9,
+        secondary:  #ffffff,
+        danger:     #f53d3d,
+        light:      #3edaff,
+        dark:       #00a2c9
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$button-ios-border-radius: 4px;
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$button-md-border-radius: 4px;
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                        </xmlizable>
+                    </styleContent>
+                </bean>
+                <bean yaml_key="Style [mobile.components.UIStyle-1517567453178]">
+                    <styleContent>
+                        <xmlizable classname="com.twinsoft.convertigo.beans.common.FormatedContent">
+                            <com.twinsoft.convertigo.beans.common.FormatedContent><![CDATA[.content {
+    background: url(../assets/icon.svg) 50% 66% / 80% no-repeat fixed;
+    background-color: color($colors, light);
+}
+
+p {
+	color: color($colors, secondary);
+}
+
+.item-md h2, .item-ios h2 {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ion-avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: color($colors, light);
+	border-radius: 100%;
+	box-shadow: 1px 1px;
+}
+
+ion-item.item {
+	align-items: start;
+}
+
+ion-footer .toolbar-md, ion-footer .toolbar-ios {
+	min-height: unset;
+}
+
+@media all and (max-height: 500px) {
+	ion-footer {
+		display: none;
+	}
+	
+	ion-content .scroll-content {
+		margin-bottom: 0px !important;
+	}
+} 
+
+@keyframes sync {
+    from   {background-position-y: 0%;}
+    to   {background-position-y: 100%;}
+}
+
+.card-md, .card-ios {
+	max-width: 780px;
+	margin: 10px auto 10px auto;
+}
+
+.toast-error .toast-container {
+	background-color: color($colors, danger);
+}
+
+.offline .toolbar-background {
+	background-color: darkorange !important;
+}
+
+.class1517910596011, .class1517996593478 {
+	max-height: 480px;
+	object-fit: contain;
+}]]></com.twinsoft.convertigo.beans.common.FormatedContent>
+                        </xmlizable>
+                    </styleContent>
+                </bean>
+            </bean>
+        </bean>
+        <bean yaml_key="Import_XSD_schema [references.ImportXsdSchemaReference]">
+            <urlpath>http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd</urlpath>
+        </bean>
+    </bean>
+</root>

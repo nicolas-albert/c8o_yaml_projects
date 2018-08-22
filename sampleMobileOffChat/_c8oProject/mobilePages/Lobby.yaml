@@ -1,0 +1,694 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        '/*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	public window: any;
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		this.window = window;
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        '
+segment: Lobby
+title: Title for Lobby
+↓Header [mobile.components.UIDynamicElement-1517842625969]: 
+  beanData: |
+    '{
+     "name": "Header",
+     "properties": {"NoBorder": {
+      "name": "NoBorder",
+      "mode": "plain",
+      "value": false
+     }}
+    }'
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1517842626004]: 
+    beanData: |
+      '{
+       "name": "NavBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        },
+        "BackButtonHidden": {
+         "name": "BackButtonHidden",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1517842626044]: 
+      beanData: |
+        '{
+         "name": "BarTitle",
+         "properties": {}
+        }'
+      tagName: ion-title
+      ↓TextFormat [mobile.components.UIDynamicElement-1517842626089]: 
+        beanData: |
+          '{
+           "name": "TextFormat",
+           "properties": {
+            "TextLeft": {
+             "name": "TextLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "TextRight": {
+             "name": "TextRight",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCenter": {
+             "name": "TextCenter",
+             "mode": "plain",
+             "value": "text-center"
+            },
+            "TextJustify": {
+             "name": "TextJustify",
+             "mode": "plain",
+             "value": false
+            },
+            "TextWrap": {
+             "name": "TextWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextNoWrap": {
+             "name": "TextNoWrap",
+             "mode": "plain",
+             "value": false
+            },
+            "TextUpperCase": {
+             "name": "TextUpperCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextLowerCase": {
+             "name": "TextLowerCase",
+             "mode": "plain",
+             "value": false
+            },
+            "TextCapitalize": {
+             "name": "TextCapitalize",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: div
+        ↓Text [mobile.components.UIText-1517842626131]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "plain",
+                   "value": "OffChat Lobby"
+                  }'
+    ↓ButtonSet [mobile.components.UIDynamicElement-1518088441378]: 
+      beanData: |
+        '{
+         "name": "ButtonSet",
+         "properties": {"SetPosition": {
+          "name": "SetPosition",
+          "mode": "plain",
+          "value": "right"
+         }}
+        }'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1518088441400]: 
+        beanData: |
+          '{
+           "name": "Button",
+           "properties": {
+            "ButtonFormType": {
+             "name": "ButtonFormType",
+             "mode": "plain",
+             "value": false
+            },
+            "ButtonType": {
+             "name": "ButtonType",
+             "mode": "plain",
+             "value": "ion-button"
+            },
+            "MenuMode": {
+             "name": "MenuMode",
+             "mode": "plain",
+             "value": false
+            },
+            "IonColor": {
+             "name": "IonColor",
+             "mode": "plain",
+             "value": false
+            },
+            "IonShape": {
+             "name": "IonShape",
+             "mode": "plain",
+             "value": false
+            },
+            "IonOutline": {
+             "name": "IonOutline",
+             "mode": "plain",
+             "value": false
+            },
+            "IonClear": {
+             "name": "IonClear",
+             "mode": "plain",
+             "value": false
+            },
+            "IonSize": {
+             "name": "IonSize",
+             "mode": "plain",
+             "value": false
+            },
+            "IconPosition": {
+             "name": "IconPosition",
+             "mode": "plain",
+             "value": false
+            },
+            "IconOnly": {
+             "name": "IconOnly",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1518088441421]: 
+          beanData: |
+            '{
+             "name": "Icon",
+             "properties": {
+              "IconName": {
+               "name": "IconName",
+               "mode": "plain",
+               "value": "more"
+              },
+              "ItemPosition": {
+               "name": "ItemPosition",
+               "mode": "plain",
+               "value": false
+              },
+              "IonColor": {
+               "name": "IonColor",
+               "mode": "plain",
+               "value": false
+              },
+              "RangeLeft": {
+               "name": "RangeLeft",
+               "mode": "plain",
+               "value": false
+              },
+              "RangeRight": {
+               "name": "RangeRight",
+               "mode": "plain",
+               "value": false
+              }
+             }
+            }'
+          tagName: ion-icon
+        ↓Event [mobile.components.UIControlEvent-1518088441443]: 
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "plain",
+                   "value": "value"
+                  }'
+          ↓CustomAction [mobile.components.UICustomAction-1518088441460]: 
+            actionValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '		page.c8o.log.debug(event ? event.toString():''no event'');
+                    		
+                    	    let actionSheet = this.getInstance(ActionSheetController).create({
+                    	        title: ''Disconnect and go to login?'',
+                    	        buttons: [
+                    	          {
+                    	            text: ''Logout'',
+                    	            icon: ''log-out'',
+                    	            handler: () => {
+                    	              resolve();
+                    	            }
+                    	          },{
+                    	            text: ''Cancel'',
+                    	            role: ''cancel'',
+                    	            icon: ''close'',
+                    	            handler: () => {
+                    	            }
+                    	          }
+                    	        ]
+                    	      });
+                    	      actionSheet.present();
+                    		
+                    '
+            module_ts_imports: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                - com.twinsoft.convertigo.beans.common.XMLVector: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - java.lang.String: 
+                        - ↑value: ActionSheetController 
+                      - java.lang.String: 
+                        - ↑value: ionic-angular
+            ↓CallFullSync [mobile.components.UIDynamicAction-1518088441506]: 
+              beanData: |
+                '{
+                 "name": "CallFullSyncAction",
+                 "properties": {
+                  "requestable": {
+                   "name": "requestable",
+                   "mode": "plain",
+                   "value": "sampleMobileOffChat.offchat_fullsync"
+                  },
+                  "marker": {
+                   "name": "marker",
+                   "mode": "plain",
+                   "value": ""
+                  },
+                  "verb": {
+                   "name": "verb",
+                   "mode": "plain",
+                   "value": "sync"
+                  }
+                 }
+                }'
+              ↓cancel [mobile.components.UIControlVariable-1518089024003]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "script",
+                         "value": "true"
+                        }'
+              ↓RootPage [mobile.components.UIDynamicAction-1518089070701]: 
+                beanData: |
+                  '{
+                   "name": "RootPageAction",
+                   "properties": {"page": {
+                    "name": "page",
+                    "mode": "plain",
+                    "value": "sampleMobileOffChat.OffChat.OffChat.Login"
+                   }}
+                  }'
+↓Content [mobile.components.UIDynamicElement-1517842626167]: 
+  beanData: |
+    '{
+     "name": "Content",
+     "properties": {
+      "IonPadding": {
+       "name": "IonPadding",
+       "mode": "plain",
+       "value": "padding"
+      },
+      "Fullscreen": {
+       "name": "Fullscreen",
+       "mode": "plain",
+       "value": false
+      }
+     }
+    }'
+  tagName: ion-content
+  ↓CardContainer [mobile.components.UIDynamicElement-1517849109999]: 
+    beanData: |
+      '{
+       "name": "Card",
+       "properties": {}
+      }'
+    tagName: ion-card
+    ↓CardContent [mobile.components.UIDynamicElement-1517849115628]: 
+      beanData: |
+        '{
+         "name": "CardContent",
+         "properties": {}
+        }'
+      tagName: ion-card-content
+      ↓ListContainer [mobile.components.UIDynamicElement-1517842865406]: 
+        beanData: |
+          '{
+           "name": "List",
+           "properties": {
+            "Nolines": {
+             "name": "Nolines",
+             "mode": "plain",
+             "value": false
+            },
+            "Inset": {
+             "name": "Inset",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: ion-list
+        ↓Directive [mobile.components.UIControlDirective-1517843119306]: 
+          directiveSource: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  '{
+                   "mode": "source",
+                   "value": "{\"filter\":\"Database\",\"project\":\"sampleMobileOffChat\",\"input\":\"listen([''fs:\\\/\\\/offchat_fullsync.get''])?.users\"}"
+                  }'
+          ↓Directive [mobile.components.UIControlDirective-1517844943304]: 
+            comment: item1517843119306 != this.router.sharedObject["username"]
+            directiveExpression: item1517843119306 != this.window.sessionStorage.username
+            directiveName: If
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: |
+                    '{
+                     "mode": "source",
+                     "value": "{}"
+                    }'
+            ↓Button [mobile.components.UIDynamicElement-1517849203750]: 
+              beanData: |
+                '{
+                 "name": "Button",
+                 "properties": {
+                  "ButtonFormType": {
+                   "name": "ButtonFormType",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "ButtonType": {
+                   "name": "ButtonType",
+                   "mode": "plain",
+                   "value": "ion-item"
+                  },
+                  "MenuMode": {
+                   "name": "MenuMode",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonColor": {
+                   "name": "IonColor",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonShape": {
+                   "name": "IonShape",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonOutline": {
+                   "name": "IonOutline",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonClear": {
+                   "name": "IonClear",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IonSize": {
+                   "name": "IonSize",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconPosition": {
+                   "name": "IconPosition",
+                   "mode": "plain",
+                   "value": false
+                  },
+                  "IconOnly": {
+                   "name": "IconOnly",
+                   "mode": "plain",
+                   "value": false
+                  }
+                 }
+                }'
+              tagName: button
+              ↓Text [mobile.components.UIText-1517843618972]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "source",
+                         "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517843119306\"}"
+                        }'
+              ↓Icon [mobile.components.UIDynamicElement-1517848669716]: 
+                beanData: |
+                  '{
+                   "name": "Icon",
+                   "properties": {
+                    "IconName": {
+                     "name": "IconName",
+                     "mode": "plain",
+                     "value": "mail-open"
+                    },
+                    "ItemPosition": {
+                     "name": "ItemPosition",
+                     "mode": "plain",
+                     "value": "item-right"
+                    },
+                    "IonColor": {
+                     "name": "IonColor",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeLeft": {
+                     "name": "RangeLeft",
+                     "mode": "plain",
+                     "value": false
+                    },
+                    "RangeRight": {
+                     "name": "RangeRight",
+                     "mode": "plain",
+                     "value": false
+                    }
+                   }
+                  }'
+                tagName: ion-icon
+              ↓Event [mobile.components.UIControlEvent-1517848722634]: 
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        '{
+                         "mode": "plain",
+                         "value": "value"
+                        }'
+                ↓CustomAction [mobile.components.UICustomAction-1517918128977]: 
+                  actionValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          		this.window.sessionStorage.dest = vars.dest;
+                          		resolve();
+                  ↓PushPage [mobile.components.UIDynamicAction-1517849454387]: 
+                    beanData: |
+                      '{
+                       "name": "PushPageAction",
+                       "properties": {
+                        "page": {
+                         "name": "page",
+                         "mode": "plain",
+                         "value": "sampleMobileOffChat.OffChat.OffChat.Chat"
+                        },
+                        "data": {
+                         "name": "data",
+                         "mode": "plain",
+                         "value": ""
+                        },
+                        "animate": {
+                         "name": "animate",
+                         "mode": "plain",
+                         "value": "true"
+                        },
+                        "animate_duration": {
+                         "name": "animate_duration",
+                         "mode": "script",
+                         "value": "250"
+                        }
+                       }
+                      }'
+                  ↓dest [mobile.components.UIControlVariable-1517921410365]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: |
+                            '{
+                             "mode": "source",
+                             "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517843119306\"}"
+                            }'
+↓Footer [mobile.components.UIDynamicElement-1517842626237]: 
+  beanData: |
+    '{
+     "name": "Footer",
+     "properties": {}
+    }'
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1517842626276]: 
+    beanData: |
+      '{
+       "name": "ToolBar",
+       "properties": {
+        "IonColor": {
+         "name": "IonColor",
+         "mode": "plain",
+         "value": "primary"
+        },
+        "BarMode": {
+         "name": "BarMode",
+         "mode": "plain",
+         "value": false
+        }
+       }
+      }'
+    tagName: ion-toolbar
+    ↓Style [mobile.components.UIStyle-1517842626309]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	text-align: center;
+              	color: color($colors, secondary);
+              '
+    ↓Directive [mobile.components.UIControlDirective-1518096866377]: 
+      directiveExpression: this.window.sessionStorage.offline == 'true'
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              '{
+               "mode": "plain",
+               "value": ""
+              }'
+      ↓Icon [mobile.components.UIDynamicElement-1518096912075]: 
+        beanData: |
+          '{
+           "name": "Icon",
+           "properties": {
+            "IconName": {
+             "name": "IconName",
+             "mode": "plain",
+             "value": "plane"
+            },
+            "ItemPosition": {
+             "name": "ItemPosition",
+             "mode": "plain",
+             "value": false
+            },
+            "IonColor": {
+             "name": "IonColor",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeLeft": {
+             "name": "RangeLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeRight": {
+             "name": "RangeRight",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: ion-icon
+      ↓Text [mobile.components.UIText-1518096918824]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: |
+                '{
+                 "mode": "plain",
+                 "value": "Offline Mode"
+                }'
+      ↓Icon1 [mobile.components.UIDynamicElement-1518097036523]: 
+        beanData: |
+          '{
+           "name": "Icon",
+           "properties": {
+            "IconName": {
+             "name": "IconName",
+             "mode": "plain",
+             "value": "plane"
+            },
+            "ItemPosition": {
+             "name": "ItemPosition",
+             "mode": "plain",
+             "value": false
+            },
+            "IonColor": {
+             "name": "IonColor",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeLeft": {
+             "name": "RangeLeft",
+             "mode": "plain",
+             "value": false
+            },
+            "RangeRight": {
+             "name": "RangeRight",
+             "mode": "plain",
+             "value": false
+            }
+           }
+          }'
+        tagName: ion-icon
+    ↓Text [mobile.components.UIText-1517842626341]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              '{
+               "mode": "plain",
+               "value": "© Convertigo"
+              }'
+↓PageEvent [mobile.components.UIPageEvent-1517842890865]: 
+  ↓GetData [mobile.components.UIDynamicAction-1519206701361]: 
+    beanData: |
+      '{
+       "name": "FullSyncGetAction",
+       "properties": {
+        "requestable": {
+         "name": "requestable",
+         "mode": "plain",
+         "value": "sampleMobileOffChat.offchat_fullsync"
+        },
+        "marker": {
+         "name": "marker",
+         "mode": "plain",
+         "value": false
+        },
+        "_id": {
+         "name": "_id",
+         "mode": "plain",
+         "value": "userList"
+        },
+        "__live": {
+         "name": "__live",
+         "mode": "plain",
+         "value": "lobby"
+        }
+       }
+      }'
