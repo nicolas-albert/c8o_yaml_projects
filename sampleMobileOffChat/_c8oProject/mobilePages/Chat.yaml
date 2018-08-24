@@ -508,14 +508,6 @@ title: Title for Chat
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1518001691979]: 
-                attrValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: |
-                        '{
-                         "mode": "plain",
-                         "value": "value"
-                        }'
                 ↓ClearForm [mobile.components.UIDynamicAction-1518001706502]: 
                   beanData: |
                     '{
@@ -625,14 +617,6 @@ title: Title for Chat
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1518702232697]: 
-                attrValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: |
-                        '{
-                         "mode": "plain",
-                         "value": "value"
-                        }'
                 ↓Camera [mobile.components.UIDynamicAction-1518702232732]: 
                   beanData: |
                     '{
@@ -846,14 +830,6 @@ title: Title for Chat
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1517995956259]: 
-                attrValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: |
-                        '{
-                         "mode": "plain",
-                         "value": "value"
-                        }'
                 ↓Camera [mobile.components.UIDynamicAction-1518528294291]: 
                   beanData: |
                     '{
@@ -1073,14 +1049,6 @@ title: Title for Chat
                 tagName: ion-icon
           ↓Event [mobile.components.UIControlEvent-1517917394981]: 
             attrName: (ngSubmit)
-            attrValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: |
-                    '{
-                     "mode": "plain",
-                     "value": "value"
-                    }'
             eventName: onSubmit
             ↓PostData [mobile.components.UIDynamicAction-1517917440325]: 
               beanData: |
@@ -1807,14 +1775,6 @@ title: Title for Chat
     ↓Directive [mobile.components.UIControlDirective-1518097160507]: 
       directiveExpression: this.window.sessionStorage.offline == 'true'
       directiveName: If
-      directiveSource: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: |
-              '{
-               "mode": "plain",
-               "value": ""
-              }'
       ↓Icon [mobile.components.UIDynamicElement-1518097160532]: 
         beanData: |
           '{

@@ -222,14 +222,6 @@ title: Title for Lobby
             }'
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1518088441443]: 
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: |
-                  '{
-                   "mode": "plain",
-                   "value": "value"
-                  }'
           ↓CustomAction [mobile.components.UICustomAction-1518088441460]: 
             actionValue: 
               - xmlizable: 
@@ -483,14 +475,6 @@ title: Title for Lobby
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1517848722634]: 
-                attrValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: |
-                        '{
-                         "mode": "plain",
-                         "value": "value"
-                        }'
                 ↓CustomAction [mobile.components.UICustomAction-1517918128977]: 
                   actionValue: 
                     - xmlizable: 
@@ -572,14 +556,6 @@ title: Title for Lobby
     ↓Directive [mobile.components.UIControlDirective-1518096866377]: 
       directiveExpression: this.window.sessionStorage.offline == 'true'
       directiveName: If
-      directiveSource: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: |
-              '{
-               "mode": "plain",
-               "value": ""
-              }'
       ↓Icon [mobile.components.UIDynamicElement-1518096912075]: 
         beanData: |
           '{
