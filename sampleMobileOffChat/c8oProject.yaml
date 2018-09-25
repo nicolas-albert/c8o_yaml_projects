@@ -2,7 +2,7 @@
 ↑beans: 7.6.0.m006
 ↓sampleMobileOffChat [core.Project]: 
   comment: Mobile application sample of a chat that can be use offline using the FullSync
-  contextTimeout: 302
+  contextTimeout: 309
   version: 7.5.2
   ↓offchat_fullsync [connectors.FullSyncConnector]: 🗏 connectors/offchat_fullsync.yaml
   ↓Login [sequences.GenericSequence]: 🗏 sequences/Login.yaml

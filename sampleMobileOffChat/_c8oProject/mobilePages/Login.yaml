@@ -18,71 +18,36 @@ scriptContent:
 segment: Login
 title: Title for Login
 ↓Header [mobile.components.UIDynamicElement-1517567290269]: 
-  beanData: '{"name":"Header"}'
+  beanData: '{"ionBean":"Header"}'
   tagName: ion-header
   ↓NavBar [mobile.components.UIDynamicElement-1517590376644]: 
-    beanData: |
-      '{
-       "name": "NavBar",
-       "properties": {"IonColor": {
-        "mode": "plain",
-        "value": "primary"
-       }}
-      }'
+    beanData: '{"ionBean":"NavBar","IonColor":"plain:primary"}'
     tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1517567324784]: 
-      beanData: '{"name":"BarTitle"}'
+      beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Center [mobile.components.UIDynamicElement-1517567363505]: 
-        beanData: |
-          '{
-           "name": "TextFormat",
-           "properties": {"TextCenter": {
-            "mode": "plain",
-            "value": "text-center"
-           }}
-          }'
+        beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
         tagName: div
         ↓Text [mobile.components.UIText-1517567331669]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: |
-                  '{
-                   "mode": "plain",
-                   "value": "OffChat Login"
-                  }'
+              - MobileSmartSourceType: 'plain:OffChat Login: cool'
     ↓ButtonSet [mobile.components.UIDynamicElement-1517591030309]: 
-      beanData: |
-        '{
-         "name": "ButtonSet",
-         "properties": {"SetPosition": {
-          "mode": "plain",
-          "value": "right"
-         }}
-        }'
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
       tagName: ion-buttons
       ↓Button [mobile.components.UIDynamicElement-1517591030322]: 
-        beanData: |
-          '{
-           "name": "Button",
-           "properties": {"ButtonFormType": {
-            "mode": "plain",
-            "value": false
-           }}
-          }'
+        beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
         tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1517591030335]: 
-          beanData: |
-            '{
-             "name": "Icon",
-             "properties": {"IconName": {
-              "mode": "plain",
-              "value": "more"
-             }}
-            }'
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1517825155947]: 
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:value
           ↓CustomAction [mobile.components.UICustomAction-1517827010857]: 
             actionValue: 
               - xmlizable: 
@@ -129,72 +94,40 @@ title: Title for Login
             ↓CallFullSync [mobile.components.UIDynamicAction-1517828045820]: 
               beanData: |
                 '{
-                 "name": "CallFullSyncAction",
-                 "properties": {
-                  "requestable": {
-                   "mode": "plain",
-                   "value": "sampleMobileOffChat.offchat_fullsync"
-                  },
-                  "verb": {
-                   "mode": "plain",
-                   "value": "reset"
-                  }
-                 }
+                 "ionBean": "CallFullSyncAction",
+                 "requestable": "plain:sampleMobileOffChat.offchat_fullsync",
+                 "verb": "plain:reset"
                 }'
               ↓Toast [mobile.components.UIDynamicAction-1517828126515]: 
-                beanData: |
-                  '{
-                   "name": "ToastAction",
-                   "properties": {"message": {
-                    "mode": "plain",
-                    "value": "Reset done!"
-                   }}
-                  }'
+                beanData: '{"ionBean":"ToastAction","message":"plain:Reset done!"}'
 ↓Content [mobile.components.UIDynamicElement-1517567294948]: 
-  beanData: '{"name":"Content"}'
+  beanData: '{"ionBean":"Content"}'
   tagName: ion-content
   ↓CardContainer [mobile.components.UIDynamicElement-1517590561097]: 
-    beanData: '{"name":"Card"}'
+    beanData: '{"ionBean":"Card"}'
     tagName: ion-card
     ↓CardContent [mobile.components.UIDynamicElement-1517590566688]: 
-      beanData: '{"name":"CardContent"}'
+      beanData: '{"ionBean":"CardContent"}'
       tagName: ion-card-content
       ↓Form [mobile.components.UIForm-1517569296572]: 
         ↓Event [mobile.components.UIControlEvent-1517588818264]: 
           attrName: (ngSubmit)
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:value
           eventName: onSubmit
           ↓CallLogin [mobile.components.UIDynamicAction-1517588861783]: 
-            beanData: |
-              '{
-               "name": "CallSequenceAction",
-               "properties": {"requestable": {
-                "mode": "plain",
-                "value": "sampleMobileOffChat.Login"
-               }}
-              }'
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleMobileOffChat.Login"}'
             ↓FailureHandler [mobile.components.UIActionFailureEvent-1518086125645]: 
               ↓Toast [mobile.components.UIDynamicAction-1518086718732]: 
                 beanData: |
                   '{
-                   "name": "ToastAction",
-                   "properties": {
-                    "message": {
-                     "mode": "plain",
-                     "value": "Network failure: Offline mode"
-                    },
-                    "duration": {
-                     "mode": "plain",
-                     "value": "2000"
-                    },
-                    "position": {
-                     "mode": "plain",
-                     "value": "top"
-                    },
-                    "cssClass": {
-                     "mode": "plain",
-                     "value": "toast-error"
-                    }
-                   }
+                   "ionBean": "ToastAction",
+                   "message": "plain:Network failure: Offline mode",
+                   "duration": "plain:2000",
+                   "position": "plain:top",
+                   "cssClass": "plain:toast-error"
                   }'
                 ↓CustomActionOffline [mobile.components.UICustomAction-1518086141924]: 
                   actionValue: 
@@ -217,83 +150,30 @@ title: Title for Login
                     ↓Toast [mobile.components.UIDynamicAction-1518086807380]: 
                       beanData: |
                         '{
-                         "name": "ToastAction",
-                         "properties": {
-                          "message": {
-                           "mode": "script",
-                           "value": "out"
-                          },
-                          "duration": {
-                           "mode": "plain",
-                           "value": "2000"
-                          },
-                          "position": {
-                           "mode": "plain",
-                           "value": "top"
-                          },
-                          "cssClass": {
-                           "mode": "plain",
-                           "value": "toast-error"
-                          }
-                         }
+                         "ionBean": "ToastAction",
+                         "message": "script:out",
+                         "duration": "plain:2000",
+                         "position": "plain:top",
+                         "cssClass": "plain:toast-error"
                         }'
                     ↓Error [mobile.components.UIDynamicAction-1518086813725]: 
-                      beanData: '{"name":"ErrorAction"}'
+                      beanData: '{"ionBean":"ErrorAction"}'
                   ↓RootPage [mobile.components.UIDynamicAction-1518086150793]: 
-                    beanData: |
-                      '{
-                       "name": "RootPageAction",
-                       "properties": {"page": {
-                        "mode": "plain",
-                        "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
-                       }}
-                      }'
+                    beanData: '{"ionBean":"RootPageAction","page":"plain:sampleMobileOffChat.OffChat.OffChat.Lobby"}'
               ↓Error [mobile.components.UIDynamicAction-1518086564258]: 
-                beanData: |
-                  '{
-                   "name": "ErrorAction",
-                   "properties": {"message": {
-                    "mode": "plain",
-                    "value": "offline"
-                   }}
-                  }'
+                beanData: '{"ionBean":"ErrorAction","message":"plain:offline"}'
             ↓If_ERROR [mobile.components.UIDynamicAction-1517840368874]: 
-              beanData: |
-                '{
-                 "name": "IfAction",
-                 "properties": {"condition": {
-                  "mode": "script",
-                  "value": "out.error"
-                 }}
-                }'
+              beanData: '{"ionBean":"IfAction","condition":"script:out.error"}'
               ↓Toast [mobile.components.UIDynamicAction-1517828328158]: 
                 beanData: |
                   '{
-                   "name": "ToastAction",
-                   "properties": {
-                    "message": {
-                     "mode": "script",
-                     "value": "stack[\"CallLogin\"].out.error.message"
-                    },
-                    "position": {
-                     "mode": "plain",
-                     "value": "top"
-                    },
-                    "cssClass": {
-                     "mode": "plain",
-                     "value": "toast-error"
-                    }
-                   }
+                   "ionBean": "ToastAction",
+                   "message": "script:stack[\"CallLogin\"].out.error.message",
+                   "position": "plain:top",
+                   "cssClass": "plain:toast-error"
                   }'
             ↓If_OK [mobile.components.UIDynamicAction-1517840421888]: 
-              beanData: |
-                '{
-                 "name": "IfAction",
-                 "properties": {"condition": {
-                  "mode": "script",
-                  "value": "out.ok"
-                 }}
-                }'
+              beanData: '{"ionBean":"IfAction","condition":"script:out.ok"}'
               ↓CustomAction [mobile.components.UICustomAction-1517911129934]: 
                 actionValue: 
                   - xmlizable: 
@@ -321,57 +201,28 @@ title: Title for Login
                         	        resolve();
                         		}
                 ↓RootPage [mobile.components.UIDynamicAction-1517842566552]: 
-                  beanData: |
-                    '{
-                     "name": "RootPageAction",
-                     "properties": {"page": {
-                      "mode": "plain",
-                      "value": "sampleMobileOffChat.OffChat.OffChat.Sync"
-                     }}
-                    }'
+                  beanData: '{"ionBean":"RootPageAction","page":"plain:sampleMobileOffChat.OffChat.OffChat.Sync"}'
         ↓ListContainer [mobile.components.UIDynamicElement-1517590290750]: 
-          beanData: '{"name":"List"}'
+          beanData: '{"ionBean":"List"}'
           tagName: ion-list
           ↓Username [mobile.components.UIDynamicElement-1517583518722]: 
-            beanData: '{"name":"ListItem"}'
+            beanData: '{"ionBean":"ListItem"}'
             tagName: ion-item
             ↓LabelUsername [mobile.components.UIDynamicElement-1517567871069]: 
-              beanData: |
-                '{
-                 "name": "Label",
-                 "properties": {"Floating": {
-                  "mode": "plain",
-                  "value": "floating"
-                 }}
-                }'
+              beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
               tagName: ion-label
               ↓Text [mobile.components.UIText-1517567903626]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: |
-                        '{
-                         "mode": "plain",
-                         "value": "Username :"
-                        }'
+                    - MobileSmartSourceType: plain:Username :
             ↓Username [mobile.components.UIDynamicElement-1517567886976]: 
               beanData: |
                 '{
-                 "name": "Input",
-                 "properties": {
-                  "FormControlName": {
-                   "mode": "plain",
-                   "value": "username"
-                  },
-                  "Type": {
-                   "mode": "plain",
-                   "value": "text"
-                  },
-                  "Value": {
-                   "mode": "script",
-                   "value": "this.window.localStorage.username"
-                  }
-                 }
+                 "ionBean": "Input",
+                 "FormControlName": "plain:username",
+                 "Type": "plain:text",
+                 "Value": "script:this.window.localStorage.username"
                 }'
               tagName: ion-input
               ↓ControlValidator [mobile.components.UIFormControlValidator-1517588945279]: 
@@ -382,47 +233,24 @@ title: Title for Login
               attrValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: |
-                      '{
-                       "mode": "plain",
-                       "value": "no-lines"
-                      }'
+                  - MobileSmartSourceType: plain:no-lines
           ↓Password [mobile.components.UIDynamicElement-1517583521117]: 
-            beanData: '{"name":"ListItem"}'
+            beanData: '{"ionBean":"ListItem"}'
             tagName: ion-item
             ↓LabelPassword [mobile.components.UIDynamicElement-1517567880553]: 
-              beanData: |
-                '{
-                 "name": "Label",
-                 "properties": {"Floating": {
-                  "mode": "plain",
-                  "value": "floating"
-                 }}
-                }'
+              beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
               tagName: ion-label
               ↓Text [mobile.components.UIText-1517567907991]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: |
-                        '{
-                         "mode": "plain",
-                         "value": "Password :"
-                        }'
+                    - MobileSmartSourceType: plain:Password :
             ↓Password [mobile.components.UIDynamicElement-1517567889698]: 
               beanData: |
                 '{
-                 "name": "Input",
-                 "properties": {
-                  "FormControlName": {
-                   "mode": "plain",
-                   "value": "password"
-                  },
-                  "Type": {
-                   "mode": "plain",
-                   "value": "password"
-                  }
-                 }
+                 "ionBean": "Input",
+                 "FormControlName": "plain:password",
+                 "Type": "plain:password"
                 }'
               tagName: ion-input
               ↓ControlValidator [mobile.components.UIFormControlValidator-1517588971917]: 
@@ -433,30 +261,15 @@ title: Title for Login
               attrValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: |
-                      '{
-                       "mode": "plain",
-                       "value": "no-lines"
-                      }'
+                  - MobileSmartSourceType: plain:no-lines
           ↓SubmitButton [mobile.components.UIDynamicElement-1517570142145]: 
-            beanData: |
-              '{
-               "name": "SubmitButton",
-               "properties": {"IonShape": {
-                "mode": "plain",
-                "value": "full"
-               }}
-              }'
+            beanData: '{"ionBean":"SubmitButton","IonShape":"plain:full"}'
             tagName: button
             ↓Text [mobile.components.UIText-1517570175643]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: |
-                      '{
-                       "mode": "plain",
-                       "value": "Login"
-                      }'
+                  - MobileSmartSourceType: plain:Login
             ↓Style [mobile.components.UIStyle-1517580640478]: 
               styleContent: 
                 - xmlizable: 
@@ -467,22 +280,15 @@ title: Title for Login
                       	margin-bottom: 20px;
                       '
           ↓Paragraph [mobile.components.UIDynamicElement-1517583021362]: 
-            beanData: '{"name":"Paragraph"}'
+            beanData: '{"ionBean":"Paragraph"}'
             tagName: p
             ↓Fragment [mobile.components.UICustom-1517583057743]: 
               htmlTemplate: '<b>Note</b>: Account creation is automatic if the <b>username</b> is unknown.'
 ↓Footer [mobile.components.UIDynamicElement-1517567298829]: 
-  beanData: '{"name":"Footer"}'
+  beanData: '{"ionBean":"Footer"}'
   tagName: ion-footer
   ↓ToolBar [mobile.components.UIDynamicElement-1517590656498]: 
-    beanData: |
-      '{
-       "name": "ToolBar",
-       "properties": {"IonColor": {
-        "mode": "plain",
-        "value": "primary"
-       }}
-      }'
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
     tagName: ion-toolbar
     ↓Style [mobile.components.UIStyle-1517599585343]: 
       styleContent: 
@@ -497,11 +303,7 @@ title: Title for Login
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: |
-              '{
-               "mode": "plain",
-               "value": "© Convertigo"
-              }'
+          - MobileSmartSourceType: plain:© Convertigo
 ↓Style [mobile.components.UIStyle-1517585344021]: 
   styleContent: 
     - xmlizable: 
