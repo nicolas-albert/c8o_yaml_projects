@@ -200,6 +200,10 @@ title: Title for Lobby
                   "ButtonType": {
                    "mode": "plain",
                    "value": "ion-item"
+                  },
+                  "IonColor": {
+                   "mode": "plain",
+                   "value": "light"
                   }
                  }
                 }'

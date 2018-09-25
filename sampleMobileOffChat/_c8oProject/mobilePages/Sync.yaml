@@ -36,10 +36,16 @@ title: Title for Sync
         beanData: |
           '{
            "name": "TextFormat",
-           "properties": {"TextCenter": {
-            "mode": "plain",
-            "value": "text-center"
-           }}
+           "properties": {
+            "TextCenter": {
+             "mode": "plain",
+             "value": "text-center"
+            },
+            "TextJustify": {
+             "mode": "plain",
+             "value": "text-justify"
+            }
+           }
           }'
         tagName: div
         ↓Text [mobile.components.UIText-1517841329074]: 
