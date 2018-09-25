@@ -44,10 +44,6 @@ title: Title for Login
           beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1517825155947]: 
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:value
           ↓CustomAction [mobile.components.UICustomAction-1517827010857]: 
             actionValue: 
               - xmlizable: 
@@ -112,10 +108,6 @@ title: Title for Login
       ↓Form [mobile.components.UIForm-1517569296572]: 
         ↓Event [mobile.components.UIControlEvent-1517588818264]: 
           attrName: (ngSubmit)
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:value
           eventName: onSubmit
           ↓CallLogin [mobile.components.UIDynamicAction-1517588861783]: 
             beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleMobileOffChat.Login"}'
