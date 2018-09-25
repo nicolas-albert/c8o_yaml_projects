@@ -32,97 +32,29 @@ scriptContent:
 segment: Chat
 title: Title for Chat
 ↓Header [mobile.components.UIDynamicElement-1517849497973]: 
-  beanData: |
-    '{
-     "name": "Header",
-     "properties": {"NoBorder": {
-      "name": "NoBorder",
-      "mode": "plain",
-      "value": false
-     }}
-    }'
+  beanData: '{"name":"Header"}'
   tagName: ion-header
   ↓NavBar [mobile.components.UIDynamicElement-1517849498007]: 
     beanData: |
       '{
        "name": "NavBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        },
-        "BackButtonHidden": {
-         "name": "BackButtonHidden",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1517849498041]: 
-      beanData: |
-        '{
-         "name": "BarTitle",
-         "properties": {}
-        }'
+      beanData: '{"name":"BarTitle"}'
       tagName: ion-title
       ↓TextFormat [mobile.components.UIDynamicElement-1517849498072]: 
         beanData: |
           '{
            "name": "TextFormat",
-           "properties": {
-            "TextLeft": {
-             "name": "TextLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "TextRight": {
-             "name": "TextRight",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCenter": {
-             "name": "TextCenter",
-             "mode": "plain",
-             "value": "text-center"
-            },
-            "TextJustify": {
-             "name": "TextJustify",
-             "mode": "plain",
-             "value": false
-            },
-            "TextWrap": {
-             "name": "TextWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextNoWrap": {
-             "name": "TextNoWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextUpperCase": {
-             "name": "TextUpperCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextLowerCase": {
-             "name": "TextLowerCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCapitalize": {
-             "name": "TextCapitalize",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"TextCenter": {
+            "mode": "plain",
+            "value": "text-center"
+           }}
           }'
         tagName: div
         ↓Text [mobile.components.UIText-1517849498103]: 
@@ -135,133 +67,36 @@ title: Title for Chat
                    "value": "\"OffChat with \" + this.window.sessionStorage.dest"
                   }'
 ↓Content [mobile.components.UIDynamicElement-1517849574548]: 
-  beanData: |
-    '{
-     "name": "Content",
-     "properties": {
-      "IonPadding": {
-       "name": "IonPadding",
-       "mode": "plain",
-       "value": "padding"
-      },
-      "Fullscreen": {
-       "name": "Fullscreen",
-       "mode": "plain",
-       "value": false
-      }
-     }
-    }'
+  beanData: '{"name":"Content"}'
   tagName: ion-content
   ↓TextFormat [mobile.components.UIDynamicElement-1518021234144]: 
     beanData: |
       '{
        "name": "TextFormat",
-       "properties": {
-        "TextLeft": {
-         "name": "TextLeft",
-         "mode": "plain",
-         "value": false
-        },
-        "TextRight": {
-         "name": "TextRight",
-         "mode": "plain",
-         "value": false
-        },
-        "TextCenter": {
-         "name": "TextCenter",
-         "mode": "plain",
-         "value": false
-        },
-        "TextJustify": {
-         "name": "TextJustify",
-         "mode": "plain",
-         "value": false
-        },
-        "TextWrap": {
-         "name": "TextWrap",
-         "mode": "plain",
-         "value": "text-wrap"
-        },
-        "TextNoWrap": {
-         "name": "TextNoWrap",
-         "mode": "plain",
-         "value": false
-        },
-        "TextUpperCase": {
-         "name": "TextUpperCase",
-         "mode": "plain",
-         "value": false
-        },
-        "TextLowerCase": {
-         "name": "TextLowerCase",
-         "mode": "plain",
-         "value": false
-        },
-        "TextCapitalize": {
-         "name": "TextCapitalize",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"TextWrap": {
+        "mode": "plain",
+        "value": "text-wrap"
+       }}
       }'
     tagName: div
     ↓CardContainer [mobile.components.UIDynamicElement-1517849585876]: 
-      beanData: |
-        '{
-         "name": "Card",
-         "properties": {}
-        }'
+      beanData: '{"name":"Card"}'
       tagName: ion-card
       ↓CardContent [mobile.components.UIDynamicElement-1517849588610]: 
-        beanData: |
-          '{
-           "name": "CardContent",
-           "properties": {}
-          }'
+        beanData: '{"name":"CardContent"}'
         tagName: ion-card-content
         ↓Form [mobile.components.UIForm-1517850194442]: 
           ↓GenericItem [mobile.components.UIDynamicElement-1517850283058]: 
-            beanData: |
-              '{
-               "name": "ListItem",
-               "properties": {"ItemPosition": {
-                "name": "ItemPosition",
-                "mode": "plain",
-                "value": false
-               }}
-              }'
+            beanData: '{"name":"ListItem"}'
             tagName: ion-item
             ↓MessageLabel [mobile.components.UIDynamicElement-1517850172878]: 
               beanData: |
                 '{
                  "name": "Label",
-                 "properties": {
-                  "Fixed": {
-                   "name": "Fixed",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Floating": {
-                   "name": "Floating",
-                   "mode": "plain",
-                   "value": "floating"
-                  },
-                  "Stacked": {
-                   "name": "Stacked",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "RangeLeft": {
-                   "name": "RangeLeft",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "RangeRight": {
-                   "name": "RangeRight",
-                   "mode": "plain",
-                   "value": false
-                  }
-                 }
+                 "properties": {"Floating": {
+                  "mode": "plain",
+                  "value": "floating"
+                 }}
                 }'
               tagName: ion-label
               ↓message [mobile.components.UIText-1517850172912]: 
@@ -279,69 +114,12 @@ title: Title for Chat
                  "name": "Input",
                  "properties": {
                   "FormControlName": {
-                   "name": "FormControlName",
                    "mode": "plain",
                    "value": "message"
                   },
-                  "Disabled": {
-                   "name": "Disabled",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "ClearInput": {
-                   "name": "ClearInput",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "ClearOnEdit": {
-                   "name": "ClearOnEdit",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Max": {
-                   "name": "Max",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Min": {
-                   "name": "Min",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Mode": {
-                   "name": "Mode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Placeholder": {
-                   "name": "Placeholder",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Readonly": {
-                   "name": "Readonly",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Step": {
-                   "name": "Step",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "TextAlign": {
-                   "name": "TextAlign",
-                   "mode": "plain",
-                   "value": false
-                  },
                   "Type": {
-                   "name": "Type",
                    "mode": "plain",
                    "value": "text"
-                  },
-                  "Value": {
-                   "name": "Value",
-                   "mode": "plain",
-                   "value": false
                   }
                  }
                 }'
@@ -370,28 +148,10 @@ title: Title for Chat
             beanData: |
               '{
                "name": "Image",
-               "properties": {
-                "url": {
-                 "name": "url",
-                 "mode": "script",
-                 "value": "this.router.sharedObject[''photo''] || ''''"
-                },
-                "width": {
-                 "name": "width",
-                 "mode": "plain",
-                 "value": ""
-                },
-                "height": {
-                 "name": "height",
-                 "mode": "plain",
-                 "value": ""
-                },
-                "alt": {
-                 "name": "alt",
-                 "mode": "plain",
-                 "value": false
-                }
-               }
+               "properties": {"url": {
+                "mode": "script",
+                "value": "this.router.sharedObject[''photo''] || ''''"
+               }}
               }'
             selfClose: true
             tagName: img
@@ -410,7 +170,6 @@ title: Title for Chat
               '{
                "name": "ButtonSet",
                "properties": {"SetPosition": {
-                "name": "SetPosition",
                 "mode": "plain",
                 "value": "right"
                }}
@@ -420,91 +179,20 @@ title: Title for Chat
               beanData: |
                 '{
                  "name": "ResetButton",
-                 "properties": {
-                  "ButtonFormType": {
-                   "name": "ButtonFormType",
-                   "mode": "plain",
-                   "value": "button"
-                  },
-                  "ButtonType": {
-                   "name": "ButtonType",
-                   "mode": "plain",
-                   "value": "ion-button"
-                  },
-                  "MenuMode": {
-                   "name": "MenuMode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonColor": {
-                   "name": "IonColor",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonShape": {
-                   "name": "IonShape",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonOutline": {
-                   "name": "IonOutline",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonClear": {
-                   "name": "IonClear",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonSize": {
-                   "name": "IonSize",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconPosition": {
-                   "name": "IconPosition",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconOnly": {
-                   "name": "IconOnly",
-                   "mode": "plain",
-                   "value": false
-                  }
-                 }
+                 "properties": {"ButtonFormType": {
+                  "mode": "plain",
+                  "value": "button"
+                 }}
                 }'
               tagName: button
               ↓Icon [mobile.components.UIDynamicElement-1517999256230]: 
                 beanData: |
                   '{
                    "name": "Icon",
-                   "properties": {
-                    "IconName": {
-                     "name": "IconName",
-                     "mode": "plain",
-                     "value": "trash"
-                    },
-                    "ItemPosition": {
-                     "name": "ItemPosition",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeLeft": {
-                     "name": "RangeLeft",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeRight": {
-                     "name": "RangeRight",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
+                   "properties": {"IconName": {
+                    "mode": "plain",
+                    "value": "trash"
+                   }}
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1518001691979]: 
@@ -512,108 +200,29 @@ title: Title for Chat
                   beanData: |
                     '{
                      "name": "IfAction",
-                     "properties": {
-                      "condition": {
-                       "name": "condition",
-                       "mode": "script",
-                       "value": "this.clearForm()"
-                      },
-                      "negate": {
-                       "name": "negate",
-                       "mode": "plain",
-                       "value": "false"
-                      }
-                     }
+                     "properties": {"condition": {
+                      "mode": "script",
+                      "value": "this.clearForm()"
+                     }}
                     }'
             ↓ButtonGallery [mobile.components.UIDynamicElement-1518702232589]: 
               beanData: |
                 '{
                  "name": "Button",
-                 "properties": {
-                  "ButtonFormType": {
-                   "name": "ButtonFormType",
-                   "mode": "plain",
-                   "value": "button"
-                  },
-                  "ButtonType": {
-                   "name": "ButtonType",
-                   "mode": "plain",
-                   "value": "ion-button"
-                  },
-                  "MenuMode": {
-                   "name": "MenuMode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonColor": {
-                   "name": "IonColor",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonShape": {
-                   "name": "IonShape",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonOutline": {
-                   "name": "IonOutline",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonClear": {
-                   "name": "IonClear",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonSize": {
-                   "name": "IonSize",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconPosition": {
-                   "name": "IconPosition",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconOnly": {
-                   "name": "IconOnly",
-                   "mode": "plain",
-                   "value": "icon-only"
-                  }
-                 }
+                 "properties": {"IconOnly": {
+                  "mode": "plain",
+                  "value": "icon-only"
+                 }}
                 }'
               tagName: button
               ↓Icon [mobile.components.UIDynamicElement-1518702232652]: 
                 beanData: |
                   '{
                    "name": "Icon",
-                   "properties": {
-                    "IconName": {
-                     "name": "IconName",
-                     "mode": "plain",
-                     "value": "images"
-                    },
-                    "ItemPosition": {
-                     "name": "ItemPosition",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeLeft": {
-                     "name": "RangeLeft",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeRight": {
-                     "name": "RangeRight",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
+                   "properties": {"IconName": {
+                    "mode": "plain",
+                    "value": "images"
+                   }}
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1518702232697]: 
@@ -623,84 +232,28 @@ title: Title for Chat
                      "name": "CameraAction",
                      "properties": {
                       "quality": {
-                       "name": "quality",
                        "mode": "script",
                        "value": "75"
                       },
                       "destinationType": {
-                       "name": "destinationType",
                        "mode": "plain",
                        "value": "FILE_URI"
                       },
                       "sourceType": {
-                       "name": "sourceType",
                        "mode": "plain",
                        "value": "PHOTOLIBRARY"
                       },
-                      "allowEdit": {
-                       "name": "allowEdit",
-                       "mode": "plain",
-                       "value": "false"
-                      },
-                      "encodingType": {
-                       "name": "encodingType",
-                       "mode": "plain",
-                       "value": "JPEG"
-                      },
                       "targetWidth": {
-                       "name": "targetWidth",
                        "mode": "script",
                        "value": "640"
                       },
                       "targetHeight": {
-                       "name": "targetHeight",
                        "mode": "script",
                        "value": "640"
                       },
-                      "mediaType": {
-                       "name": "mediaType",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "correctOrientation": {
-                       "name": "correctOrientation",
-                       "mode": "plain",
-                       "value": "true"
-                      },
-                      "saveToPhotoAlbum": {
-                       "name": "saveToPhotoAlbum",
-                       "mode": "plain",
-                       "value": false
-                      },
                       "cameraDirection": {
-                       "name": "cameraDirection",
                        "mode": "plain",
                        "value": "FRONT"
-                      },
-                      "x": {
-                       "name": "x",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "y": {
-                       "name": "y",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "width": {
-                       "name": "width",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "height": {
-                       "name": "height",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "arrowDir": {
-                       "name": "arrowDir",
-                       "mode": "plain",
-                       "value": false
                       }
                      }
                     }'
@@ -710,12 +263,10 @@ title: Title for Chat
                        "name": "SetGlobalAction",
                        "properties": {
                         "Property": {
-                         "name": "Property",
                          "mode": "plain",
                          "value": "photo"
                         },
                         "Value": {
-                         "name": "Value",
                          "mode": "script",
                          "value": "out"
                         }
@@ -725,108 +276,29 @@ title: Title for Chat
                       beanData: |
                         '{
                          "name": "IfAction",
-                         "properties": {
-                          "condition": {
-                           "name": "condition",
-                           "mode": "script",
-                           "value": "this.validateForm()"
-                          },
-                          "negate": {
-                           "name": "negate",
-                           "mode": "plain",
-                           "value": "false"
-                          }
-                         }
+                         "properties": {"condition": {
+                          "mode": "script",
+                          "value": "this.validateForm()"
+                         }}
                         }'
             ↓ButtonPhoto [mobile.components.UIDynamicElement-1517909749723]: 
               beanData: |
                 '{
                  "name": "Button",
-                 "properties": {
-                  "ButtonFormType": {
-                   "name": "ButtonFormType",
-                   "mode": "plain",
-                   "value": "button"
-                  },
-                  "ButtonType": {
-                   "name": "ButtonType",
-                   "mode": "plain",
-                   "value": "ion-button"
-                  },
-                  "MenuMode": {
-                   "name": "MenuMode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonColor": {
-                   "name": "IonColor",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonShape": {
-                   "name": "IonShape",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonOutline": {
-                   "name": "IonOutline",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonClear": {
-                   "name": "IonClear",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonSize": {
-                   "name": "IonSize",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconPosition": {
-                   "name": "IconPosition",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconOnly": {
-                   "name": "IconOnly",
-                   "mode": "plain",
-                   "value": "icon-only"
-                  }
-                 }
+                 "properties": {"IconOnly": {
+                  "mode": "plain",
+                  "value": "icon-only"
+                 }}
                 }'
               tagName: button
               ↓Icon [mobile.components.UIDynamicElement-1517909753358]: 
                 beanData: |
                   '{
                    "name": "Icon",
-                   "properties": {
-                    "IconName": {
-                     "name": "IconName",
-                     "mode": "plain",
-                     "value": "camera"
-                    },
-                    "ItemPosition": {
-                     "name": "ItemPosition",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeLeft": {
-                     "name": "RangeLeft",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeRight": {
-                     "name": "RangeRight",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
+                   "properties": {"IconName": {
+                    "mode": "plain",
+                    "value": "camera"
+                   }}
                   }'
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1517995956259]: 
@@ -836,84 +308,24 @@ title: Title for Chat
                      "name": "CameraAction",
                      "properties": {
                       "quality": {
-                       "name": "quality",
                        "mode": "script",
                        "value": "75"
                       },
                       "destinationType": {
-                       "name": "destinationType",
                        "mode": "plain",
                        "value": "FILE_URI"
                       },
-                      "sourceType": {
-                       "name": "sourceType",
-                       "mode": "plain",
-                       "value": "CAMERA"
-                      },
-                      "allowEdit": {
-                       "name": "allowEdit",
-                       "mode": "plain",
-                       "value": "false"
-                      },
-                      "encodingType": {
-                       "name": "encodingType",
-                       "mode": "plain",
-                       "value": "JPEG"
-                      },
                       "targetWidth": {
-                       "name": "targetWidth",
                        "mode": "script",
                        "value": "640"
                       },
                       "targetHeight": {
-                       "name": "targetHeight",
                        "mode": "script",
                        "value": "640"
                       },
-                      "mediaType": {
-                       "name": "mediaType",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "correctOrientation": {
-                       "name": "correctOrientation",
-                       "mode": "plain",
-                       "value": "true"
-                      },
-                      "saveToPhotoAlbum": {
-                       "name": "saveToPhotoAlbum",
-                       "mode": "plain",
-                       "value": false
-                      },
                       "cameraDirection": {
-                       "name": "cameraDirection",
                        "mode": "plain",
                        "value": "FRONT"
-                      },
-                      "x": {
-                       "name": "x",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "y": {
-                       "name": "y",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "width": {
-                       "name": "width",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "height": {
-                       "name": "height",
-                       "mode": "script",
-                       "value": false
-                      },
-                      "arrowDir": {
-                       "name": "arrowDir",
-                       "mode": "plain",
-                       "value": false
                       }
                      }
                     }'
@@ -923,12 +335,10 @@ title: Title for Chat
                        "name": "SetGlobalAction",
                        "properties": {
                         "Property": {
-                         "name": "Property",
                          "mode": "plain",
                          "value": "photo"
                         },
                         "Value": {
-                         "name": "Value",
                          "mode": "script",
                          "value": "out"
                         }
@@ -938,113 +348,29 @@ title: Title for Chat
                       beanData: |
                         '{
                          "name": "IfAction",
-                         "properties": {
-                          "condition": {
-                           "name": "condition",
-                           "mode": "script",
-                           "value": "this.validateForm()"
-                          },
-                          "negate": {
-                           "name": "negate",
-                           "mode": "plain",
-                           "value": "false"
-                          }
-                         }
+                         "properties": {"condition": {
+                          "mode": "script",
+                          "value": "this.validateForm()"
+                         }}
                         }'
             ↓SubmitButton [mobile.components.UIDynamicElement-1517850328552]: 
               beanData: |
                 '{
                  "name": "SubmitButton",
-                 "properties": {
-                  "ButtonFormType": {
-                   "name": "ButtonFormType",
-                   "mode": "plain",
-                   "value": "submit"
-                  },
-                  "ButtonType": {
-                   "name": "ButtonType",
-                   "mode": "plain",
-                   "value": "ion-button"
-                  },
-                  "MenuMode": {
-                   "name": "MenuMode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonColor": {
-                   "name": "IonColor",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonShape": {
-                   "name": "IonShape",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonOutline": {
-                   "name": "IonOutline",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonClear": {
-                   "name": "IonClear",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonSize": {
-                   "name": "IonSize",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconPosition": {
-                   "name": "IconPosition",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconOnly": {
-                   "name": "IconOnly",
-                   "mode": "plain",
-                   "value": "icon-only"
-                  },
-                  "AutoDisable": {
-                   "name": "AutoDisable",
-                   "mode": "plain",
-                   "value": "true"
-                  }
-                 }
+                 "properties": {"IconOnly": {
+                  "mode": "plain",
+                  "value": "icon-only"
+                 }}
                 }'
               tagName: button
               ↓Icon [mobile.components.UIDynamicElement-1517909691234]: 
                 beanData: |
                   '{
                    "name": "Icon",
-                   "properties": {
-                    "IconName": {
-                     "name": "IconName",
-                     "mode": "plain",
-                     "value": "send"
-                    },
-                    "ItemPosition": {
-                     "name": "ItemPosition",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeLeft": {
-                     "name": "RangeLeft",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeRight": {
-                     "name": "RangeRight",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
+                   "properties": {"IconName": {
+                    "mode": "plain",
+                    "value": "send"
+                   }}
                   }'
                 tagName: ion-icon
           ↓Event [mobile.components.UIControlEvent-1517917394981]: 
@@ -1056,29 +382,12 @@ title: Title for Chat
                  "name": "FullSyncPostAction",
                  "properties": {
                   "requestable": {
-                   "name": "requestable",
                    "mode": "plain",
                    "value": "sampleMobileOffChat.offchat_fullsync"
                   },
-                  "_id": {
-                   "name": "_id",
-                   "mode": "plain",
-                   "value": false
-                  },
                   "_use_policy": {
-                   "name": "_use_policy",
                    "mode": "plain",
                    "value": "none"
-                  },
-                  "RootKey": {
-                   "name": "RootKey",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "c8oGrp": {
-                   "name": "c8oGrp",
-                   "mode": "plain",
-                   "value": false
                   }
                  }
                 }'
@@ -1122,18 +431,10 @@ title: Title for Chat
                 beanData: |
                   '{
                    "name": "IfAction",
-                   "properties": {
-                    "condition": {
-                     "name": "condition",
-                     "mode": "script",
-                     "value": "document.getElementById(''photo'').getAttribute(''src'').length != 0"
-                    },
-                    "negate": {
-                     "name": "negate",
-                     "mode": "plain",
-                     "value": "false"
-                    }
-                   }
+                   "properties": {"condition": {
+                    "mode": "script",
+                    "value": "document.getElementById(''photo'').getAttribute(''src'').length != 0"
+                   }}
                   }'
                 ↓PutAttachment [mobile.components.UIDynamicAction-1517998064600]: 
                   beanData: |
@@ -1141,27 +442,22 @@ title: Title for Chat
                      "name": "FullSyncPutAttachmentAction",
                      "properties": {
                       "requestable": {
-                       "name": "requestable",
                        "mode": "plain",
                        "value": "sampleMobileOffChat.offchat_fullsync"
                       },
                       "docid": {
-                       "name": "docid",
                        "mode": "script",
                        "value": "stack[''PostData''].out.id"
                       },
                       "name": {
-                       "name": "name",
                        "mode": "plain",
                        "value": "img.jpeg"
                       },
                       "content_type": {
-                       "name": "content_type",
                        "mode": "plain",
                        "value": "image\/jpeg"
                       },
                       "content": {
-                       "name": "content",
                        "mode": "script",
                        "value": "document.getElementById(''photo'').getAttribute(''src'')"
                       }
@@ -1171,18 +467,10 @@ title: Title for Chat
                     beanData: |
                       '{
                        "name": "IfAction",
-                       "properties": {
-                        "condition": {
-                         "name": "condition",
-                         "mode": "script",
-                         "value": "this.clearForm()"
-                        },
-                        "negate": {
-                         "name": "negate",
-                         "mode": "plain",
-                         "value": "false"
-                        }
-                       }
+                       "properties": {"condition": {
+                        "mode": "script",
+                        "value": "this.clearForm()"
+                       }}
                       }'
               ↓Else [mobile.components.UIDynamicAction-1518008230653]: 
                 beanData: |
@@ -1190,12 +478,10 @@ title: Title for Chat
                    "name": "IfAction",
                    "properties": {
                     "condition": {
-                     "name": "condition",
                      "mode": "script",
                      "value": "document.getElementById(''photo'').getAttribute(''src'').length != 0"
                     },
                     "negate": {
-                     "name": "negate",
                      "mode": "plain",
                      "value": "true"
                     }
@@ -1205,18 +491,10 @@ title: Title for Chat
                   beanData: |
                     '{
                      "name": "IfAction",
-                     "properties": {
-                      "condition": {
-                       "name": "condition",
-                       "mode": "script",
-                       "value": "this.clearForm()"
-                      },
-                      "negate": {
-                       "name": "negate",
-                       "mode": "plain",
-                       "value": "false"
-                      }
-                     }
+                     "properties": {"condition": {
+                      "mode": "script",
+                      "value": "this.clearForm()"
+                     }}
                     }'
               ↓ts [mobile.components.UIControlVariable-1518022800702]: 
                 varValue: 
@@ -1228,29 +506,10 @@ title: Title for Chat
                          "value": "this.window.localStorage.decTs * 1 + new Date().getTime()"
                         }'
     ↓CardContainer1 [mobile.components.UIDynamicElement-1518001966264]: 
-      beanData: |
-        '{
-         "name": "Card",
-         "properties": {}
-        }'
+      beanData: '{"name":"Card"}'
       tagName: ion-card
       ↓ListContainer [mobile.components.UIDynamicElement-1517849854716]: 
-        beanData: |
-          '{
-           "name": "List",
-           "properties": {
-            "Nolines": {
-             "name": "Nolines",
-             "mode": "plain",
-             "value": false
-            },
-            "Inset": {
-             "name": "Inset",
-             "mode": "plain",
-             "value": false
-            }
-           }
-          }'
+        beanData: '{"name":"List"}'
         tagName: ion-list
         ↓Directive [mobile.components.UIControlDirective-1517849900594]: 
           directiveSource: 
@@ -1272,77 +531,23 @@ title: Title for Chat
                      "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.dir == ''to''\"}"
                     }'
             ↓GenericItem [mobile.components.UIDynamicElement-1517849944165]: 
-              beanData: |
-                '{
-                 "name": "ListItem",
-                 "properties": {"ItemPosition": {
-                  "name": "ItemPosition",
-                  "mode": "plain",
-                  "value": false
-                 }}
-                }'
+              beanData: '{"name":"ListItem"}'
               tagName: ion-item
               ↓AvatarItem [mobile.components.UIDynamicElement-1517913225485]: 
-                beanData: |
-                  '{
-                   "name": "Avatar",
-                   "properties": {"ItemPosition": {
-                    "name": "ItemPosition",
-                    "mode": "plain",
-                    "value": "item-left"
-                   }}
-                  }'
+                beanData: '{"name":"Avatar"}'
                 tagName: ion-avatar
                 ↓Icon [mobile.components.UIDynamicElement-1517913258594]: 
                   beanData: |
                     '{
                      "name": "Icon",
-                     "properties": {
-                      "IconName": {
-                       "name": "IconName",
-                       "mode": "plain",
-                       "value": "ionitron"
-                      },
-                      "ItemPosition": {
-                       "name": "ItemPosition",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "IonColor": {
-                       "name": "IonColor",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "RangeLeft": {
-                       "name": "RangeLeft",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "RangeRight": {
-                       "name": "RangeRight",
-                       "mode": "plain",
-                       "value": false
-                      }
-                     }
+                     "properties": {"IconName": {
+                      "mode": "plain",
+                      "value": "ionitron"
+                     }}
                     }'
                   tagName: ion-icon
               ↓H2 [mobile.components.UIDynamicElement-1517913138703]: 
-                beanData: |
-                  '{
-                   "name": "Heading2",
-                   "properties": {
-                    "ionText": {
-                     "name": "ionText",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
-                  }'
+                beanData: '{"name":"Heading2"}'
                 tagName: h2
                 ↓Text [mobile.components.UIText-1517912810323]: 
                   textValue: 
@@ -1354,11 +559,7 @@ title: Title for Chat
                            "value": "window.sessionStorage.username"
                           }'
                 ↓Span [mobile.components.UIDynamicElement-1518094131695]: 
-                  beanData: |
-                    '{
-                     "name": "SpanTag",
-                     "properties": {}
-                    }'
+                  beanData: '{"name":"SpanTag"}'
                   tagName: span
                   ↓Text [mobile.components.UIText-1518093127569]: 
                     textValue: 
@@ -1381,22 +582,7 @@ title: Title for Chat
                                 padding-right: 15px;
                             '
               ↓H3 [mobile.components.UIDynamicElement-1517913154295]: 
-                beanData: |
-                  '{
-                   "name": "Heading3",
-                   "properties": {
-                    "ionText": {
-                     "name": "ionText",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
-                  }'
+                beanData: '{"name":"Heading3"}'
                 tagName: h3
                 ↓Text1 [mobile.components.UIText-1517849979669]: 
                   textValue: 
@@ -1422,43 +608,23 @@ title: Title for Chat
                     '{
                      "name": "FSImage",
                      "properties": {
-                      "url": {
-                       "name": "url",
-                       "mode": "script",
-                       "value": "getAttachmentUrl($[docid], $[attachment], $[placeholder], $[requestable])"
-                      },
                       "docid": {
-                       "name": "docid",
                        "mode": "source",
                        "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.id\"}"
                       },
                       "attachment": {
-                       "name": "attachment",
                        "mode": "plain",
                        "value": "img.jpeg"
                       },
                       "placeholder": {
-                       "name": "placeholder",
                        "mode": "plain",
                        "value": "assets\/icon.svg"
                       },
                       "requestable": {
-                       "name": "requestable",
                        "mode": "plain",
                        "value": "sampleMobileOffChat.offchat_fullsync"
                       },
-                      "width": {
-                       "name": "width",
-                       "mode": "plain",
-                       "value": ""
-                      },
-                      "height": {
-                       "name": "height",
-                       "mode": "plain",
-                       "value": ""
-                      },
                       "alt": {
-                       "name": "alt",
                        "mode": "plain",
                        "value": "image"
                       }
@@ -1477,22 +643,13 @@ title: Title for Chat
                      "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.dir == ''from''\"}"
                     }'
             ↓GenericItem [mobile.components.UIDynamicElement-1517912810303]: 
-              beanData: |
-                '{
-                 "name": "ListItem",
-                 "properties": {"ItemPosition": {
-                  "name": "ItemPosition",
-                  "mode": "plain",
-                  "value": false
-                 }}
-                }'
+              beanData: '{"name":"ListItem"}'
               tagName: ion-item
               ↓AvatarItem [mobile.components.UIDynamicElement-1517913370313]: 
                 beanData: |
                   '{
                    "name": "Avatar",
                    "properties": {"ItemPosition": {
-                    "name": "ItemPosition",
                     "mode": "plain",
                     "value": "item-right"
                    }}
@@ -1502,112 +659,27 @@ title: Title for Chat
                   beanData: |
                     '{
                      "name": "Icon",
-                     "properties": {
-                      "IconName": {
-                       "name": "IconName",
-                       "mode": "plain",
-                       "value": "happy"
-                      },
-                      "ItemPosition": {
-                       "name": "ItemPosition",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "IonColor": {
-                       "name": "IonColor",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "RangeLeft": {
-                       "name": "RangeLeft",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "RangeRight": {
-                       "name": "RangeRight",
-                       "mode": "plain",
-                       "value": false
-                      }
-                     }
+                     "properties": {"IconName": {
+                      "mode": "plain",
+                      "value": "happy"
+                     }}
                     }'
                   tagName: ion-icon
               ↓TextFormat [mobile.components.UIDynamicElement-1517915194451]: 
                 beanData: |
                   '{
                    "name": "TextFormat",
-                   "properties": {
-                    "TextLeft": {
-                     "name": "TextLeft",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextRight": {
-                     "name": "TextRight",
-                     "mode": "plain",
-                     "value": "text-right"
-                    },
-                    "TextCenter": {
-                     "name": "TextCenter",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextJustify": {
-                     "name": "TextJustify",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextWrap": {
-                     "name": "TextWrap",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextNoWrap": {
-                     "name": "TextNoWrap",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextUpperCase": {
-                     "name": "TextUpperCase",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextLowerCase": {
-                     "name": "TextLowerCase",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "TextCapitalize": {
-                     "name": "TextCapitalize",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
+                   "properties": {"TextRight": {
+                    "mode": "plain",
+                    "value": "text-right"
+                   }}
                   }'
                 tagName: div
                 ↓H2 [mobile.components.UIDynamicElement-1517913407093]: 
-                  beanData: |
-                    '{
-                     "name": "Heading2",
-                     "properties": {
-                      "ionText": {
-                       "name": "ionText",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "IonColor": {
-                       "name": "IonColor",
-                       "mode": "plain",
-                       "value": false
-                      }
-                     }
-                    }'
+                  beanData: '{"name":"Heading2"}'
                   tagName: h2
                   ↓Span [mobile.components.UIDynamicElement-1518094703835]: 
-                    beanData: |
-                      '{
-                       "name": "SpanTag",
-                       "properties": {}
-                      }'
+                    beanData: '{"name":"SpanTag"}'
                     tagName: span
                     ↓Text [mobile.components.UIText-1518094703863]: 
                       textValue: 
@@ -1643,22 +715,7 @@ title: Title for Chat
                              "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.value?.user\"}"
                             }'
                 ↓H3 [mobile.components.UIDynamicElement-1517913423897]: 
-                  beanData: |
-                    '{
-                     "name": "Heading3",
-                     "properties": {
-                      "ionText": {
-                       "name": "ionText",
-                       "mode": "plain",
-                       "value": false
-                      },
-                      "IonColor": {
-                       "name": "IonColor",
-                       "mode": "plain",
-                       "value": false
-                      }
-                     }
-                    }'
+                  beanData: '{"name":"Heading3"}'
                   tagName: h3
                   ↓Text1 [mobile.components.UIText-1517912810341]: 
                     textValue: 
@@ -1694,43 +751,23 @@ title: Title for Chat
                       '{
                        "name": "FSImage",
                        "properties": {
-                        "url": {
-                         "name": "url",
-                         "mode": "script",
-                         "value": "getAttachmentUrl($[docid], $[attachment], $[placeholder], $[requestable])"
-                        },
                         "docid": {
-                         "name": "docid",
                          "mode": "source",
                          "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517849900594?.id\"}"
                         },
                         "attachment": {
-                         "name": "attachment",
                          "mode": "plain",
                          "value": "img.jpeg"
                         },
                         "placeholder": {
-                         "name": "placeholder",
                          "mode": "plain",
                          "value": "assets\/icon.svg"
                         },
                         "requestable": {
-                         "name": "requestable",
                          "mode": "plain",
                          "value": "sampleMobileOffChat.offchat_fullsync"
                         },
-                        "width": {
-                         "name": "width",
-                         "mode": "plain",
-                         "value": ""
-                        },
-                        "height": {
-                         "name": "height",
-                         "mode": "plain",
-                         "value": ""
-                        },
                         "alt": {
-                         "name": "alt",
                          "mode": "plain",
                          "value": "image"
                         }
@@ -1739,28 +776,16 @@ title: Title for Chat
                     selfClose: true
                     tagName: img
 ↓Footer [mobile.components.UIDynamicElement-1517849498139]: 
-  beanData: |
-    '{
-     "name": "Footer",
-     "properties": {}
-    }'
+  beanData: '{"name":"Footer"}'
   tagName: ion-footer
   ↓ToolBar [mobile.components.UIDynamicElement-1517849498172]: 
     beanData: |
       '{
        "name": "ToolBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-toolbar
     ↓Style [mobile.components.UIStyle-1517849498205]: 
@@ -1779,33 +804,10 @@ title: Title for Chat
         beanData: |
           '{
            "name": "Icon",
-           "properties": {
-            "IconName": {
-             "name": "IconName",
-             "mode": "plain",
-             "value": "plane"
-            },
-            "ItemPosition": {
-             "name": "ItemPosition",
-             "mode": "plain",
-             "value": false
-            },
-            "IonColor": {
-             "name": "IonColor",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeLeft": {
-             "name": "RangeLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeRight": {
-             "name": "RangeRight",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"IconName": {
+            "mode": "plain",
+            "value": "plane"
+           }}
           }'
         tagName: ion-icon
       ↓Text [mobile.components.UIText-1518097160557]: 
@@ -1821,33 +823,10 @@ title: Title for Chat
         beanData: |
           '{
            "name": "Icon",
-           "properties": {
-            "IconName": {
-             "name": "IconName",
-             "mode": "plain",
-             "value": "plane"
-            },
-            "ItemPosition": {
-             "name": "ItemPosition",
-             "mode": "plain",
-             "value": false
-            },
-            "IonColor": {
-             "name": "IonColor",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeLeft": {
-             "name": "RangeLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeRight": {
-             "name": "RangeRight",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"IconName": {
+            "mode": "plain",
+            "value": "plane"
+           }}
           }'
         tagName: ion-icon
     ↓Text [mobile.components.UIText-1517849498243]: 
@@ -1865,100 +844,33 @@ title: Title for Chat
       '{
        "name": "FullSyncViewAction",
        "properties": {
-        "marker": {
-         "name": "marker",
-         "mode": "plain",
-         "value": false
-        },
         "fsview": {
-         "name": "fsview",
          "mode": "plain",
          "value": "sampleMobileOffChat.offchat_fullsync.OffChat.getChat"
         },
         "__live": {
-         "name": "__live",
          "mode": "plain",
          "value": "chat"
         },
         "include_docs": {
-         "name": "include_docs",
          "mode": "plain",
          "value": "true"
         },
-        "conflicts": {
-         "name": "conflicts",
-         "mode": "plain",
-         "value": false
-        },
-        "reduce": {
-         "name": "reduce",
-         "mode": "plain",
-         "value": false
-        },
-        "attachments": {
-         "name": "attachments",
-         "mode": "plain",
-         "value": false
-        },
-        "binary": {
-         "name": "binary",
-         "mode": "plain",
-         "value": false
-        },
         "startkey": {
-         "name": "startkey",
          "mode": "script",
          "value": "[this.window.sessionStorage.dest,{}]"
         },
         "endkey": {
-         "name": "endkey",
          "mode": "script",
          "value": "[this.window.sessionStorage.dest]"
         },
-        "inclusive_end": {
-         "name": "inclusive_end",
-         "mode": "plain",
-         "value": false
-        },
         "limit": {
-         "name": "limit",
          "mode": "script",
          "value": "14"
         },
-        "skip": {
-         "name": "skip",
-         "mode": "script",
-         "value": false
-        },
         "descending": {
-         "name": "descending",
          "mode": "plain",
          "value": "true"
-        },
-        "key": {
-         "name": "key",
-         "mode": "plain",
-         "value": false
-        },
-        "keys": {
-         "name": "keys",
-         "mode": "plain",
-         "value": false
-        },
-        "group": {
-         "name": "group",
-         "mode": "plain",
-         "value": false
-        },
-        "group_level": {
-         "name": "group_level",
-         "mode": "plain",
-         "value": false
-        },
-        "stale": {
-         "name": "stale",
-         "mode": "plain",
-         "value": false
         }
        }
       }'

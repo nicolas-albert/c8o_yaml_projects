@@ -17,97 +17,29 @@ scriptContent:
 segment: Sync
 title: Title for Sync
 ↓Header [mobile.components.UIDynamicElement-1517841328972]: 
-  beanData: |
-    '{
-     "name": "Header",
-     "properties": {"NoBorder": {
-      "name": "NoBorder",
-      "mode": "plain",
-      "value": false
-     }}
-    }'
+  beanData: '{"name":"Header"}'
   tagName: ion-header
   ↓NavBar [mobile.components.UIDynamicElement-1517841328998]: 
     beanData: |
       '{
        "name": "NavBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        },
-        "BackButtonHidden": {
-         "name": "BackButtonHidden",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1517841329024]: 
-      beanData: |
-        '{
-         "name": "BarTitle",
-         "properties": {}
-        }'
+      beanData: '{"name":"BarTitle"}'
       tagName: ion-title
       ↓TextFormat [mobile.components.UIDynamicElement-1517841329048]: 
         beanData: |
           '{
            "name": "TextFormat",
-           "properties": {
-            "TextLeft": {
-             "name": "TextLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "TextRight": {
-             "name": "TextRight",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCenter": {
-             "name": "TextCenter",
-             "mode": "plain",
-             "value": "text-center"
-            },
-            "TextJustify": {
-             "name": "TextJustify",
-             "mode": "plain",
-             "value": false
-            },
-            "TextWrap": {
-             "name": "TextWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextNoWrap": {
-             "name": "TextNoWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextUpperCase": {
-             "name": "TextUpperCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextLowerCase": {
-             "name": "TextLowerCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCapitalize": {
-             "name": "TextCapitalize",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"TextCenter": {
+            "mode": "plain",
+            "value": "text-center"
+           }}
           }'
         tagName: div
         ↓Text [mobile.components.UIText-1517841329074]: 
@@ -120,22 +52,7 @@ title: Title for Sync
                    "value": "OffChat Sync"
                   }'
 ↓Content [mobile.components.UIDynamicElement-1517841344920]: 
-  beanData: |
-    '{
-     "name": "Content",
-     "properties": {
-      "IonPadding": {
-       "name": "IonPadding",
-       "mode": "plain",
-       "value": "padding"
-      },
-      "Fullscreen": {
-       "name": "Fullscreen",
-       "mode": "plain",
-       "value": false
-      }
-     }
-    }'
+  beanData: '{"name":"Content"}'
   tagName: ion-content
   ↓Style [mobile.components.UIStyle-1517841643117]: 
     styleContent: 
@@ -150,28 +67,16 @@ title: Title for Sync
             	animation-timing-function: ease-in-out;
             '
 ↓Footer [mobile.components.UIDynamicElement-1517841335763]: 
-  beanData: |
-    '{
-     "name": "Footer",
-     "properties": {}
-    }'
+  beanData: '{"name":"Footer"}'
   tagName: ion-footer
   ↓ToolBar [mobile.components.UIDynamicElement-1517841335793]: 
     beanData: |
       '{
        "name": "ToolBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-toolbar
     ↓Style [mobile.components.UIStyle-1517841335823]: 
@@ -199,37 +104,14 @@ title: Title for Sync
        "name": "ToastAction",
        "properties": {
         "message": {
-         "name": "message",
          "mode": "script",
          "value": "''Welcome '' + this.window.sessionStorage.username + '', sync in progress!''"
         },
         "duration": {
-         "name": "duration",
          "mode": "plain",
          "value": "10000"
         },
-        "position": {
-         "name": "position",
-         "mode": "plain",
-         "value": "bottom"
-        },
-        "cssClass": {
-         "name": "cssClass",
-         "mode": "plain",
-         "value": false
-        },
-        "showCloseButton": {
-         "name": "showCloseButton",
-         "mode": "plain",
-         "value": false
-        },
-        "closeButtonText": {
-         "name": "closeButtonText",
-         "mode": "plain",
-         "value": false
-        },
         "dismissOnPageChange": {
-         "name": "dismissOnPageChange",
          "mode": "plain",
          "value": "true"
         }
@@ -239,45 +121,16 @@ title: Title for Sync
     beanData: |
       '{
        "name": "FullSyncSyncAction",
-       "properties": {
-        "requestable": {
-         "name": "requestable",
-         "mode": "plain",
-         "value": "sampleMobileOffChat.offchat_fullsync"
-        },
-        "Direction": {
-         "name": "Direction",
-         "mode": "plain",
-         "value": "bi-directional"
-        },
-        "Mode": {
-         "name": "Mode",
-         "mode": "plain",
-         "value": "continuous"
-        },
-        "Retry": {
-         "name": "Retry",
-         "mode": "plain",
-         "value": "true"
-        },
-        "BatchSize": {
-         "name": "BatchSize",
-         "mode": "script",
-         "value": "100"
-        },
-        "BatchesLimit": {
-         "name": "BatchesLimit",
-         "mode": "script",
-         "value": "10"
-        }
-       }
+       "properties": {"requestable": {
+        "mode": "plain",
+        "value": "sampleMobileOffChat.offchat_fullsync"
+       }}
       }'
     ↓RootPage [mobile.components.UIDynamicAction-1517842553795]: 
       beanData: |
         '{
          "name": "RootPageAction",
          "properties": {"page": {
-          "name": "page",
           "mode": "plain",
           "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
          }}

@@ -17,97 +17,29 @@ scriptContent:
 segment: Lobby
 title: Title for Lobby
 ↓Header [mobile.components.UIDynamicElement-1517842625969]: 
-  beanData: |
-    '{
-     "name": "Header",
-     "properties": {"NoBorder": {
-      "name": "NoBorder",
-      "mode": "plain",
-      "value": false
-     }}
-    }'
+  beanData: '{"name":"Header"}'
   tagName: ion-header
   ↓NavBar [mobile.components.UIDynamicElement-1517842626004]: 
     beanData: |
       '{
        "name": "NavBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        },
-        "BackButtonHidden": {
-         "name": "BackButtonHidden",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1517842626044]: 
-      beanData: |
-        '{
-         "name": "BarTitle",
-         "properties": {}
-        }'
+      beanData: '{"name":"BarTitle"}'
       tagName: ion-title
       ↓TextFormat [mobile.components.UIDynamicElement-1517842626089]: 
         beanData: |
           '{
            "name": "TextFormat",
-           "properties": {
-            "TextLeft": {
-             "name": "TextLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "TextRight": {
-             "name": "TextRight",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCenter": {
-             "name": "TextCenter",
-             "mode": "plain",
-             "value": "text-center"
-            },
-            "TextJustify": {
-             "name": "TextJustify",
-             "mode": "plain",
-             "value": false
-            },
-            "TextWrap": {
-             "name": "TextWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextNoWrap": {
-             "name": "TextNoWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextUpperCase": {
-             "name": "TextUpperCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextLowerCase": {
-             "name": "TextLowerCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCapitalize": {
-             "name": "TextCapitalize",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"TextCenter": {
+            "mode": "plain",
+            "value": "text-center"
+           }}
           }'
         tagName: div
         ↓Text [mobile.components.UIText-1517842626131]: 
@@ -124,7 +56,6 @@ title: Title for Lobby
         '{
          "name": "ButtonSet",
          "properties": {"SetPosition": {
-          "name": "SetPosition",
           "mode": "plain",
           "value": "right"
          }}
@@ -134,91 +65,20 @@ title: Title for Lobby
         beanData: |
           '{
            "name": "Button",
-           "properties": {
-            "ButtonFormType": {
-             "name": "ButtonFormType",
-             "mode": "plain",
-             "value": false
-            },
-            "ButtonType": {
-             "name": "ButtonType",
-             "mode": "plain",
-             "value": "ion-button"
-            },
-            "MenuMode": {
-             "name": "MenuMode",
-             "mode": "plain",
-             "value": false
-            },
-            "IonColor": {
-             "name": "IonColor",
-             "mode": "plain",
-             "value": false
-            },
-            "IonShape": {
-             "name": "IonShape",
-             "mode": "plain",
-             "value": false
-            },
-            "IonOutline": {
-             "name": "IonOutline",
-             "mode": "plain",
-             "value": false
-            },
-            "IonClear": {
-             "name": "IonClear",
-             "mode": "plain",
-             "value": false
-            },
-            "IonSize": {
-             "name": "IonSize",
-             "mode": "plain",
-             "value": false
-            },
-            "IconPosition": {
-             "name": "IconPosition",
-             "mode": "plain",
-             "value": false
-            },
-            "IconOnly": {
-             "name": "IconOnly",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"ButtonFormType": {
+            "mode": "plain",
+            "value": false
+           }}
           }'
         tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1518088441421]: 
           beanData: |
             '{
              "name": "Icon",
-             "properties": {
-              "IconName": {
-               "name": "IconName",
-               "mode": "plain",
-               "value": "more"
-              },
-              "ItemPosition": {
-               "name": "ItemPosition",
-               "mode": "plain",
-               "value": false
-              },
-              "IonColor": {
-               "name": "IonColor",
-               "mode": "plain",
-               "value": false
-              },
-              "RangeLeft": {
-               "name": "RangeLeft",
-               "mode": "plain",
-               "value": false
-              },
-              "RangeRight": {
-               "name": "RangeRight",
-               "mode": "plain",
-               "value": false
-              }
-             }
+             "properties": {"IconName": {
+              "mode": "plain",
+              "value": "more"
+             }}
             }'
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1518088441443]: 
@@ -268,17 +128,10 @@ title: Title for Lobby
                  "name": "CallFullSyncAction",
                  "properties": {
                   "requestable": {
-                   "name": "requestable",
                    "mode": "plain",
                    "value": "sampleMobileOffChat.offchat_fullsync"
                   },
-                  "marker": {
-                   "name": "marker",
-                   "mode": "plain",
-                   "value": ""
-                  },
                   "verb": {
-                   "name": "verb",
                    "mode": "plain",
                    "value": "sync"
                   }
@@ -298,60 +151,21 @@ title: Title for Lobby
                   '{
                    "name": "RootPageAction",
                    "properties": {"page": {
-                    "name": "page",
                     "mode": "plain",
                     "value": "sampleMobileOffChat.OffChat.OffChat.Login"
                    }}
                   }'
 ↓Content [mobile.components.UIDynamicElement-1517842626167]: 
-  beanData: |
-    '{
-     "name": "Content",
-     "properties": {
-      "IonPadding": {
-       "name": "IonPadding",
-       "mode": "plain",
-       "value": "padding"
-      },
-      "Fullscreen": {
-       "name": "Fullscreen",
-       "mode": "plain",
-       "value": false
-      }
-     }
-    }'
+  beanData: '{"name":"Content"}'
   tagName: ion-content
   ↓CardContainer [mobile.components.UIDynamicElement-1517849109999]: 
-    beanData: |
-      '{
-       "name": "Card",
-       "properties": {}
-      }'
+    beanData: '{"name":"Card"}'
     tagName: ion-card
     ↓CardContent [mobile.components.UIDynamicElement-1517849115628]: 
-      beanData: |
-        '{
-         "name": "CardContent",
-         "properties": {}
-        }'
+      beanData: '{"name":"CardContent"}'
       tagName: ion-card-content
       ↓ListContainer [mobile.components.UIDynamicElement-1517842865406]: 
-        beanData: |
-          '{
-           "name": "List",
-           "properties": {
-            "Nolines": {
-             "name": "Nolines",
-             "mode": "plain",
-             "value": false
-            },
-            "Inset": {
-             "name": "Inset",
-             "mode": "plain",
-             "value": false
-            }
-           }
-          }'
+        beanData: '{"name":"List"}'
         tagName: ion-list
         ↓Directive [mobile.components.UIControlDirective-1517843119306]: 
           directiveSource: 
@@ -380,54 +194,12 @@ title: Title for Lobby
                  "name": "Button",
                  "properties": {
                   "ButtonFormType": {
-                   "name": "ButtonFormType",
                    "mode": "plain",
                    "value": false
                   },
                   "ButtonType": {
-                   "name": "ButtonType",
                    "mode": "plain",
                    "value": "ion-item"
-                  },
-                  "MenuMode": {
-                   "name": "MenuMode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonColor": {
-                   "name": "IonColor",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonShape": {
-                   "name": "IonShape",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonOutline": {
-                   "name": "IonOutline",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonClear": {
-                   "name": "IonClear",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IonSize": {
-                   "name": "IonSize",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconPosition": {
-                   "name": "IconPosition",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "IconOnly": {
-                   "name": "IconOnly",
-                   "mode": "plain",
-                   "value": false
                   }
                  }
                 }'
@@ -447,29 +219,12 @@ title: Title for Lobby
                    "name": "Icon",
                    "properties": {
                     "IconName": {
-                     "name": "IconName",
                      "mode": "plain",
                      "value": "mail-open"
                     },
                     "ItemPosition": {
-                     "name": "ItemPosition",
                      "mode": "plain",
                      "value": "item-right"
-                    },
-                    "IonColor": {
-                     "name": "IonColor",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeLeft": {
-                     "name": "RangeLeft",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "RangeRight": {
-                     "name": "RangeRight",
-                     "mode": "plain",
-                     "value": false
                     }
                    }
                   }'
@@ -489,24 +244,12 @@ title: Title for Lobby
                        "name": "PushPageAction",
                        "properties": {
                         "page": {
-                         "name": "page",
                          "mode": "plain",
                          "value": "sampleMobileOffChat.OffChat.OffChat.Chat"
                         },
                         "data": {
-                         "name": "data",
                          "mode": "plain",
                          "value": ""
-                        },
-                        "animate": {
-                         "name": "animate",
-                         "mode": "plain",
-                         "value": "true"
-                        },
-                        "animate_duration": {
-                         "name": "animate_duration",
-                         "mode": "script",
-                         "value": "250"
                         }
                        }
                       }'
@@ -520,28 +263,16 @@ title: Title for Lobby
                              "value": "{\"filter\":\"Iteration\",\"project\":\"sampleMobileOffChat\",\"input\":\"item1517843119306\"}"
                             }'
 ↓Footer [mobile.components.UIDynamicElement-1517842626237]: 
-  beanData: |
-    '{
-     "name": "Footer",
-     "properties": {}
-    }'
+  beanData: '{"name":"Footer"}'
   tagName: ion-footer
   ↓ToolBar [mobile.components.UIDynamicElement-1517842626276]: 
     beanData: |
       '{
        "name": "ToolBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-toolbar
     ↓Style [mobile.components.UIStyle-1517842626309]: 
@@ -560,33 +291,10 @@ title: Title for Lobby
         beanData: |
           '{
            "name": "Icon",
-           "properties": {
-            "IconName": {
-             "name": "IconName",
-             "mode": "plain",
-             "value": "plane"
-            },
-            "ItemPosition": {
-             "name": "ItemPosition",
-             "mode": "plain",
-             "value": false
-            },
-            "IonColor": {
-             "name": "IonColor",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeLeft": {
-             "name": "RangeLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeRight": {
-             "name": "RangeRight",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"IconName": {
+            "mode": "plain",
+            "value": "plane"
+           }}
           }'
         tagName: ion-icon
       ↓Text [mobile.components.UIText-1518096918824]: 
@@ -602,33 +310,10 @@ title: Title for Lobby
         beanData: |
           '{
            "name": "Icon",
-           "properties": {
-            "IconName": {
-             "name": "IconName",
-             "mode": "plain",
-             "value": "plane"
-            },
-            "ItemPosition": {
-             "name": "ItemPosition",
-             "mode": "plain",
-             "value": false
-            },
-            "IonColor": {
-             "name": "IonColor",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeLeft": {
-             "name": "RangeLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "RangeRight": {
-             "name": "RangeRight",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"IconName": {
+            "mode": "plain",
+            "value": "plane"
+           }}
           }'
         tagName: ion-icon
     ↓Text [mobile.components.UIText-1517842626341]: 
@@ -647,22 +332,14 @@ title: Title for Lobby
        "name": "FullSyncGetAction",
        "properties": {
         "requestable": {
-         "name": "requestable",
          "mode": "plain",
          "value": "sampleMobileOffChat.offchat_fullsync"
         },
-        "marker": {
-         "name": "marker",
-         "mode": "plain",
-         "value": false
-        },
         "_id": {
-         "name": "_id",
          "mode": "plain",
          "value": "userList"
         },
         "__live": {
-         "name": "__live",
          "mode": "plain",
          "value": "lobby"
         }

@@ -18,97 +18,29 @@ scriptContent:
 segment: Login
 title: Title for Login
 ↓Header [mobile.components.UIDynamicElement-1517567290269]: 
-  beanData: |
-    '{
-     "name": "Header",
-     "properties": {"NoBorder": {
-      "name": "NoBorder",
-      "mode": "plain",
-      "value": false
-     }}
-    }'
+  beanData: '{"name":"Header"}'
   tagName: ion-header
   ↓NavBar [mobile.components.UIDynamicElement-1517590376644]: 
     beanData: |
       '{
        "name": "NavBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        },
-        "BackButtonHidden": {
-         "name": "BackButtonHidden",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1517567324784]: 
-      beanData: |
-        '{
-         "name": "BarTitle",
-         "properties": {}
-        }'
+      beanData: '{"name":"BarTitle"}'
       tagName: ion-title
       ↓Center [mobile.components.UIDynamicElement-1517567363505]: 
         beanData: |
           '{
            "name": "TextFormat",
-           "properties": {
-            "TextLeft": {
-             "name": "TextLeft",
-             "mode": "plain",
-             "value": false
-            },
-            "TextRight": {
-             "name": "TextRight",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCenter": {
-             "name": "TextCenter",
-             "mode": "plain",
-             "value": "text-center"
-            },
-            "TextJustify": {
-             "name": "TextJustify",
-             "mode": "plain",
-             "value": false
-            },
-            "TextWrap": {
-             "name": "TextWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextNoWrap": {
-             "name": "TextNoWrap",
-             "mode": "plain",
-             "value": false
-            },
-            "TextUpperCase": {
-             "name": "TextUpperCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextLowerCase": {
-             "name": "TextLowerCase",
-             "mode": "plain",
-             "value": false
-            },
-            "TextCapitalize": {
-             "name": "TextCapitalize",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"TextCenter": {
+            "mode": "plain",
+            "value": "text-center"
+           }}
           }'
         tagName: div
         ↓Text [mobile.components.UIText-1517567331669]: 
@@ -125,7 +57,6 @@ title: Title for Login
         '{
          "name": "ButtonSet",
          "properties": {"SetPosition": {
-          "name": "SetPosition",
           "mode": "plain",
           "value": "right"
          }}
@@ -135,91 +66,20 @@ title: Title for Login
         beanData: |
           '{
            "name": "Button",
-           "properties": {
-            "ButtonFormType": {
-             "name": "ButtonFormType",
-             "mode": "plain",
-             "value": false
-            },
-            "ButtonType": {
-             "name": "ButtonType",
-             "mode": "plain",
-             "value": "ion-button"
-            },
-            "MenuMode": {
-             "name": "MenuMode",
-             "mode": "plain",
-             "value": false
-            },
-            "IonColor": {
-             "name": "IonColor",
-             "mode": "plain",
-             "value": false
-            },
-            "IonShape": {
-             "name": "IonShape",
-             "mode": "plain",
-             "value": false
-            },
-            "IonOutline": {
-             "name": "IonOutline",
-             "mode": "plain",
-             "value": false
-            },
-            "IonClear": {
-             "name": "IonClear",
-             "mode": "plain",
-             "value": false
-            },
-            "IonSize": {
-             "name": "IonSize",
-             "mode": "plain",
-             "value": false
-            },
-            "IconPosition": {
-             "name": "IconPosition",
-             "mode": "plain",
-             "value": false
-            },
-            "IconOnly": {
-             "name": "IconOnly",
-             "mode": "plain",
-             "value": false
-            }
-           }
+           "properties": {"ButtonFormType": {
+            "mode": "plain",
+            "value": false
+           }}
           }'
         tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1517591030335]: 
           beanData: |
             '{
              "name": "Icon",
-             "properties": {
-              "IconName": {
-               "name": "IconName",
-               "mode": "plain",
-               "value": "more"
-              },
-              "ItemPosition": {
-               "name": "ItemPosition",
-               "mode": "plain",
-               "value": false
-              },
-              "IonColor": {
-               "name": "IonColor",
-               "mode": "plain",
-               "value": false
-              },
-              "RangeLeft": {
-               "name": "RangeLeft",
-               "mode": "plain",
-               "value": false
-              },
-              "RangeRight": {
-               "name": "RangeRight",
-               "mode": "plain",
-               "value": false
-              }
-             }
+             "properties": {"IconName": {
+              "mode": "plain",
+              "value": "more"
+             }}
             }'
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1517825155947]: 
@@ -272,17 +132,10 @@ title: Title for Login
                  "name": "CallFullSyncAction",
                  "properties": {
                   "requestable": {
-                   "name": "requestable",
                    "mode": "plain",
                    "value": "sampleMobileOffChat.offchat_fullsync"
                   },
-                  "marker": {
-                   "name": "marker",
-                   "mode": "plain",
-                   "value": ""
-                  },
                   "verb": {
-                   "name": "verb",
                    "mode": "plain",
                    "value": "reset"
                   }
@@ -292,75 +145,19 @@ title: Title for Login
                 beanData: |
                   '{
                    "name": "ToastAction",
-                   "properties": {
-                    "message": {
-                     "name": "message",
-                     "mode": "plain",
-                     "value": "Reset done!"
-                    },
-                    "duration": {
-                     "name": "duration",
-                     "mode": "plain",
-                     "value": "3000"
-                    },
-                    "position": {
-                     "name": "position",
-                     "mode": "plain",
-                     "value": "bottom"
-                    },
-                    "cssClass": {
-                     "name": "cssClass",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "showCloseButton": {
-                     "name": "showCloseButton",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "closeButtonText": {
-                     "name": "closeButtonText",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "dismissOnPageChange": {
-                     "name": "dismissOnPageChange",
-                     "mode": "plain",
-                     "value": false
-                    }
-                   }
+                   "properties": {"message": {
+                    "mode": "plain",
+                    "value": "Reset done!"
+                   }}
                   }'
 ↓Content [mobile.components.UIDynamicElement-1517567294948]: 
-  beanData: |
-    '{
-     "name": "Content",
-     "properties": {
-      "IonPadding": {
-       "name": "IonPadding",
-       "mode": "plain",
-       "value": "padding"
-      },
-      "Fullscreen": {
-       "name": "Fullscreen",
-       "mode": "plain",
-       "value": false
-      }
-     }
-    }'
+  beanData: '{"name":"Content"}'
   tagName: ion-content
   ↓CardContainer [mobile.components.UIDynamicElement-1517590561097]: 
-    beanData: |
-      '{
-       "name": "Card",
-       "properties": {}
-      }'
+    beanData: '{"name":"Card"}'
     tagName: ion-card
     ↓CardContent [mobile.components.UIDynamicElement-1517590566688]: 
-      beanData: |
-        '{
-         "name": "CardContent",
-         "properties": {}
-        }'
+      beanData: '{"name":"CardContent"}'
       tagName: ion-card-content
       ↓Form [mobile.components.UIForm-1517569296572]: 
         ↓Event [mobile.components.UIControlEvent-1517588818264]: 
@@ -370,28 +167,10 @@ title: Title for Login
             beanData: |
               '{
                "name": "CallSequenceAction",
-               "properties": {
-                "requestable": {
-                 "name": "requestable",
-                 "mode": "plain",
-                 "value": "sampleMobileOffChat.Login"
-                },
-                "marker": {
-                 "name": "marker",
-                 "mode": "plain",
-                 "value": ""
-                },
-                "cachePolicy": {
-                 "name": "cachePolicy",
-                 "mode": "plain",
-                 "value": false
-                },
-                "cacheTtl": {
-                 "name": "cacheTtl",
-                 "mode": "plain",
-                 "value": "3000"
-                }
-               }
+               "properties": {"requestable": {
+                "mode": "plain",
+                "value": "sampleMobileOffChat.Login"
+               }}
               }'
             ↓FailureHandler [mobile.components.UIActionFailureEvent-1518086125645]: 
               ↓Toast [mobile.components.UIDynamicAction-1518086718732]: 
@@ -400,39 +179,20 @@ title: Title for Login
                    "name": "ToastAction",
                    "properties": {
                     "message": {
-                     "name": "message",
                      "mode": "plain",
                      "value": "Network failure: Offline mode"
                     },
                     "duration": {
-                     "name": "duration",
                      "mode": "plain",
                      "value": "2000"
                     },
                     "position": {
-                     "name": "position",
                      "mode": "plain",
                      "value": "top"
                     },
                     "cssClass": {
-                     "name": "cssClass",
                      "mode": "plain",
                      "value": "toast-error"
-                    },
-                    "showCloseButton": {
-                     "name": "showCloseButton",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "closeButtonText": {
-                     "name": "closeButtonText",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "dismissOnPageChange": {
-                     "name": "dismissOnPageChange",
-                     "mode": "plain",
-                     "value": false
                     }
                    }
                   }'
@@ -460,58 +220,30 @@ title: Title for Login
                          "name": "ToastAction",
                          "properties": {
                           "message": {
-                           "name": "message",
                            "mode": "script",
                            "value": "out"
                           },
                           "duration": {
-                           "name": "duration",
                            "mode": "plain",
                            "value": "2000"
                           },
                           "position": {
-                           "name": "position",
                            "mode": "plain",
                            "value": "top"
                           },
                           "cssClass": {
-                           "name": "cssClass",
                            "mode": "plain",
                            "value": "toast-error"
-                          },
-                          "showCloseButton": {
-                           "name": "showCloseButton",
-                           "mode": "plain",
-                           "value": false
-                          },
-                          "closeButtonText": {
-                           "name": "closeButtonText",
-                           "mode": "plain",
-                           "value": false
-                          },
-                          "dismissOnPageChange": {
-                           "name": "dismissOnPageChange",
-                           "mode": "plain",
-                           "value": false
                           }
                          }
                         }'
                     ↓Error [mobile.components.UIDynamicAction-1518086813725]: 
-                      beanData: |
-                        '{
-                         "name": "ErrorAction",
-                         "properties": {"message": {
-                          "name": "message",
-                          "mode": "plain",
-                          "value": "some error"
-                         }}
-                        }'
+                      beanData: '{"name":"ErrorAction"}'
                   ↓RootPage [mobile.components.UIDynamicAction-1518086150793]: 
                     beanData: |
                       '{
                        "name": "RootPageAction",
                        "properties": {"page": {
-                        "name": "page",
                         "mode": "plain",
                         "value": "sampleMobileOffChat.OffChat.OffChat.Lobby"
                        }}
@@ -521,7 +253,6 @@ title: Title for Login
                   '{
                    "name": "ErrorAction",
                    "properties": {"message": {
-                    "name": "message",
                     "mode": "plain",
                     "value": "offline"
                    }}
@@ -530,18 +261,10 @@ title: Title for Login
               beanData: |
                 '{
                  "name": "IfAction",
-                 "properties": {
-                  "condition": {
-                   "name": "condition",
-                   "mode": "script",
-                   "value": "out.error"
-                  },
-                  "negate": {
-                   "name": "negate",
-                   "mode": "plain",
-                   "value": "false"
-                  }
-                 }
+                 "properties": {"condition": {
+                  "mode": "script",
+                  "value": "out.error"
+                 }}
                 }'
               ↓Toast [mobile.components.UIDynamicAction-1517828328158]: 
                 beanData: |
@@ -549,39 +272,16 @@ title: Title for Login
                    "name": "ToastAction",
                    "properties": {
                     "message": {
-                     "name": "message",
                      "mode": "script",
                      "value": "stack[\"CallLogin\"].out.error.message"
                     },
-                    "duration": {
-                     "name": "duration",
-                     "mode": "plain",
-                     "value": "3000"
-                    },
                     "position": {
-                     "name": "position",
                      "mode": "plain",
                      "value": "top"
                     },
                     "cssClass": {
-                     "name": "cssClass",
                      "mode": "plain",
                      "value": "toast-error"
-                    },
-                    "showCloseButton": {
-                     "name": "showCloseButton",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "closeButtonText": {
-                     "name": "closeButtonText",
-                     "mode": "plain",
-                     "value": false
-                    },
-                    "dismissOnPageChange": {
-                     "name": "dismissOnPageChange",
-                     "mode": "plain",
-                     "value": false
                     }
                    }
                   }'
@@ -589,18 +289,10 @@ title: Title for Login
               beanData: |
                 '{
                  "name": "IfAction",
-                 "properties": {
-                  "condition": {
-                   "name": "condition",
-                   "mode": "script",
-                   "value": "out.ok"
-                  },
-                  "negate": {
-                   "name": "negate",
-                   "mode": "plain",
-                   "value": "false"
-                  }
-                 }
+                 "properties": {"condition": {
+                  "mode": "script",
+                  "value": "out.ok"
+                 }}
                 }'
               ↓CustomAction [mobile.components.UICustomAction-1517911129934]: 
                 actionValue: 
@@ -633,71 +325,24 @@ title: Title for Login
                     '{
                      "name": "RootPageAction",
                      "properties": {"page": {
-                      "name": "page",
                       "mode": "plain",
                       "value": "sampleMobileOffChat.OffChat.OffChat.Sync"
                      }}
                     }'
         ↓ListContainer [mobile.components.UIDynamicElement-1517590290750]: 
-          beanData: |
-            '{
-             "name": "List",
-             "properties": {
-              "Nolines": {
-               "name": "Nolines",
-               "mode": "plain",
-               "value": false
-              },
-              "Inset": {
-               "name": "Inset",
-               "mode": "plain",
-               "value": false
-              }
-             }
-            }'
+          beanData: '{"name":"List"}'
           tagName: ion-list
           ↓Username [mobile.components.UIDynamicElement-1517583518722]: 
-            beanData: |
-              '{
-               "name": "ListItem",
-               "properties": {"ItemPosition": {
-                "name": "ItemPosition",
-                "mode": "plain",
-                "value": false
-               }}
-              }'
+            beanData: '{"name":"ListItem"}'
             tagName: ion-item
             ↓LabelUsername [mobile.components.UIDynamicElement-1517567871069]: 
               beanData: |
                 '{
                  "name": "Label",
-                 "properties": {
-                  "Fixed": {
-                   "name": "Fixed",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Floating": {
-                   "name": "Floating",
-                   "mode": "plain",
-                   "value": "floating"
-                  },
-                  "Stacked": {
-                   "name": "Stacked",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "RangeLeft": {
-                   "name": "RangeLeft",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "RangeRight": {
-                   "name": "RangeRight",
-                   "mode": "plain",
-                   "value": false
-                  }
-                 }
+                 "properties": {"Floating": {
+                  "mode": "plain",
+                  "value": "floating"
+                 }}
                 }'
               tagName: ion-label
               ↓Text [mobile.components.UIText-1517567903626]: 
@@ -715,67 +360,14 @@ title: Title for Login
                  "name": "Input",
                  "properties": {
                   "FormControlName": {
-                   "name": "FormControlName",
                    "mode": "plain",
                    "value": "username"
                   },
-                  "Disabled": {
-                   "name": "Disabled",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "ClearInput": {
-                   "name": "ClearInput",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "ClearOnEdit": {
-                   "name": "ClearOnEdit",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Max": {
-                   "name": "Max",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Min": {
-                   "name": "Min",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Mode": {
-                   "name": "Mode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Placeholder": {
-                   "name": "Placeholder",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Readonly": {
-                   "name": "Readonly",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Step": {
-                   "name": "Step",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "TextAlign": {
-                   "name": "TextAlign",
-                   "mode": "plain",
-                   "value": false
-                  },
                   "Type": {
-                   "name": "Type",
                    "mode": "plain",
                    "value": "text"
                   },
                   "Value": {
-                   "name": "Value",
                    "mode": "script",
                    "value": "this.window.localStorage.username"
                   }
@@ -796,47 +388,16 @@ title: Title for Login
                        "value": "no-lines"
                       }'
           ↓Password [mobile.components.UIDynamicElement-1517583521117]: 
-            beanData: |
-              '{
-               "name": "ListItem",
-               "properties": {"ItemPosition": {
-                "name": "ItemPosition",
-                "mode": "plain",
-                "value": false
-               }}
-              }'
+            beanData: '{"name":"ListItem"}'
             tagName: ion-item
             ↓LabelPassword [mobile.components.UIDynamicElement-1517567880553]: 
               beanData: |
                 '{
                  "name": "Label",
-                 "properties": {
-                  "Fixed": {
-                   "name": "Fixed",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Floating": {
-                   "name": "Floating",
-                   "mode": "plain",
-                   "value": "floating"
-                  },
-                  "Stacked": {
-                   "name": "Stacked",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "RangeLeft": {
-                   "name": "RangeLeft",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "RangeRight": {
-                   "name": "RangeRight",
-                   "mode": "plain",
-                   "value": false
-                  }
-                 }
+                 "properties": {"Floating": {
+                  "mode": "plain",
+                  "value": "floating"
+                 }}
                 }'
               tagName: ion-label
               ↓Text [mobile.components.UIText-1517567907991]: 
@@ -854,69 +415,12 @@ title: Title for Login
                  "name": "Input",
                  "properties": {
                   "FormControlName": {
-                   "name": "FormControlName",
                    "mode": "plain",
                    "value": "password"
-                  },
-                  "Disabled": {
-                   "name": "Disabled",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "ClearInput": {
-                   "name": "ClearInput",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "ClearOnEdit": {
-                   "name": "ClearOnEdit",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Max": {
-                   "name": "Max",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Min": {
-                   "name": "Min",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Mode": {
-                   "name": "Mode",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Placeholder": {
-                   "name": "Placeholder",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Readonly": {
-                   "name": "Readonly",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "Step": {
-                   "name": "Step",
-                   "mode": "plain",
-                   "value": false
-                  },
-                  "TextAlign": {
-                   "name": "TextAlign",
-                   "mode": "plain",
-                   "value": false
                   },
                   "Type": {
-                   "name": "Type",
                    "mode": "plain",
                    "value": "password"
-                  },
-                  "Value": {
-                   "name": "Value",
-                   "mode": "plain",
-                   "value": false
                   }
                  }
                 }'
@@ -938,63 +442,10 @@ title: Title for Login
             beanData: |
               '{
                "name": "SubmitButton",
-               "properties": {
-                "ButtonFormType": {
-                 "name": "ButtonFormType",
-                 "mode": "plain",
-                 "value": "submit"
-                },
-                "ButtonType": {
-                 "name": "ButtonType",
-                 "mode": "plain",
-                 "value": "ion-button"
-                },
-                "MenuMode": {
-                 "name": "MenuMode",
-                 "mode": "plain",
-                 "value": false
-                },
-                "IonColor": {
-                 "name": "IonColor",
-                 "mode": "plain",
-                 "value": false
-                },
-                "IonShape": {
-                 "name": "IonShape",
-                 "mode": "plain",
-                 "value": "full"
-                },
-                "IonOutline": {
-                 "name": "IonOutline",
-                 "mode": "plain",
-                 "value": false
-                },
-                "IonClear": {
-                 "name": "IonClear",
-                 "mode": "plain",
-                 "value": false
-                },
-                "IonSize": {
-                 "name": "IonSize",
-                 "mode": "plain",
-                 "value": false
-                },
-                "IconPosition": {
-                 "name": "IconPosition",
-                 "mode": "plain",
-                 "value": false
-                },
-                "IconOnly": {
-                 "name": "IconOnly",
-                 "mode": "plain",
-                 "value": false
-                },
-                "AutoDisable": {
-                 "name": "AutoDisable",
-                 "mode": "plain",
-                 "value": "true"
-                }
-               }
+               "properties": {"IonShape": {
+                "mode": "plain",
+                "value": "full"
+               }}
               }'
             tagName: button
             ↓Text [mobile.components.UIText-1517570175643]: 
@@ -1016,37 +467,21 @@ title: Title for Login
                       	margin-bottom: 20px;
                       '
           ↓Paragraph [mobile.components.UIDynamicElement-1517583021362]: 
-            beanData: |
-              '{
-               "name": "Paragraph",
-               "properties": {}
-              }'
+            beanData: '{"name":"Paragraph"}'
             tagName: p
             ↓Fragment [mobile.components.UICustom-1517583057743]: 
               htmlTemplate: '<b>Note</b>: Account creation is automatic if the <b>username</b> is unknown.'
 ↓Footer [mobile.components.UIDynamicElement-1517567298829]: 
-  beanData: |
-    '{
-     "name": "Footer",
-     "properties": {}
-    }'
+  beanData: '{"name":"Footer"}'
   tagName: ion-footer
   ↓ToolBar [mobile.components.UIDynamicElement-1517590656498]: 
     beanData: |
       '{
        "name": "ToolBar",
-       "properties": {
-        "IonColor": {
-         "name": "IonColor",
-         "mode": "plain",
-         "value": "primary"
-        },
-        "BarMode": {
-         "name": "BarMode",
-         "mode": "plain",
-         "value": false
-        }
-       }
+       "properties": {"IonColor": {
+        "mode": "plain",
+        "value": "primary"
+       }}
       }'
     tagName: ion-toolbar
     ↓Style [mobile.components.UIStyle-1517599585343]: 
